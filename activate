@@ -1,0 +1,111 @@
+# --------------------------------------------------------------------
+# PATHS
+# --------------------------------------------------------------------
+
+# Set paths
+export CORDEXP_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export CORDEXP_ROOT="$( cd "$( dirname "${CORDEXP_HOME}" )" && pwd )"
+export CORDEXP_BASH=$CORDEXP_HOME/sh
+export CORDEXP_LIB=$CORDEXP_HOME/cordexp
+
+# Ensure target scripts are executable.
+chmod a+x $CORDEXP_BASH/*.sh
+chmod a+x $CORDEXP_BASH/*/*.sh
+
+# --------------------------------------------------------------------
+# COMMAND EXECUTION
+# --------------------------------------------------------------------
+
+# Command executor.
+exec_cmd()
+{
+	source $CORDEXP_BASH/utils.sh
+
+	log_banner
+	log $1" :: BEGINS"
+	activate_venv
+	log_banner
+
+	target=$CORDEXP_BASH/$2
+	if [ "$3" ] && [ "$4" ] && [ "$5" ]; then
+		source $target $3 $4 $5
+	elif [ "$3" ] && [ "$4" ]; then
+		source $target $3 $4 ""
+	elif [ "$3" ]; then
+		source $target $3 "" ""
+	else
+		source $target ""
+	fi
+
+	log_banner
+	log $1" :: ENDS"
+	log_banner
+}
+
+# --------------------------------------------------------------------
+# ALIASES
+# --------------------------------------------------------------------
+
+# ... citations
+alias cordexp-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh $1'
+alias cordexp-citations-generate-json='exec_cmd citations-generate-json citations/generate_json.sh $1'
+
+# ... institutes
+alias cordexp-institutes-list='exec_cmd institutes-list institutes/list.sh'
+alias cordexp-institutes-github-repos-clone='exec_cmd institutes-github-repos-clone institutes/github_repos_clone.sh'
+alias cordexp-institutes-github-repos-pull='exec_cmd institutes-github-repos-pull institutes/github_repos_pull.sh'
+alias cordexp-institutes-github-repos-push='exec_cmd institutes-github-repos-push institutes/github_repos_push.sh'
+alias cordexp-institutes-github-repos-status='exec_cmd institutes-github-repos-clone institutes/github_repos_status.sh'
+alias cordexp-institutes-github-repos-sync='exec_cmd institutes-github-repos-sync institutes/github_repos_sync.sh'
+alias cordexp-institutes-github-repos-verify='exec_cmd institutes-github-repos-verify institutes/github_repos_verify.sh $1'
+alias cordexp-institutes-github-teams-sync='exec_cmd institutes-github-teams-sync institutes/github_teams_sync.sh'
+
+# ... models
+alias cordexp-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
+alias cordexp-models-generate-cim='exec_cmd models-generate-cim models/generate_cim.sh'
+alias cordexp-models-generate-json='exec_cmd models-generate-json models/generate_json.sh'
+alias cordexp-models-generate-xls='exec_cmd models-generate-xls models/generate_xls.sh'
+alias cordexp-models-reset-cim='exec_cmd models-reset-cim models/reset_cim.sh'
+alias cordexp-models-reset-json='exec_cmd models-reset-json models/reset_json.sh'
+
+# ... parties
+alias cordexp-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh $1'
+alias cordexp-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh $1'
+
+# ... specializations
+alias cordexp-specializations-clone='exec_cmd specializations-clone specializations/clone.sh'
+alias cordexp-specializations-generate='exec_cmd specializations-generate specializations/generate.sh'
+alias cordexp-specializations-pull='exec_cmd specializations-pull specializations/pull.sh'
+alias cordexp-specializations-push='exec_cmd specializations-push specializations/push.sh'
+alias cordexp-specializations-status='exec_cmd specializations-status specializations/status.sh'
+alias cordexp-specializations-sync-cim-profile='exec_cmd specializations-sync-cim-profile specializations/sync_cim_profile.sh'
+alias cordexp-specializations-sync-definitions='exec_cmd specializations-sync-definitions specializations/sync_definitions.sh'
+alias cordexp-specializations-sync-templates='exec_cmd specializations-sync-templates specializations/sync_templates.sh'
+alias cordexp-specializations-sync-tooling='exec_cmd specializations-sync-tooling specializations/sync_tooling.sh'
+alias cordexp-specializations-sync-viewer='exec_cmd specializations-sync-viewer specializations/sync_viewer.sh'
+alias cordexp-specializations-validate='exec_cmd specializations-validate specializations/validate.sh'
+
+# ... vocabs
+alias cordexp-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'
+
+# --------------------------------------------------------------------
+# COMPOSITE COMMANDS
+# --------------------------------------------------------------------
+
+
+
+_reset_all()
+{
+	cordexp-models-generate-cim
+
+	esdoc-archive-delete-documents CORDEXP
+	cordexp-experiments-archive-cim-documents
+	cordexp-models-archive-cim-documents
+
+	esdoc-ws-db-flush CORDEXP
+	esdoc-ws-db-ingest
+
+	esdoc-ws-db-backup
+	esdoc-archive-compress
+}
+alias cordexp-reset=_reset_all
