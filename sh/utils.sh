@@ -31,12 +31,12 @@ log()
 			do
 				declare tabs+='\t'
 			done
-	    	echo -e $now" [INFO] :: CMIP6 :: "$tabs$1
+	    	echo -e $now" [INFO] :: CORDEXP :: "$tabs$1
 	    else
-	    	echo -e $now" [INFO] :: CMIP6 :: "$1
+	    	echo -e $now" [INFO] :: CORDEXP :: "$1
 	    fi
 	else
-	    echo -e $now" [INFO] :: CMIP6 :: "
+	    echo -e $now" [INFO] :: CORDEXP :: "
 	fi
 }
 
