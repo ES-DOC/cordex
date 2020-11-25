@@ -9,8 +9,12 @@ main()
 		local institution=all
 	fi
 
-	pipenv run python $CORDEXP_LIB/citations/generate_json.py --institution-id=$institution
+	echo "TODO: reactivate JSON generation script"
+	# pipenv run python $CORDEXP_LIB/citations/generate_json.py --institution-id=$institution
 }
+
+# Import utils.
+source $CORDEXP_BASH/utils.sh
 
 # Invoke entry point.
 main $1

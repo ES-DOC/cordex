@@ -13,5 +13,8 @@ main()
 	log "cordexp vocabs bash file written to "$CORDEXP_BASH/vocabs/definitions.sh
 }
 
+# Import utils.
+source $CORDEXP_BASH/utils.sh
+
 # Invoke entry point.
 main

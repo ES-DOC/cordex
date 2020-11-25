@@ -8,6 +8,10 @@ export CORDEXP_ROOT="$( cd "$( dirname "${CORDEXP_HOME}" )" && pwd )"
 export CORDEXP_BASH=$CORDEXP_HOME/sh
 export CORDEXP_LIB=$CORDEXP_HOME/lib
 export CORDEXP_TEMPLATES=$CORDEXP_HOME/templates
+export CORDEXP_PATH_SPECIALIZATIONS=$CORDEXP_HOME/specializations
+export CORDEXP_PATH_VIEWER=$CORDEXP_HOME/viewer
+
+export CORDEXP_PATH_REPOS=$CORDEXP_HOME/repos
 
 # Ensure target scripts are executable.
 chmod a+x $CORDEXP_BASH/*.sh
@@ -77,17 +81,19 @@ alias cordexp-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh $1
 alias cordexp-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh $1'
 
 # ... specializations
-alias cordexp-specializations-clone='exec_cmd specializations-clone specializations/clone.sh'
+alias cordexp-specializations-gh-repos-clone='exec_cmd specializations-clone specializations/gh_repos_clone.sh'
+alias cordexp-specializations-gh-repos-pull='exec_cmd specializations-pull specializations/gh_repos_pull.sh'
+alias cordexp-specializations-gh-repos-push='exec_cmd specializations-push specializations/gh_repos_push.sh'
+alias cordexp-specializations-gh-repos-status='exec_cmd specializations-status specializations/gh_repos_status.sh'
+
 alias cordexp-specializations-generate='exec_cmd specializations-generate specializations/generate.sh'
-alias cordexp-specializations-pull='exec_cmd specializations-pull specializations/pull.sh'
-alias cordexp-specializations-push='exec_cmd specializations-push specializations/push.sh'
-alias cordexp-specializations-status='exec_cmd specializations-status specializations/status.sh'
+alias cordexp-specializations-validate='exec_cmd specializations-validate specializations/validate.sh'
+
 alias cordexp-specializations-sync-cim-profile='exec_cmd specializations-sync-cim-profile specializations/sync_cim_profile.sh'
 alias cordexp-specializations-sync-definitions='exec_cmd specializations-sync-definitions specializations/sync_definitions.sh'
 alias cordexp-specializations-sync-templates='exec_cmd specializations-sync-templates specializations/sync_templates.sh'
 alias cordexp-specializations-sync-tooling='exec_cmd specializations-sync-tooling specializations/sync_tooling.sh'
 alias cordexp-specializations-sync-viewer='exec_cmd specializations-sync-viewer specializations/sync_viewer.sh'
-alias cordexp-specializations-validate='exec_cmd specializations-validate specializations/validate.sh'
 
 # ... vocabs
 alias cordexp-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'

@@ -47,6 +47,25 @@ log_banner()
 	echo "-------------------------------------------------------------------------------"
 }
 
+#######################################
+# Wraps pushd command to suppress stdout.
+#######################################
+function pushd ()
+{
+    command pushd "$@" > /dev/null
+}
+
+#######################################
+# Wraps popd command to suppress stdout.
+#######################################
+function popd ()
+{
+    command popd "$@" > /dev/null
+}
+
+#######################################
+# Command execution begin.
+#######################################
 on_cmd_begin()
 {
 	log_banner
@@ -55,6 +74,9 @@ on_cmd_begin()
 	log_banner
 }
 
+#######################################
+# Command execution end.
+#######################################
 on_cmd_end()
 {
 	log_banner

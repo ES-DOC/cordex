@@ -1,24 +1,25 @@
 #!/bin/bash
 
+function _do_generate()
+{
+	local repo=${1}
+	local path_to_repo=$CORDEXP_PATH_REPOS/${repo}
+
+	log "generating "$repo
+	python $path_to_repo/generate
+}
+
 # Main entry point.
 main()
 {
-	if [ "$1" ]; then
-		declare specialization=$1
-		log_banner
-		log "generating "$specialization
-		log_banner
-		python $CORDEXP_ROOT/cordexp-specializations-$specialization/generate
-	else
-		for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"
-		do
-			log_banner
-			log "generating "$specialization
-			log_banner
-			python $CORDEXP_ROOT/cordexp-specializations-$specialization/generate
-		done
-	fi
+	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"
+	do
+		_do_generate cordexp-specializations-$specialization
+	done
 }
 
+# Import utils.
+source $CORDEXP_BASH/utils.sh
+
 # Invoke entry point.
-main $1
+main

@@ -23,5 +23,8 @@ main()
     popd -1
 }
 
+# Import utils.
+source $CORDEXP_BASH/utils.sh
+
 # Invoke entry point.
 main
