@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#######################################
+# Generates various specialisation assets definitions.
+# Globals:
+#   CORDEXP_PATH_REPOS - path to managed repos.
+# Arguments:
+#   Specialization repo name.
+#######################################
 function _do_generate()
 {
 	local repo=${1}

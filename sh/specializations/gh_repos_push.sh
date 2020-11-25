@@ -18,6 +18,7 @@ function _do_push()
 		if [ ! -z "$(git status --porcelain)" ]; then
 			log "pushing -> "$repo
 			git add *
+			git add ./.gitignore
 			git commit -m $comment
 			git push > /dev/null
 		else

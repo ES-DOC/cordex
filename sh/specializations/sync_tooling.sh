@@ -31,7 +31,10 @@ function _do_sync_tooling()
 		cp -r $path_to_toplevel_repo/templates/* $path_to_repo/templates
 	fi
 
-	# All toplevel specialisations:
+	# All specialisations:
+	# ... sync with pyesdoc
+	cp $path_to_repo/$specialization*.py \
+	   $CORDEXP_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordexp
 	# ... sync with viewer
 	cp -r $path_to_repo/_$specialization.js \
 		  $CORDEXP_PATH_REPOS/esdoc-web-view-specialization/data/cordexp_$specialization.js	
@@ -46,6 +49,13 @@ function _do_sync_tooling()
 #######################################
 main()
 {
+
+	local path_to_pyesdoc_mp=$CORDEXP_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordexp
+	if [ -d $path_to_pyesdoc_mp ]; then
+		rm -rf $path_to_pyesdoc_mp
+	fi
+	mkdir $path_to_pyesdoc_mp
+
 	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
 		_do_sync_tooling $specialization

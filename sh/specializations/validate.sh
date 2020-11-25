@@ -1,6 +1,12 @@
 #!/bin/bash
 
-function _do_validate()
+#######################################
+# Validates specialisation definitions.
+# Globals:
+#   CORDEXP_PATH_REPOS - path to managed repos.
+# Arguments:
+#   Specialization repo name.
+#######################################function _do_validate()
 {
 	local repo=${1}
 	local path_to_repo=$CORDEXP_PATH_REPOS/${repo}
