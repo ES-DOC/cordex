@@ -23,6 +23,13 @@ _ARGS.add_argument(
     dest="output_fpath",
     type=str
     )
+_ARGS.add_argument(
+    "--template-fpath",
+    help="Path to template",
+    dest="template_fpath",
+    type=str
+    )
+
 
 # Map of CORDEXP collections to data factories / name pre-formatters.
 _VOCABS = {
@@ -42,13 +49,12 @@ def _main(args):
 
     """
     # Open template.
-    with open(_TEMPLATE, 'r') as fstream:
+    with open(args.template_fpath, 'r') as fstream:
         content = fstream.read()
 
     # Create CORDEXP collections.
     for scope in _VOCABS:
         for collection in [pyessv.load('ecmwf:{}:{}'.format(scope, i)) for i in _VOCABS[scope]]:
-            print(collection)
             data = ''
             for term in collection:
                 data += '\t\'{}\'\n'.format(term.canonical_name)

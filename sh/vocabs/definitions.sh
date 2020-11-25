@@ -185,4 +185,5 @@ declare -a RCM_MODEL_RAW=(
 # Array of specifications.
 declare -a CORDEXP_SPECIALIZATIONS=(
 	'toplevel'
+	'atmos'
 )

@@ -91,9 +91,7 @@ alias cordexp-specializations-validate='exec_cmd specializations-validate specia
 
 alias cordexp-specializations-sync-cim-profile='exec_cmd specializations-sync-cim-profile specializations/sync_cim_profile.sh'
 alias cordexp-specializations-sync-definitions='exec_cmd specializations-sync-definitions specializations/sync_definitions.sh'
-alias cordexp-specializations-sync-templates='exec_cmd specializations-sync-templates specializations/sync_templates.sh'
 alias cordexp-specializations-sync-tooling='exec_cmd specializations-sync-tooling specializations/sync_tooling.sh'
-alias cordexp-specializations-sync-viewer='exec_cmd specializations-sync-viewer specializations/sync_viewer.sh'
 
 # ... vocabs
 alias cordexp-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'

@@ -9,7 +9,11 @@ function _do_generate()
 	python $path_to_repo/generate
 }
 
+#######################################
 # Main entry point.
+# Globals:
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
+#######################################
 main()
 {
 	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"

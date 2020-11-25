@@ -5,7 +5,7 @@
 # Globals:
 #   CORDEXP_PATH_REPOS - path to managed repos.
 # Arguments:
-#   Path to local repo to be pulled.
+#   Specialization repo name.
 #######################################
 function _do_pull()
 {
@@ -32,6 +32,7 @@ main()
 		_do_pull cordexp-specializations-$specialization
 	done
 	_do_pull esdoc-web-view-specialization
+	_do_pull esdoc-py-client
 }
 
 # Import utils.

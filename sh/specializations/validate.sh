@@ -8,7 +8,11 @@ function _do_validate()
 	python $path_to_repo/validate
 }
 
+#######################################
 # Main entry point.
+# Globals:
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
+#######################################
 main()
 {
 	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"

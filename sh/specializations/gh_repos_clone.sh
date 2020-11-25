@@ -5,7 +5,7 @@
 # Globals:
 #   CORDEXP_PATH_REPOS - path to managed repos.
 # Arguments:
-#   Path to local repo to be pulled.
+#   Specialization repo name.
 #######################################
 function _do_clone()
 {
@@ -38,6 +38,7 @@ main()
 		_do_clone cordexp-specializations-$specialization
 	done
 	_do_clone esdoc-web-view-specialization
+	_do_clone esdoc-py-client
 }
 
 # Import utils.
