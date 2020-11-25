@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# ###############################################################
+# SECTION: VOCABULARY BASH VARS
+# ###############################################################
+
+# Institute - canonical name
+declare -a INSTITUTE=(
+[INSTITUTE])
+
+# Institute - raw name
+declare -a INSTITUTE_RAW=(
+[INSTITUTE_RAW])
+
+# Source ID - canonical name
+declare -a RCM_MODEL=(
+[RCM_MODEL])
+
+# Source ID - raw name
+declare -a RCM_MODEL_RAW=(
+[RCM_MODEL_RAW])
+
+# ###############################################################
+# SECTION: ES-DOC SPECIALZATIONS
+# ###############################################################
+
+# Array of specifications.
+declare -a CORDEXP_SPECIALIZATIONS=(
+	'toplevel'
+)

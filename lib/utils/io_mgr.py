@@ -13,21 +13,19 @@ import os
 
 import pyessv
 
-from cmip6.utils import logger
+from lib.utils import logger
 
 
 
 # Home directory.
-ESDOC_HOME = os.getenv('ESDOC_HOME')
+ESDOC_INSTITUTIONAL_HOME = os.getenv('ESDOC_INSTITUTIONAL_HOME')
 
 
-def get_folder(parts):
+def get_folder(parts, create_if_not_found=True):
     """Returns path to an institute's mip-era repository.
 
     """
-    path = os.path.join(ESDOC_HOME, 'repos')
-    path = os.path.join(path, 'institutional')
-
+    path = os.path.join(ESDOC_INSTITUTIONAL_HOME)
     for part in parts:
         if part is None:
             continue
@@ -38,7 +36,7 @@ def get_folder(parts):
         else:
             path = os.path.join(path, part.canonical_name)
 
-    if not os.path.isdir(path):
+    if not os.path.isdir(path) and create_if_not_found:
         os.makedirs(path)
 
     return path
@@ -143,15 +141,14 @@ def get_model_topic_pdf(institution, source_id, topic):
     return os.path.join(folder, fname)
 
 
-def get_model_topic_xls(institution, source_id, topic):
+def get_model_topic_xls(institution, model_id, topic_canonical_name):
     """Returns path to xls file for a particular model topic.
 
     """
-    folder = get_model_folder(institution, source_id)
-    fname = 'cmip6_{}_{}_{}.xlsx'.format(
-        institution.canonical_name,
-        source_id.canonical_name,
-        topic.canonical_name
+    folder = get_model_folder(institution, model_id)
+    fname = 'cmip6_{}_{}.xlsx'.format(
+        model_id.canonical_name.replace("-", "_"),
+        topic_canonical_name
         )
 
     return os.path.join(folder, fname)

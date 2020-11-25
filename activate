@@ -6,7 +6,7 @@
 export CORDEXP_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export CORDEXP_ROOT="$( cd "$( dirname "${CORDEXP_HOME}" )" && pwd )"
 export CORDEXP_BASH=$CORDEXP_HOME/sh
-export CORDEXP_LIB=$CORDEXP_HOME/cordexp
+export CORDEXP_LIB=$CORDEXP_HOME/lib
 
 # Ensure target scripts are executable.
 chmod a+x $CORDEXP_BASH/*.sh
@@ -52,13 +52,12 @@ alias cordexp-citations-generate-json='exec_cmd citations-generate-json citation
 
 # ... institutes
 alias cordexp-institutes-list='exec_cmd institutes-list institutes/list.sh'
-alias cordexp-institutes-github-repos-clone='exec_cmd institutes-github-repos-clone institutes/github_repos_clone.sh'
-alias cordexp-institutes-github-repos-pull='exec_cmd institutes-github-repos-pull institutes/github_repos_pull.sh'
-alias cordexp-institutes-github-repos-push='exec_cmd institutes-github-repos-push institutes/github_repos_push.sh'
-alias cordexp-institutes-github-repos-status='exec_cmd institutes-github-repos-clone institutes/github_repos_status.sh'
-alias cordexp-institutes-github-repos-sync='exec_cmd institutes-github-repos-sync institutes/github_repos_sync.sh'
-alias cordexp-institutes-github-repos-verify='exec_cmd institutes-github-repos-verify institutes/github_repos_verify.sh $1'
-alias cordexp-institutes-github-teams-sync='exec_cmd institutes-github-teams-sync institutes/github_teams_sync.sh'
+alias cordexp-institutes-gh-repos-clone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clone.sh'
+alias cordexp-institutes-gh-repos-create='exec_cmd institutes-gh-repos-sync institutes/gh_repos_create.sh'
+alias cordexp-institutes-gh-repos-pull='exec_cmd institutes-gh-repos-pull institutes/gh_repos_pull.sh'
+alias cordexp-institutes-gh-repos-push='exec_cmd institutes-gh-repos-push institutes/gh_repos_push.sh'
+alias cordexp-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone institutes/gh_repos_status.sh'
+alias cordexp-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh $1'
 
 # ... models
 alias cordexp-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
@@ -91,8 +90,6 @@ alias cordexp-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/wri
 # --------------------------------------------------------------------
 # COMPOSITE COMMANDS
 # --------------------------------------------------------------------
-
-
 
 _reset_all()
 {

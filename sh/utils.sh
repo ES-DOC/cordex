@@ -18,6 +18,7 @@ source $CORDEXP_BASH/vocabs/definitions.sh
 activate_venv()
 {
 	export PYTHONPATH=$CORDEXP_HOME:$PYTHONPATH
+	pushd $CORDEXP_HOME	
 }
 
 # Wraps standard echo by adding ESDOC prefix.

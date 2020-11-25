@@ -73,6 +73,13 @@ def log_error(err, app=_DEFAULT_APP):
     log(msg, LOG_LEVEL_ERROR, app)
 
 
+def log_line():
+    """Outputs a line message to log.
+
+    """
+    print("------------------------------------------------------------------------------------")
+
+
 def log_warning(err, app=_DEFAULT_APP):
     """Logs a runtime warning.
 
