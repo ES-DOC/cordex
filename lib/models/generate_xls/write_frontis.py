@@ -43,11 +43,11 @@ def write(spreadsheet):
     f5.set_font_color('#FFFFFF')
 
     ws_row = 0
-    ws.write(ws_row, 0, 'ES-DOC CMIP6 Model Documentation', f0)
+    ws.write(ws_row, 0, 'ES-DOC CORDEXP Model Documentation', f0)
 
     ws_row += 2
     ws.write(ws_row, 0, 'MIP Era', f1)
-    ws.write(ws_row, 1, 'CMIP6', f2)
+    ws.write(ws_row, 1, 'CORDEXP', f2)
 
     ws_row += 1
     ws.write(ws_row, 0, 'Institute', f1)

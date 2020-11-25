@@ -2,7 +2,7 @@
 .. module:: github_repos_verify.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Verifies that all CMIP6 instituional GitHub repos exist.
+   :synopsis: Verifies that all CORDEXP instituional GitHub repos exist.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
 

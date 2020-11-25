@@ -2,7 +2,7 @@
 .. module:: github_repos_sync.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Synchronizes CMIP6 institutional GitHub repos.
+   :synopsis: Synchronizes CORDEXP institutional GitHub repos.
 
 .. moduleauthor:: Mark A. Conway-Greenslade
 

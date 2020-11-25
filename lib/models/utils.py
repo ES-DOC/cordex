@@ -65,7 +65,7 @@ class ModelTopicOutput(object):
         :rtype: ModelTopicOutput
 
         """
-        return cls('CMIP6', i, s, t)
+        return cls('CORDEXP', i, s, t)
 
 
     def save(self):

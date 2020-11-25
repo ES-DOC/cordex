@@ -16,7 +16,7 @@ import pyessv
 
 
 # Define command line argument parser.
-_ARGS = argparse.ArgumentParser("Generates CMIP6 vocab related bash variables.")
+_ARGS = argparse.ArgumentParser("Generates CORDEXP vocab related bash variables.")
 _ARGS.add_argument(
     "--output-fpath",
     help="Path to which output will be written",
@@ -24,7 +24,7 @@ _ARGS.add_argument(
     type=str
     )
 
-# Map of CMIP6 collections to data factories / name pre-formatters.
+# Map of CORDEXP collections to data factories / name pre-formatters.
 _VOCABS = {
     'c3s-cordex': {
         'institute',
@@ -45,7 +45,7 @@ def _main(args):
     with open(_TEMPLATE, 'r') as fstream:
         content = fstream.read()
 
-    # Create CMIP6 collections.
+    # Create CORDEXP collections.
     for scope in _VOCABS:
         for collection in [pyessv.load('ecmwf:{}:{}'.format(scope, i)) for i in _VOCABS[scope]]:
             print(collection)

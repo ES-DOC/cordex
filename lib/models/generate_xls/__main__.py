@@ -2,7 +2,7 @@
 .. module:: generate_xls/__main__.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Generates CMIP6 PDF documents.
+   :synopsis: Generates CORDEXP XLS documents.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
 
@@ -29,7 +29,7 @@ from write_topic import write as write_topic
 
 
 # Define command line argument parser.
-_ARGS = argparse.ArgumentParser("Generates CMIP6 model XLS files.")
+_ARGS = argparse.ArgumentParser("Generates CORDEXP model XLS files.")
 _ARGS.add_argument(
     "--institution-id",
     help="An institution identifier",
