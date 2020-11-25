@@ -6,6 +6,7 @@ function do_copy_citations_xls_template()
 	local template=$CORDEXP_TEMPLATES/citations.xlsx
 	local dest_fname=cordexp_${institute}_citations.xlsx
 	local dest=$ESDOC_INSTITUTIONAL_HOME/$institute/cordexp/citations/$dest_fname
+
 	cp $template $dest
 	log "initialised citations XLS :: "$institute
 }
@@ -13,13 +14,14 @@ function do_copy_citations_xls_template()
 # Main entry point.
 function main()
 {
+	local institution=${1:-"all"}
 	local xls_template=$CORDEXP_TEMPLATES/citations.xlsx
+
 	if [ ! -f $xls_template ]; then
 		log "citations template not found"
 		exit 1
 	fi
 
-	local institution=${1:-"all"}
 	if [ $institution == "all" ]; then
 		for institute in "${INSTITUTE[@]}"
 		do

@@ -34,7 +34,7 @@ def get_institutes(institution_id=None):
     if institution_id in (None, '', 'all'):
         return _INSTITUTES
     
-    return get_institute(institution_id)
+    return [get_institute(institution_id)]
 
 
 def get_model(model_id):
@@ -51,7 +51,7 @@ def get_models(model_id=None):
     if model_id in (None, '', 'all'):
         return _MODELS
     
-    return get_model(model_id)
+    return [get_model(model_id)]
 
 
 def get_models_by_institute(institution_id=None):

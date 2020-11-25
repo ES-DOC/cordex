@@ -3,13 +3,9 @@
 # Main entry point.
 main()
 {
-	if [ "$1" ]; then
-		institution=$1
-	else
-		institution=all
-	fi
+	local institution=${1:-"all"}
 
-	pipenv run python $CORDEXP_LIB/institutes/gh_repos_verify.py --institution-id=$1
+	pipenv run python $CORDEXP_LIB/institutes/gh_repos_verify.py --institution-id=$institution
 }
 
 # Import utils.

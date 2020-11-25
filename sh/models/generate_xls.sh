@@ -3,11 +3,7 @@
 # Main entry point.
 main()
 {
-	if [ "$1" ]; then
-		institution=$1
-	else
-		institution=all
-	fi
+	local institution=${1:-"all"}
 
 	python $CORDEXP_LIB/models/generate_xls --institution-id=$institution
 }

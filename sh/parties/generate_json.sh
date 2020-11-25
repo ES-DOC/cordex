@@ -3,11 +3,7 @@
 # Main entry point.
 main()
 {
-	if [ "$1" ]; then
-		local institution=$1
-	else
-		local institution=all
-	fi
+	local institution=${1:-"all"}
 
 	echo "TODO: reactivate JSON generation script"
 	# pipenv run python $CORDEXP_LIB/parties/generate_json.py --institution-id=$institution
