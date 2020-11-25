@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: Verifies that all CORDEXP instituional GitHub repos exist.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 """
 import argparse
@@ -29,13 +29,13 @@ _ARGS.add_argument(
 SUB_FOLDERS = (
     'cordexp/citations',
     'cordexp/models',
-    'cordexp/responsible_parties',
+    'cordexp/parties',
     )
 
 # Set of expected static files.
 STATIC_FILES = (
     'cordexp/citations/cordexp_{}_citations.xlsx',
-    'cordexp/responsible_parties/cordexp_{}_responsible_parties.xlsx',
+    'cordexp/parties/cordexp_{}_parties.xlsx',
     )
 
 
@@ -82,7 +82,7 @@ def _verify_static_files(i, errs):
         fname = static_file.format(i.canonical_name)
         path = os.path.join(folder, fname)
         if not os.path.exists(path):
-            errs.append("static file not found: {}".format(fname))
+            errs.append("file not found: {}".format(fname))
 
 
 

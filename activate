@@ -7,6 +7,7 @@ export CORDEXP_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 export CORDEXP_ROOT="$( cd "$( dirname "${CORDEXP_HOME}" )" && pwd )"
 export CORDEXP_BASH=$CORDEXP_HOME/sh
 export CORDEXP_LIB=$CORDEXP_HOME/lib
+export CORDEXP_TEMPLATES=$CORDEXP_HOME/templates
 
 # Ensure target scripts are executable.
 chmod a+x $CORDEXP_BASH/*.sh
@@ -52,10 +53,14 @@ alias cordexp-citations-generate-json='exec_cmd citations-generate-json citation
 
 # ... institutes
 alias cordexp-institutes-list='exec_cmd institutes-list institutes/list.sh'
+alias cordexp-institutes-gh-repos-add='exec_cmd institutes-gh-repos-clone institutes/gh_repos_add.sh'
+alias cordexp-institutes-gh-repos-clean='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clean.sh'
 alias cordexp-institutes-gh-repos-clone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clone.sh'
 alias cordexp-institutes-gh-repos-create='exec_cmd institutes-gh-repos-sync institutes/gh_repos_create.sh'
+alias cordexp-institutes-gh-repos-init-gitignore='exec_cmd institutes-gh-repos-clone institutes/gh_repos_init_gitignore.sh'
 alias cordexp-institutes-gh-repos-pull='exec_cmd institutes-gh-repos-pull institutes/gh_repos_pull.sh'
 alias cordexp-institutes-gh-repos-push='exec_cmd institutes-gh-repos-push institutes/gh_repos_push.sh'
+alias cordexp-institutes-gh-repos-reclone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_reclone.sh'
 alias cordexp-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone institutes/gh_repos_status.sh'
 alias cordexp-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh $1'
 

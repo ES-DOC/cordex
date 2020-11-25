@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: Model topic notebook data wrapper.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 
 """

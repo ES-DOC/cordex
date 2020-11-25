@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: Model topic notebook data wrapper.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 
 """
@@ -46,14 +46,14 @@ def get_citations_folder(i):
     """Returns path to an institute's citations directory.
 
     """
-    return get_folder((i, 'cmip6', 'citations'))
+    return get_folder((i, 'cordexp', 'citations'))
 
 
 def get_citations_spreadsheet(i):
     """Returns path to an institute's citations xls file.
 
     """
-    fname = 'cmip6_{}_citations.xlsx'.format(i.canonical_name)
+    fname = 'cordexp_{}_citations.xlsx'.format(i.canonical_name)
     path = get_citations_folder(i)
 
     return os.path.join(path, fname)
@@ -63,7 +63,7 @@ def get_citations_json(i):
     """Returns path to an institute's citations json file.
 
     """
-    fname = 'cmip6_{}_citations.json'.format(i.canonical_name)
+    fname = 'cordexp_{}_citations.json'.format(i.canonical_name)
     path = get_citations_folder(i)
     path = os.path.join(path, 'json')
 
@@ -71,24 +71,24 @@ def get_citations_json(i):
 
 
 def get_institute_folder(institution):
-    """Returns path to an institute's cmip6 directory.
+    """Returns path to an institute's cordexp directory.
 
     """
-    return get_folder((institution, 'cmip6'))
+    return get_folder((institution, 'cordexp'))
 
 
 def get_models_folder(institution):
     """Returns path to an institute's models directory.
 
     """
-    return get_folder((institution, 'cmip6', 'models'))
+    return get_folder((institution, 'cordexp', 'models'))
 
 
 def get_model_folder(institution, source_id, sub_folder=None):
     """Returns path to a directory for a particular model.
 
     """
-    return get_folder((institution, 'cmip6', 'models', source_id, sub_folder))
+    return get_folder((institution, 'cordexp', 'models', source_id, sub_folder))
 
 
 def get_model_cim(institution, source_id):
@@ -96,7 +96,7 @@ def get_model_cim(institution, source_id):
 
     """
     folder = get_model_folder(institution, source_id, 'cim')
-    fname = 'cmip6_{}_{}.json'.format(
+    fname = 'cordexp_{}_{}.json'.format(
         institution.canonical_name,
         source_id.canonical_name
         )
@@ -118,7 +118,7 @@ def get_model_topic_json(institution, source_id, topic):
 
     """
     folder = get_model_folder(institution, source_id, 'json')
-    fname = 'cmip6_{}_{}_{}.json'.format(
+    fname = 'cordexp_{}_{}_{}.json'.format(
         institution.canonical_name,
         source_id.canonical_name,
         topic.canonical_name
@@ -132,7 +132,7 @@ def get_model_topic_pdf(institution, source_id, topic):
 
     """
     folder = get_model_folder(institution, source_id, 'pdf')
-    fname = 'cmip6_{}_{}_{}.pdf'.format(
+    fname = 'cordexp_{}_{}_{}.pdf'.format(
         institution.canonical_name,
         source_id.canonical_name,
         topic.canonical_name
@@ -146,7 +146,7 @@ def get_model_topic_xls(institution, model_id, topic_canonical_name):
 
     """
     folder = get_model_folder(institution, model_id)
-    fname = 'cmip6_{}_{}.xlsx'.format(
+    fname = 'cordexp_{}_{}.xlsx'.format(
         model_id.canonical_name.replace("-", "_"),
         topic_canonical_name
         )
@@ -158,14 +158,14 @@ def get_parties_folder(i):
     """Returns path to an institute's responsible parties directory.
 
     """
-    return get_folder((i, 'cmip6', 'responsible_parties'))
+    return get_folder((i, 'cordexp', 'parties'))
 
 
 def get_parties_spreadsheet(i):
     """Returns path to an institute's responsible parties xls file.
 
     """
-    fname = 'cmip6_{}_responsible_parties.xlsx'.format(i.canonical_name)
+    fname = 'cordexp_{}_parties.xlsx'.format(i.canonical_name)
     path = get_parties_folder(i)
 
     return os.path.join(path, fname)
@@ -175,7 +175,7 @@ def get_parties_json(i):
     """Returns path to an institute's responsible parties json file.
 
     """
-    fname = 'cmip6_{}_responsible_parties.json'.format(i.canonical_name)
+    fname = 'cordexp_{}_parties.json'.format(i.canonical_name)
     path = get_parties_folder(i)
     path = os.path.join(path, 'json')
 

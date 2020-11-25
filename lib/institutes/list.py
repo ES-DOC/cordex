@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: List set of participating institutes.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 """
 from lib.utils import vocabs

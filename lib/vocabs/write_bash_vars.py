@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: Writes vocab terms to a bash file.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 """
 import argparse

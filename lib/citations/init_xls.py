@@ -4,15 +4,15 @@
    :platform: Unix, Windows
    :synopsis: Initialises CORDEXP citation spreadsheets.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 """
 import argparse
 import os
 import shutil
 
-from cmip6.utils import io_mgr
-from cmip6.utils import vocabs
+from lib.utils import io_mgr
+from lib.utils import vocabs
 
 
 
@@ -44,8 +44,9 @@ def _main(args):
     # Write one file per institute.
     for i in vocabs.get_institutes(args.institution_id):
         dest = io_mgr.get_citations_spreadsheet(i)
-        if not os.path.exists(dest):
-            shutil.copy(args.xls_template, dest)
+        print(dest)
+        # if not os.path.exists(dest):
+        #     shutil.copy(args.xls_template, dest)
 
 
 # Main entry point.

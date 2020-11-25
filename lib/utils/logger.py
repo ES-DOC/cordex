@@ -5,7 +5,7 @@
    :platform: Unix, Windows
    :synopsis: Package logging utility functions.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 
 """

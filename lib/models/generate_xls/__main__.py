@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: Generates CORDEXP XLS documents.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 """
 import argparse

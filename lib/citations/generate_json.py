@@ -4,7 +4,7 @@
    :platform: Unix, Windows
    :synopsis: Generates CORDEXP JSON documents from XLS files.
 
-.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
+.. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
 """
 import argparse
@@ -14,9 +14,9 @@ import os
 
 import openpyxl
 
-from cmip6.utils import io_mgr
-from cmip6.utils import logger
-from cmip6.utils import vocabs
+from lib.utils import io_mgr
+from lib.utils import logger
+from lib.utils import vocabs
 
 
 # Define command line argument parser.
@@ -73,7 +73,7 @@ def _get_content(i, spreadsheet):
     """
         # Initialise output.
     obj = collections.OrderedDict()
-    obj['mipEra'] = "cmip6"
+    obj['mipEra'] = "cordexp"
     obj['institute'] = i.canonical_name
     obj['seedingSource'] = 'Spreadsheet'
     obj['content'] = []

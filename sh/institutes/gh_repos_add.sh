@@ -7,15 +7,12 @@ main()
 	do
         if [ -d $ESDOC_INSTITUTIONAL_HOME/$institute ]; then
 			pushd $ESDOC_INSTITUTIONAL_HOME/$institute
-			log "GH : pushing  "$institute
+			log "GH : adding files to  "$institute
 			git add *
-			git add ./.gitignore
-			git commit -S -a -m $1
-			git push
 			popd -1
         fi
 	done
 }
 
 # Invoke entry point.
-main $1
+main
