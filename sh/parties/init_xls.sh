@@ -3,7 +3,7 @@
 function do_copy_parties_xls_template() 
 {
 	local institute=${1}
-	local template=$CORDEXP_TEMPLATES/parties.xlsx
+	local template=$CORDEXP_PATH_TEMPLATES/parties.xlsx
 	local dest_fname=cordexp_${institute}_parties.xlsx
 	local dest=$ESDOC_INSTITUTIONAL_HOME/$institute/cordexp/parties/$dest_fname
 
@@ -15,7 +15,7 @@ function do_copy_parties_xls_template()
 function main()
 {
 	local institution=${1:-"all"}
-	local xls_template=$CORDEXP_TEMPLATES/parties.xlsx
+	local xls_template=$CORDEXP_PATH_TEMPLATES/parties.xlsx
 
 	if [ ! -f $xls_template ]; then
 		log "parties template not found"
@@ -33,7 +33,7 @@ function main()
 }
 
 # Import utils.
-source $CORDEXP_BASH/utils.sh
+source $CORDEXP_PATH_SH/utils.sh
 
 # Invoke entry point.
 main $1

@@ -30,7 +30,7 @@ main()
 }
 
 # Import utils.
-source $CORDEXP_BASH/utils.sh
+source $CORDEXP_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

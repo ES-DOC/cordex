@@ -8,7 +8,7 @@ main()
         if [ -d $ESDOC_INSTITUTIONAL_HOME/$institute ]; then
 			log "GH : initialising .gitignore of "$institution_id
 			pushd $ESDOC_INSTITUTIONAL_HOME/$institution_id
-            cp $CORDEXP_TEMPLATES/repo_gitignore ./.gitignore
+            cp $CORDEXP_PATH_TEMPLATES/repo_gitignore ./.gitignore
             git init > /dev/null
 			popd -1
         fi
@@ -16,7 +16,7 @@ main()
 }
 
 # Import utils.
-source $CORDEXP_BASH/utils.sh
+source $CORDEXP_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

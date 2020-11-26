@@ -5,7 +5,7 @@
 # ###############################################################
 
 # Vocabs.
-source $CORDEXP_BASH/vocabs/definitions.sh
+source $CORDEXP_PATH_SH/vocabs/definitions.sh
 
 # ###############################################################
 # SECTION: HELPER FUNCTIONS

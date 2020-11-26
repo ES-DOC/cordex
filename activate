@@ -4,18 +4,16 @@
 
 # Set paths
 export CORDEXP_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-export CORDEXP_ROOT="$( cd "$( dirname "${CORDEXP_HOME}" )" && pwd )"
-export CORDEXP_BASH=$CORDEXP_HOME/sh
-export CORDEXP_LIB=$CORDEXP_HOME/lib
-export CORDEXP_TEMPLATES=$CORDEXP_HOME/templates
+export CORDEXP_PATH_SH=$CORDEXP_HOME/sh
+export CORDEXP_PATH_LIB=$CORDEXP_HOME/lib
+export CORDEXP_PATH_TEMPLATES=$CORDEXP_HOME/templates
 export CORDEXP_PATH_SPECIALIZATIONS=$CORDEXP_HOME/specializations
 export CORDEXP_PATH_VIEWER=$CORDEXP_HOME/viewer
-
 export CORDEXP_PATH_REPOS=$CORDEXP_HOME/repos
 
 # Ensure target scripts are executable.
-chmod a+x $CORDEXP_BASH/*.sh
-chmod a+x $CORDEXP_BASH/*/*.sh
+chmod a+x $CORDEXP_PATH_SH/*.sh
+chmod a+x $CORDEXP_PATH_SH/*/*.sh
 
 # --------------------------------------------------------------------
 # COMMAND EXECUTION
@@ -24,14 +22,14 @@ chmod a+x $CORDEXP_BASH/*/*.sh
 # Command executor.
 exec_cmd()
 {
-	source $CORDEXP_BASH/utils.sh
+	source $CORDEXP_PATH_SH/utils.sh
 
 	log_banner
 	log $1" :: BEGINS"
 	activate_venv
 	log_banner
 
-	target=$CORDEXP_BASH/$2
+	target=$CORDEXP_PATH_SH/$2
 	if [ "$3" ] && [ "$4" ] && [ "$5" ]; then
 		source $target $3 $4 $5
 	elif [ "$3" ] && [ "$4" ]; then
