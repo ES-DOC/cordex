@@ -11,7 +11,7 @@
 	local repo=${1}
 	local path_to_repo=$CORDEXP_PATH_REPOS/${repo}
 
-	python $path_to_repo/validate
+	pipenv run python $path_to_repo/validate
 }
 
 #######################################

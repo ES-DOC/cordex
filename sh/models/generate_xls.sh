@@ -5,7 +5,8 @@ main()
 {
 	local institution=${1:-"all"}
 
-	python $CORDEXP_LIB/models/generate_xls --institution-id=$institution
+	export PYTHONPATH=$CORDEXP_PATH_REPOS/esdoc-py-client:$PYTHONPATH
+	pipenv run python $CORDEXP_LIB/models/generate_xls --institution-id=$institution
 }
 
 # Import utils.

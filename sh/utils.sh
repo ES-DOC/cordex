@@ -4,9 +4,6 @@
 # SECTION: INITIALIZE PATHS / VARS
 # ###############################################################
 
-# Vars.
-source $ESDOC_HOME/bash/utils_vars.sh
-
 # Vocabs.
 source $CORDEXP_BASH/vocabs/definitions.sh
 
@@ -17,6 +14,7 @@ source $CORDEXP_BASH/vocabs/definitions.sh
 # Activates a virtual environment.
 activate_venv()
 {
+	export PYTHONPATH=$CORDEXP_PATH_REPOS/esdoc-py-clients:$PYTHONPATH
 	export PYTHONPATH=$CORDEXP_HOME:$PYTHONPATH
 	pushd $CORDEXP_HOME	
 }

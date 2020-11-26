@@ -16,8 +16,8 @@ import xlsxwriter
 import pyesdoc
 import pyessv
 
-from cordexp.models.utils import ModelTopicOutput
-from cordexp.utils import vocabs
+from lib.models.utils import ModelTopicOutput
+from lib.utils import vocabs
 from write_citations_and_parties import write as write_citations_and_parties
 from write_frontis import write as write_frontis
 from write_property_value import write as write_property_value
@@ -48,11 +48,10 @@ def _main(args):
     """Main entry point.
 
     """
-    institutes = vocabs.get_institutes(args.institution_id)
-    for i in institutes:
-        for s in vocabs.get_institute_sources(i):
-            for t in pyessv.ESDOC.cordexp.get_model_topics(s):
-                xl = Spreadsheet(i, s, t)
+    for i in vocabs.get_institutes(args.institution_id):
+        for m in vocabs.get_models_by_institute(i):
+            for t in vocabs.get_topics():
+                xl = Spreadsheet(i, m, t)
                 xl.write()
 
 

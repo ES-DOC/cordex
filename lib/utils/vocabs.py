@@ -16,8 +16,11 @@ import pyessv
 # Set of participating institutes.
 _INSTITUTES = pyessv.ECMWF.c3s_cordex.institute
 
-# Set of participating institutes.
+# Set of models run in support of project.
 _MODELS = pyessv.ECMWF.c3s_cordex.rcm_model
+
+# Set of model topics to be documented.
+_TOPICS = pyessv.ESDOC.cordexp.model_topic
 
 
 def get_institute(institution_id):
@@ -70,6 +73,4 @@ def get_topics():
     """Returns set of topics to be documented.
 
     """
-    return {
-        'top_level',
-    }
+    return [i for i in _TOPICS if i.canonical_name == "toplevel"]

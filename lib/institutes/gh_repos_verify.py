@@ -110,7 +110,8 @@ def _verify_models(i, errs):
         else:
             for topic in vocabs.get_topics():
                 topic_xls = io_mgr.get_model_topic_xls(i, model, topic)
-                print(topic_xls)
+                if not os.path.exists(topic_xls):
+                    errs.append("model topic undocumented :: {} :: {}".format(model.canonical_name, topic.canonical_name))
 
 
 # Set of verifiers to be executed.

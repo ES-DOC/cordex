@@ -141,14 +141,14 @@ def get_model_topic_pdf(institution, source_id, topic):
     return os.path.join(folder, fname)
 
 
-def get_model_topic_xls(institution, model_id, topic_canonical_name):
+def get_model_topic_xls(institution, model_id, topic):
     """Returns path to xls file for a particular model topic.
 
     """
     folder = get_model_folder(institution, model_id)
     fname = 'cordexp_{}_{}.xlsx'.format(
         model_id.canonical_name.replace("-", "_"),
-        topic_canonical_name
+        topic.canonical_name
         )
 
     return os.path.join(folder, fname)

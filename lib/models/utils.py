@@ -15,8 +15,8 @@ import os
 from pyesdoc.mp.specializations.utils_cache import get_topic_specialization
 from pyesdoc.mp.specializations.utils_cache import get_property_specialization
 
-from cordexp.utils import vocabs
-from cordexp.utils import io_mgr
+from lib.utils import vocabs
+from lib.utils import io_mgr
 
 
 

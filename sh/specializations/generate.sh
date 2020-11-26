@@ -13,7 +13,7 @@ function _do_generate()
 	local path_to_repo=$CORDEXP_PATH_REPOS/${repo}
 
 	log "generating "$repo
-	python $path_to_repo/generate
+	pipenv run python $path_to_repo/generate
 }
 
 #######################################
