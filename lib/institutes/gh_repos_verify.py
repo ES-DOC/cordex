@@ -2,7 +2,7 @@
 .. module:: github_repos_verify.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Verifies that all CORDEXP instituional GitHub repos exist.
+   :synopsis: Verifies that all CORDEX instituional GitHub repos exist.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
@@ -27,15 +27,15 @@ _ARGS.add_argument(
 
 # Set of expected sub-folders.
 SUB_FOLDERS = (
-    'cordexp/citations',
-    'cordexp/models',
-    'cordexp/parties',
+    'cordex/citations',
+    'cordex/models',
+    'cordex/parties',
     )
 
 # Set of expected static files.
 STATIC_FILES = (
-    'cordexp/citations/cordexp_{}_citations.xlsx',
-    'cordexp/parties/cordexp_{}_parties.xlsx',
+    'cordex/citations/cordex_{}_citations.xlsx',
+    'cordex/parties/cordex_{}_parties.xlsx',
     )
 
 
@@ -94,7 +94,7 @@ def _verify_models(i, errs):
     identifiers = set([j.canonical_name for j in vocabs.get_models_by_institute(i)])
 
     # Set directories.
-    folder_root = io_mgr.get_folder([i, 'cordexp', 'models'])
+    folder_root = io_mgr.get_folder([i, 'cordex', 'models'])
     documented = set([j for j in os.listdir(folder_root) if os.path.isdir(os.path.join(folder_root, j))])
 
     # Set undocuemtned & obsolete models.

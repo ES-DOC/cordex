@@ -5,7 +5,7 @@
 # ###############################################################
 
 # Vocabs.
-source $CORDEXP_PATH_SH/vocabs/definitions.sh
+source $CORDEX_PATH_SH/vocabs/definitions.sh
 
 # ###############################################################
 # SECTION: HELPER FUNCTIONS
@@ -14,12 +14,12 @@ source $CORDEXP_PATH_SH/vocabs/definitions.sh
 # Activates a virtual environment.
 activate_venv()
 {
-	export PYTHONPATH=$CORDEXP_PATH_REPOS/esdoc-py-clients:$PYTHONPATH
-	export PYTHONPATH=$CORDEXP_HOME:$PYTHONPATH
-	pushd $CORDEXP_HOME	
+	export PYTHONPATH=$CORDEX_PATH_REPOS/esdoc-py-clients:$PYTHONPATH
+	export PYTHONPATH=$CORDEX_HOME:$PYTHONPATH
+	pushd $CORDEX_HOME	
 }
 
-# Wraps standard echo by adding ESDOC prefix.
+# Wraps standard echo by adding prefix.
 log()
 {
 	declare now=`date +%Y-%m-%dT%H:%M:%S:000000`
@@ -30,12 +30,12 @@ log()
 			do
 				declare tabs+='\t'
 			done
-	    	echo -e $now" [INFO] :: CORDEXP :: "$tabs$1
+	    	echo -e $now" [INFO] :: CORDEX :: "$tabs$1
 	    else
-	    	echo -e $now" [INFO] :: CORDEXP :: "$1
+	    	echo -e $now" [INFO] :: CORDEX :: "$1
 	    fi
 	else
-	    echo -e $now" [INFO] :: CORDEXP :: "
+	    echo -e $now" [INFO] :: CORDEX :: "
 	fi
 }
 
@@ -60,27 +60,3 @@ function popd ()
 {
     command popd "$@" > /dev/null
 }
-
-#######################################
-# Command execution begin.
-#######################################
-on_cmd_begin()
-{
-	log_banner
-	log $1" :: BEGINS"
-	activate_venv
-	log_banner
-}
-
-#######################################
-# Command execution end.
-#######################################
-on_cmd_end()
-{
-	log_banner
-	deactivate
-	log $1" :: ENDS"
-	log_banner
-}
-
-

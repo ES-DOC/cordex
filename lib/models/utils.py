@@ -56,7 +56,7 @@ class ModelTopicOutput(object):
     def create(cls, i, s, t):
         """Get notebook output wrapper instance.
 
-        :param str m: MIP era, e.g. cordexp.
+        :param str m: MIP era, e.g. cordex.
         :param pyessv.Term i: Institute.
         :param pyessv.Term s: Model source.
         :param pyessv.Term t: Documentation topic.
@@ -65,7 +65,7 @@ class ModelTopicOutput(object):
         :rtype: ModelTopicOutput
 
         """
-        return cls('CORDEXP', i, s, t)
+        return cls('CORDEX', i, s, t)
 
 
     def save(self):

@@ -2,7 +2,7 @@
 .. module:: generate_xls/__main__.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Generates CORDEXP XLS documents.
+   :synopsis: Generates CORDEX XLS documents.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
@@ -29,7 +29,7 @@ from write_topic import write as write_topic
 
 
 # Define command line argument parser.
-_ARGS = argparse.ArgumentParser("Generates CORDEXP model XLS files.")
+_ARGS = argparse.ArgumentParser("Generates CORDEX model XLS files.")
 _ARGS.add_argument(
     "--institution-id",
     help="An institution identifier",
@@ -38,7 +38,7 @@ _ARGS.add_argument(
     )
 
 # MIP era.
-_MIP_ERA = "cordexp"
+_MIP_ERA = "cordex"
 
 # Generator version.
 _VERSION = '1.0.0'

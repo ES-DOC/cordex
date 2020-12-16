@@ -11,7 +11,7 @@ def write(ctx):
     """Write topic workbook.
 
     """
-    path = os.getenv('ESDOC_INSTITUTIONAL_HOME')
+    path = os.getenv('CORDEX_PATH_REPOS_INST')
     path = os.path.join(path, ctx.institution_id)
     path = os.path.join(path, ctx.MIP_ERA)
     path = os.path.join(path, 'models')

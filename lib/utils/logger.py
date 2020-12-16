@@ -15,7 +15,6 @@ from pyessv.utils import compat
 
 
 
-# Set of logging levels.
 LOG_LEVEL_DEBUG = 'DEBUG'
 LOG_LEVEL_INFO = 'INFO'
 LOG_LEVEL_WARNING = 'WARN'
@@ -23,11 +22,9 @@ LOG_LEVEL_ERROR = 'ERROR'
 LOG_LEVEL_CRITICAL = 'CRITICAL'
 LOG_LEVEL_FATAL = 'FATAL'
 
-# Defaults.
-_DEFAULT_APP = 'CORDEXP'
+_DEFAULT_APP = 'CORDEX'
 _DEFAULT_INSTITUTE = 'ESDOC'
 
-# Text to display when passed a null message.
 _NULL_MSG = '-------------------------------------------------------------------------------'
 
 

@@ -3,15 +3,15 @@
 #######################################
 # Syncs specializations tooling from toplevel.
 # Globals:
-#   CORDEXP_PATH_REPOS - path to managed repos.
+#   CORDEX_PATH_REPOS - path to managed repos.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_sync_tooling()
 {
 	local specialization=${1}
-	local path_to_repo=$CORDEXP_PATH_REPOS/cordexp-specializations-$specialization
-	local path_to_toplevel_repo=$CORDEXP_PATH_REPOS/cordexp-specializations-toplevel
+	local path_to_repo=$CORDEX_PATH_REPOS/cordex-specializations-$specialization
+	local path_to_toplevel_repo=$CORDEX_PATH_REPOS/cordex-specializations-toplevel
 
 	# Non toplevel specialisations.
 	if [ $specialization != "toplevel" ]; then
@@ -34,10 +34,10 @@ function _do_sync_tooling()
 	# All specialisations:
 	# ... sync with pyesdoc
 	cp $path_to_repo/$specialization*.py \
-	   $CORDEXP_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordexp
+	   $CORDEX_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordex
 	# ... sync with viewer
 	cp -r $path_to_repo/_$specialization.js \
-		  $CORDEXP_PATH_REPOS/esdoc-web-view-specialization/data/cordexp_$specialization.js	
+		  $CORDEX_PATH_REPOS/esdoc-web-view-specialization/data/cordex_$specialization.js	
 
 	log "synced tooling: "$specialization
 }
@@ -45,25 +45,25 @@ function _do_sync_tooling()
 #######################################
 # Main entry point.
 # Globals:
-#   CORDEXP_SPECIALIZATIONS - array of specializations.
+#   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 main()
 {
 
-	local path_to_pyesdoc_mp=$CORDEXP_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordexp
+	local path_to_pyesdoc_mp=$CORDEX_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordex
 	if [ -d $path_to_pyesdoc_mp ]; then
 		rm -rf $path_to_pyesdoc_mp
 	fi
 	mkdir $path_to_pyesdoc_mp
 
-	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"
+	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
 		_do_sync_tooling $specialization
 	done
 }
 
 # Import utils.
-source $CORDEXP_PATH_SH/utils.sh
+source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

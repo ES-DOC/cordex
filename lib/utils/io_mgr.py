@@ -18,14 +18,14 @@ from lib.utils import logger
 
 
 # Home directory.
-ESDOC_INSTITUTIONAL_HOME = os.getenv('ESDOC_INSTITUTIONAL_HOME')
+CORDEX_PATH_REPOS_INST = os.getenv('CORDEX_PATH_REPOS_INST')
 
 
 def get_folder(parts, create_if_not_found=True):
     """Returns path to an institute's mip-era repository.
 
     """
-    path = os.path.join(ESDOC_INSTITUTIONAL_HOME)
+    path = os.path.join(CORDEX_PATH_REPOS_INST)
     for part in parts:
         if part is None:
             continue
@@ -46,14 +46,14 @@ def get_citations_folder(i):
     """Returns path to an institute's citations directory.
 
     """
-    return get_folder((i, 'cordexp', 'citations'))
+    return get_folder((i, 'cordex', 'citations'))
 
 
 def get_citations_spreadsheet(i):
     """Returns path to an institute's citations xls file.
 
     """
-    fname = 'cordexp_{}_citations.xlsx'.format(i.canonical_name)
+    fname = 'cordex_{}_citations.xlsx'.format(i.canonical_name)
     path = get_citations_folder(i)
 
     return os.path.join(path, fname)
@@ -63,7 +63,7 @@ def get_citations_json(i):
     """Returns path to an institute's citations json file.
 
     """
-    fname = 'cordexp_{}_citations.json'.format(i.canonical_name)
+    fname = 'cordex_{}_citations.json'.format(i.canonical_name)
     path = get_citations_folder(i)
     path = os.path.join(path, 'json')
 
@@ -71,24 +71,24 @@ def get_citations_json(i):
 
 
 def get_institute_folder(institution):
-    """Returns path to an institute's cordexp directory.
+    """Returns path to an institute's cordex directory.
 
     """
-    return get_folder((institution, 'cordexp'))
+    return get_folder((institution, 'cordex'))
 
 
 def get_models_folder(institution):
     """Returns path to an institute's models directory.
 
     """
-    return get_folder((institution, 'cordexp', 'models'))
+    return get_folder((institution, 'cordex', 'models'))
 
 
 def get_model_folder(institution, source_id, sub_folder=None):
     """Returns path to a directory for a particular model.
 
     """
-    return get_folder((institution, 'cordexp', 'models', source_id, sub_folder))
+    return get_folder((institution, 'cordex', 'models', source_id, sub_folder))
 
 
 def get_model_cim(institution, source_id):
@@ -96,7 +96,7 @@ def get_model_cim(institution, source_id):
 
     """
     folder = get_model_folder(institution, source_id, 'cim')
-    fname = 'cordexp_{}_{}.json'.format(
+    fname = 'cordex_{}_{}.json'.format(
         institution.canonical_name,
         source_id.canonical_name
         )
@@ -118,7 +118,7 @@ def get_model_topic_json(institution, source_id, topic):
 
     """
     folder = get_model_folder(institution, source_id, 'json')
-    fname = 'cordexp_{}_{}_{}.json'.format(
+    fname = 'cordex_{}_{}_{}.json'.format(
         institution.canonical_name,
         source_id.canonical_name,
         topic.canonical_name
@@ -132,7 +132,7 @@ def get_model_topic_pdf(institution, source_id, topic):
 
     """
     folder = get_model_folder(institution, source_id, 'pdf')
-    fname = 'cordexp_{}_{}_{}.pdf'.format(
+    fname = 'cordex_{}_{}_{}.pdf'.format(
         institution.canonical_name,
         source_id.canonical_name,
         topic.canonical_name
@@ -146,7 +146,7 @@ def get_model_topic_xls(institution, model_id, topic):
 
     """
     folder = get_model_folder(institution, model_id)
-    fname = 'cordexp_{}_{}.xlsx'.format(
+    fname = 'cordex_{}_{}.xlsx'.format(
         model_id.canonical_name.replace("-", "_"),
         topic.canonical_name
         )
@@ -158,14 +158,14 @@ def get_parties_folder(i):
     """Returns path to an institute's responsible parties directory.
 
     """
-    return get_folder((i, 'cordexp', 'parties'))
+    return get_folder((i, 'cordex', 'parties'))
 
 
 def get_parties_spreadsheet(i):
     """Returns path to an institute's responsible parties xls file.
 
     """
-    fname = 'cordexp_{}_parties.xlsx'.format(i.canonical_name)
+    fname = 'cordex_{}_parties.xlsx'.format(i.canonical_name)
     path = get_parties_folder(i)
 
     return os.path.join(path, fname)
@@ -175,7 +175,7 @@ def get_parties_json(i):
     """Returns path to an institute's responsible parties json file.
 
     """
-    fname = 'cordexp_{}_parties.json'.format(i.canonical_name)
+    fname = 'cordex_{}_parties.json'.format(i.canonical_name)
     path = get_parties_folder(i)
     path = os.path.join(path, 'json')
 

@@ -3,14 +3,14 @@
 #######################################
 # Renders local repo status.
 # Globals:
-#   CORDEXP_PATH_REPOS - path to managed repos.
+#   CORDEX_PATH_REPOS - path to managed repos.
 # Arguments:
 #   Repo name.
 #######################################
 function _do_render_status()
 {
 	local repo=${1}
-	local path_to_repo=$CORDEXP_PATH_REPOS/$repo
+	local path_to_repo=$CORDEX_PATH_REPOS/$repo
 
 	if [ -d $path_to_repo ]; then
 		log_banner
@@ -25,20 +25,20 @@ function _do_render_status()
 #######################################
 # Main entry point.
 # Globals:
-#   CORDEXP_SPECIALIZATIONS - array of specializations.
+#   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 main()
 {
-	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"
+	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_render_status cordexp-specializations-$specialization
+		_do_render_status cordex-specializations-$specialization
 	done
 	_do_render_status esdoc-web-view-specialization
 	_do_render_status esdoc-py-client
 }
 
 # Import utils.
-source $CORDEXP_PATH_SH/utils.sh
+source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

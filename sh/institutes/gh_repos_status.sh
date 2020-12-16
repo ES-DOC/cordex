@@ -3,11 +3,12 @@
 # Main entry point.
 main()
 {
+	log 666
 	for institution_id in "${INSTITUTE[@]}"
 	do
-        if [ -d $ESDOC_INSTITUTIONAL_HOME/$institute ]; then
+        if [ -d $CORDEX_PATH_REPOS_INST/$institute ]; then
 			log "GH : status of "$institution_id
-			pushd $ESDOC_INSTITUTIONAL_HOME/$institution_id
+			pushd $CORDEX_PATH_REPOS_INST/$institution_id
 			git status
 			popd -1
         fi
@@ -15,7 +16,7 @@ main()
 }
 
 # Import utils.
-source $CORDEXP_PATH_SH/utils.sh
+source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

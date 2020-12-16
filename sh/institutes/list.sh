@@ -3,11 +3,11 @@
 # Main entry point.
 main()
 {
-	pipenv run python $CORDEXP_PATH_LIB/institutes/list.py
+	pipenv run python $CORDEX_PATH_LIB/institutes/list.py
 }
 
 # Import utils.
-source $CORDEXP_PATH_SH/utils.sh
+source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

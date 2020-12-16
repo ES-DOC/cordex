@@ -5,18 +5,18 @@ main()
 {
     for institute in "${INSTITUTE[@]}"
     do
-        if [ -d $ESDOC_INSTITUTIONAL_HOME/$institute ]; then
-            rm -rf $ESDOC_INSTITUTIONAL_HOME/$institute
+        if [ -d $CORDEX_PATH_REPOS_INST/$institute ]; then
+            rm -rf $CORDEX_PATH_REPOS_INST/$institute
         fi
         log "GH : cloning repo: "$institute
-        pushd $ESDOC_INSTITUTIONAL_HOME
+        pushd $CORDEX_PATH_REPOS_INST
         git clone https://github.com/ES-DOC-INSTITUTIONAL/$institute.git > /dev/null
         popd -1
     done
 }
 
 # Import utils.
-source $CORDEXP_PATH_SH/utils.sh
+source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

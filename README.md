@@ -1,7 +1,7 @@
-cordexp-shell
+cordex-shell
 ===============
 
-ES-DOC command line interface for managing CORDEXP documentation.
+ES-DOC command line interface for managing CORDEX documentation.
 
 
 What is ES-DOC ?
@@ -10,22 +10,22 @@ What is ES-DOC ?
 ES-DOC stands for Earth Science - Documentation.  It's goal is to provide software tools and services in order to support the distribution of earth science documentation.
 
 
-What is cordexp-shell ?
+What is cordex-shell ?
 --------------------------------------
 
-cordexp-shell is a command line interface for interacting with the es-doc CORDEXP documentation eco-system.
+cordex-shell is a command line interface for interacting with the es-doc CORDEX documentation eco-system.
 
 
-Why cordexp-shell ?
+Why cordex-shell ?
 --------------------------------------
 
 There is a need to support command line programs for streamlining deployments, publishing ... etc. 
 
 
-Who uses cordexp-shell ?
+Who uses cordex-shell ?
 --------------------------------------
 
-ES-DOC software engineers.  CORDEXP experts.
+ES-DOC software engineers.  CORDEX experts.
 
 Further Information ?
 --------------------------------------

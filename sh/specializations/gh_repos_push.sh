@@ -3,14 +3,14 @@
 #######################################
 # Pushes latest changes to a remote.
 # Globals:
-#   CORDEXP_PATH_REPOS - path to managed repos.
+#   CORDEX_PATH_REPOS - path to managed repos.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_push()
 {
 	local repo=${1}
-	local path_to_repo=$CORDEXP_PATH_REPOS/$repo
+	local path_to_repo=$CORDEX_PATH_REPOS/$repo
 	local comment=${2}
 
 	if [ -d $path_to_repo ]; then
@@ -31,22 +31,22 @@ function _do_push()
 #######################################
 # Main entry point.
 # Globals:
-#   CORDEXP_SPECIALIZATIONS - array of specializations.
+#   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 main()
 {
 	local comment=${1}
 
-	for specialization in "${CORDEXP_SPECIALIZATIONS[@]}"
+	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_push cordexp-specializations-$specialization $comment
+		_do_push cordex-specializations-$specialization $comment
 	done
 	_do_push esdoc-web-view-specialization $comment
 	_do_push esdoc-py-client $comment
 }
 
 # Import utils.
-source $CORDEXP_PATH_SH/utils.sh
+source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main $1

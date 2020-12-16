@@ -3,17 +3,40 @@
 # --------------------------------------------------------------------
 
 # Set paths
-export CORDEXP_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-export CORDEXP_PATH_SH=$CORDEXP_HOME/sh
-export CORDEXP_PATH_LIB=$CORDEXP_HOME/lib
-export CORDEXP_PATH_TEMPLATES=$CORDEXP_HOME/templates
-export CORDEXP_PATH_SPECIALIZATIONS=$CORDEXP_HOME/specializations
-export CORDEXP_PATH_VIEWER=$CORDEXP_HOME/viewer
-export CORDEXP_PATH_REPOS=$CORDEXP_HOME/repos
+export CORDEX_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export CORDEX_PATH_SH=$CORDEX_HOME/sh
+export CORDEX_PATH_LIB=$CORDEX_HOME/lib
+export CORDEX_PATH_TEMPLATES=$CORDEX_HOME/templates
+export CORDEX_PATH_SPECIALIZATIONS=$CORDEX_HOME/specializations
+export CORDEX_PATH_VIEWER=$CORDEX_HOME/viewer
+
+export CORDEX_PATH_REPOS=$CORDEX_HOME/repos
+export CORDEX_PATH_REPOS_UTIL=$CORDEX_HOME/repos/utils
+export CORDEX_PATH_REPOS_INST=$CORDEX_HOME/repos/institutional
+export CORDEX_PATH_REPOS_SPEC=$CORDEX_HOME/repos/specializations
 
 # Ensure target scripts are executable.
-chmod a+x $CORDEXP_PATH_SH/*.sh
-chmod a+x $CORDEXP_PATH_SH/*/*.sh
+chmod a+x $CORDEX_PATH_SH/*.sh
+chmod a+x $CORDEX_PATH_SH/*/*.sh
+
+# --------------------------------------------------------------------
+# VARS
+# --------------------------------------------------------------------
+
+# Set of utility repos.
+declare -a REPOS_UTILS=(
+	'pyessv'
+	'esdoc-py-client'
+)
+
+# Set of specialization repos.
+declare -a REPOS_SPEC=(
+	# CORDEX
+	'cordex-specializations-atmos'
+	'cordex-specializations-toplevel'
+	# TOOLS
+	'esdoc-web-view-specialization'
+)
 
 # --------------------------------------------------------------------
 # COMMAND EXECUTION
@@ -22,14 +45,14 @@ chmod a+x $CORDEXP_PATH_SH/*/*.sh
 # Command executor.
 exec_cmd()
 {
-	source $CORDEXP_PATH_SH/utils.sh
+	source $CORDEX_PATH_SH/utils.sh
 
 	log_banner
 	log $1" :: BEGINS"
 	activate_venv
 	log_banner
 
-	target=$CORDEXP_PATH_SH/$2
+	target=$CORDEX_PATH_SH/$2
 	if [ "$3" ] && [ "$4" ] && [ "$5" ]; then
 		source $target $3 $4 $5
 	elif [ "$3" ] && [ "$4" ]; then
@@ -50,68 +73,49 @@ exec_cmd()
 # --------------------------------------------------------------------
 
 # ... citations
-alias cordexp-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh $1'
-alias cordexp-citations-generate-json='exec_cmd citations-generate-json citations/generate_json.sh $1'
+alias cordex-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh $1'
+alias cordex-citations-generate-json='exec_cmd citations-generate-json citations/generate_json.sh $1'
 
 # ... institutes
-alias cordexp-institutes-list='exec_cmd institutes-list institutes/list.sh'
-alias cordexp-institutes-gh-repos-add='exec_cmd institutes-gh-repos-clone institutes/gh_repos_add.sh'
-alias cordexp-institutes-gh-repos-clean='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clean.sh'
-alias cordexp-institutes-gh-repos-clone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clone.sh'
-alias cordexp-institutes-gh-repos-create='exec_cmd institutes-gh-repos-sync institutes/gh_repos_create.sh'
-alias cordexp-institutes-gh-repos-init-gitignore='exec_cmd institutes-gh-repos-clone institutes/gh_repos_init_gitignore.sh'
-alias cordexp-institutes-gh-repos-pull='exec_cmd institutes-gh-repos-pull institutes/gh_repos_pull.sh'
-alias cordexp-institutes-gh-repos-push='exec_cmd institutes-gh-repos-push institutes/gh_repos_push.sh'
-alias cordexp-institutes-gh-repos-reclone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_reclone.sh'
-alias cordexp-institutes-gh-repos-reset='exec_cmd institutes-gh-repos-push institutes/gh_repos_reset.sh'
-alias cordexp-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone institutes/gh_repos_status.sh'
-alias cordexp-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh $1'
+alias cordex-institutes-list='exec_cmd institutes-list institutes/list.sh'
+alias cordex-institutes-gh-repos-add='exec_cmd institutes-gh-repos-clone institutes/gh_repos_add.sh'
+alias cordex-institutes-gh-repos-clean='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clean.sh'
+alias cordex-institutes-gh-repos-clone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clone.sh'
+alias cordex-institutes-gh-repos-create='exec_cmd institutes-gh-repos-sync institutes/gh_repos_create.sh'
+alias cordex-institutes-gh-repos-init-gitignore='exec_cmd institutes-gh-repos-clone institutes/gh_repos_init_gitignore.sh'
+alias cordex-institutes-gh-repos-pull='exec_cmd institutes-gh-repos-pull institutes/gh_repos_pull.sh'
+alias cordex-institutes-gh-repos-push='exec_cmd institutes-gh-repos-push institutes/gh_repos_push.sh'
+alias cordex-institutes-gh-repos-reclone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_reclone.sh'
+alias cordex-institutes-gh-repos-reset='exec_cmd institutes-gh-repos-push institutes/gh_repos_reset.sh'
+alias cordex-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone institutes/gh_repos_status.sh'
+alias cordex-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh $1'
 
 # ... models
-# alias cordexp-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
-# alias cordexp-models-generate-cim='exec_cmd models-generate-cim models/generate_cim.sh'
-# alias cordexp-models-generate-json='exec_cmd models-generate-json models/generate_json.sh'
-alias cordexp-models-generate-xls='exec_cmd models-generate-xls models/generate_xls.sh'
-# alias cordexp-models-reset-cim='exec_cmd models-reset-cim models/reset_cim.sh'
-# alias cordexp-models-reset-json='exec_cmd models-reset-json models/reset_json.sh'
+# alias cordex-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
+# alias cordex-models-generate-cim='exec_cmd models-generate-cim models/generate_cim.sh'
+# alias cordex-models-generate-json='exec_cmd models-generate-json models/generate_json.sh'
+alias cordex-models-generate-xls='exec_cmd models-generate-xls models/generate_xls.sh'
+# alias cordex-models-reset-cim='exec_cmd models-reset-cim models/reset_cim.sh'
+# alias cordex-models-reset-json='exec_cmd models-reset-json models/reset_json.sh'
 
 # ... parties
-alias cordexp-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh $1'
-alias cordexp-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh $1'
+alias cordex-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh $1'
+alias cordex-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh $1'
 
 # ... specializations
-alias cordexp-specializations-gh-repos-clone='exec_cmd specializations-clone specializations/gh_repos_clone.sh'
-alias cordexp-specializations-gh-repos-pull='exec_cmd specializations-pull specializations/gh_repos_pull.sh'
-alias cordexp-specializations-gh-repos-push='exec_cmd specializations-push specializations/gh_repos_push.sh'
+alias cordex-specializations-gh-repos-clone='exec_cmd specializations-clone specializations/gh_repos_clone.sh'
+alias cordex-specializations-gh-repos-pull='exec_cmd specializations-pull specializations/gh_repos_pull.sh'
+alias cordex-specializations-gh-repos-push='exec_cmd specializations-push specializations/gh_repos_push.sh'
 
-alias cordexp-specializations-gh-repos-status='exec_cmd specializations-status specializations/gh_repos_status.sh'
+alias cordex-specializations-gh-repos-status='exec_cmd specializations-status specializations/gh_repos_status.sh'
 
-alias cordexp-specializations-generate='exec_cmd specializations-generate specializations/generate.sh'
-alias cordexp-specializations-validate='exec_cmd specializations-validate specializations/validate.sh'
+alias cordex-specializations-generate='exec_cmd specializations-generate specializations/generate.sh'
+alias cordex-specializations-validate='exec_cmd specializations-validate specializations/validate.sh'
 
-alias cordexp-specializations-sync-cim-profile='exec_cmd specializations-sync-cim-profile specializations/sync_cim_profile.sh'
-alias cordexp-specializations-sync-definitions='exec_cmd specializations-sync-definitions specializations/sync_definitions.sh'
-alias cordexp-specializations-sync-tooling='exec_cmd specializations-sync-tooling specializations/sync_tooling.sh'
+alias cordex-specializations-sync-cim-profile='exec_cmd specializations-sync-cim-profile specializations/sync_cim_profile.sh'
+alias cordex-specializations-sync-definitions='exec_cmd specializations-sync-definitions specializations/sync_definitions.sh'
+alias cordex-specializations-sync-tooling='exec_cmd specializations-sync-tooling specializations/sync_tooling.sh'
 
 # ... vocabs
-alias cordexp-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'
+alias cordex-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'
 
-# --------------------------------------------------------------------
-# COMPOSITE COMMANDS
-# --------------------------------------------------------------------
-
-_reset_all()
-{
-	cordexp-models-generate-cim
-
-	esdoc-archive-delete-documents CORDEXP
-	cordexp-experiments-archive-cim-documents
-	cordexp-models-archive-cim-documents
-
-	esdoc-ws-db-flush CORDEXP
-	esdoc-ws-db-ingest
-
-	esdoc-ws-db-backup
-	esdoc-archive-compress
-}
-alias cordexp-reset=_reset_all

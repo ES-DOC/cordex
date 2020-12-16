@@ -2,7 +2,7 @@
 .. module:: generate_json.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Generates CORDEXP JSON documents from XLS files.
+   :synopsis: Generates CORDEX JSON documents from XLS files.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.fr>
 
@@ -20,7 +20,7 @@ from lib.utils import vocabs
 
 
 # Define command line argument parser.
-_ARGS = argparse.ArgumentParser("Generates CORDEXP citation JSON files.")
+_ARGS = argparse.ArgumentParser("Generates CORDEX citation JSON files.")
 _ARGS.add_argument(
     "--institution-id",
     help="An institution identifier",
@@ -73,7 +73,7 @@ def _get_content(i, spreadsheet):
     """
         # Initialise output.
     obj = collections.OrderedDict()
-    obj['mipEra'] = "cordexp"
+    obj['mipEra'] = "cordex"
     obj['institute'] = i.canonical_name
     obj['seedingSource'] = 'Spreadsheet'
     obj['content'] = []
