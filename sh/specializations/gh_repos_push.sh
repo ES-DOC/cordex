@@ -2,8 +2,6 @@
 
 #######################################
 # Pushes latest changes to a remote.
-# Globals:
-#   CORDEX_PATH_REPOS_SPEC - path to managed specialization repos.
 # Arguments:
 #   Specialization repo name.
 #######################################
@@ -40,14 +38,11 @@ function main()
 
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_push $CORDEX_PATH_REPOS_SPEC cordex-specializations-$specialization $comment
+		_do_push "$CORDEX_HOME/repos/specializations" "cordex-specializations-$specialization" "$comment"
 	done
-	_do_push $CORDEX_HOME/repos/libs esdoc-web-view-specialization $comment
-	_do_push $CORDEX_HOME/repos/libs esdoc-py-client $comment
+	_do_push "$CORDEX_HOME/repos/libs esdoc-web-view-specialization" "$comment"
+	_do_push "$CORDEX_HOME/repos/libs esdoc-py-client" "$comment"
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main $1

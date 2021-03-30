@@ -3,14 +3,14 @@
 #######################################
 # Syncs specializations tooling from toplevel.
 # Globals:
-#   CORDEX_PATH_REPOS_SPEC - path to managed specialization repos.
+#   CORDEX_HOME - path to cordex hsell home directory.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_sync_definitions()
 {
 	local specialization=${1}
-	local path_to_repo=$CORDEX_PATH_REPOS_SPEC/cordex-specializations-$specialization
+	local path_to_repo=$CORDEX_HOME/repos/specializations/cordex-specializations-$specialization
 
 	log "syncing py files ..."
 	cp $path_to_repo/$specialization*.py \
@@ -33,9 +33,6 @@ function main()
 		_do_sync_definitions $specialization
 	done
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

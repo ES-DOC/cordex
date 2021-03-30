@@ -2,24 +2,24 @@
 
 #######################################
 # Renders local repo status.
-# Globals:
-#   CORDEX_PATH_REPOS_SPEC - path to managed specialization repos.
 # Arguments:
 #   Repo name.
 #######################################
 function _do_render_status()
 {
-	local folder=${1}
-	local repo=${2}
-	local path_to_repo=$folder/$repo
+	local PATH_TO_FOLDER=${1}
+	local REPO_NAME=${2}
 
-	if [ -d $path_to_repo ]; then
+	local PATH_TO_REPO="$PATH_TO_FOLDER"/"$REPO_NAME"
+
+	if [ -d "$PATH_TO_REPO" ]; then
 		log_banner
-		log "status : "$repo
+		log "status : $REPO_NAME"
 		log_banner
-		pushd $path_to_repo
+
+		pushd "$PATH_TO_REPO"
 		git status 
-		popd 1
+		popd
 	fi
 }
 
@@ -32,14 +32,11 @@ function main()
 {
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_render_status $CORDEX_PATH_REPOS_SPEC cordex-specializations-$specialization
+		_do_render_status $CORDEX_HOME/repos/specializations cordex-specializations-$specialization
 	done
-	_do_render_status $CORDEX_PATH_REPOS_SPEC esdoc-web-view-specialization
+	_do_render_status $CORDEX_HOME/repos/specializations esdoc-web-view-specialization
 	_do_render_status $CORDEX_HOME/repos/libs esdoc-py-client
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

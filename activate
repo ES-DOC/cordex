@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# --------------------------------------------------------------------
+# ###############################################################
 # PATHS
-# --------------------------------------------------------------------
+# ###############################################################
 
 # Set home.
 export CORDEX_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -11,10 +11,9 @@ export CORDEX_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 chmod a+x "$CORDEX_HOME"/sh/*/*.sh
 
 # Set python path.
-export PYTHONPATH="$CORDEX_HOME":$PYTHONPATH
-
-export CORDEX_PATH_REPOS=$CORDEX_HOME/repos
-export CORDEX_PATH_REPOS_SPEC=$CORDEX_HOME/repos/specializations
+export PYTHONPATH="$CORDEX_HOME":"$PYTHONPATH"
+export PYTHONPATH="$CORDEX_HOME/repos/libs/esdoc-py-client":"$PYTHONPATH"
+export PYTHONPATH="$CORDEX_HOME/repos/libs/pyessv":"$PYTHONPATH"
 
 # ###############################################################
 # UTILS
@@ -22,34 +21,13 @@ export CORDEX_PATH_REPOS_SPEC=$CORDEX_HOME/repos/specializations
 
 source "$CORDEX_HOME"/sh/utils/main.sh
 
-# --------------------------------------------------------------------
-# VARS
-# --------------------------------------------------------------------
-
-# Set of utility repos.
-declare -a REPOS_UTILS=(
-	'pyessv'
-	'esdoc-py-client'
-)
-
-# Set of specialization repos.
-declare -a REPOS_SPEC=(
-	# CORDEX
-	'cordex-specializations-atmos'
-	'cordex-specializations-toplevel'
-	# TOOLS
-	'esdoc-web-view-specialization'
-)
-
-# --------------------------------------------------------------------
+# ###############################################################
 # COMMAND EXECUTION
-# --------------------------------------------------------------------
+# ###############################################################
 
 # Command executor.
 exec_cmd()
 {
-	source $"$CORDEX_HOME"/sh/utils.sh
-
 	log_banner
 	log $1" :: BEGINS"
 	activate_venv
@@ -71,9 +49,9 @@ exec_cmd()
 	log_banner
 }
 
-# --------------------------------------------------------------------
+# ###############################################################
 # ALIASES
-# --------------------------------------------------------------------
+# ###############################################################
 
 # ... citations
 alias cordex-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh $1'
@@ -121,4 +99,3 @@ alias cordex-specializations-sync-tooling='exec_cmd specializations-sync-tooling
 
 # ... vocabs
 alias cordex-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'
-

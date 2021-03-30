@@ -7,8 +7,5 @@ function main()
 	pipenv run python $"$CORDEX_HOME"/lib/institutes/gh_repos_create.py
 }
 
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
-
 # Invoke entry point.
 main

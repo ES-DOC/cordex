@@ -30,23 +30,20 @@ function _do_clone()
 #######################################
 function main()
 {
-	if [ ! -d $CORDEX_PATH_REPOS_SPEC ]; then
-		mkdir -p $CORDEX_PATH_REPOS_SPEC
+	if [ ! -d "$CORDEX_HOME/repos/specializations" ]; then
+		mkdir -p "$CORDEX_HOME/repos/specializations"
 	fi
-	if [ ! -d $CORDEX_HOME/repos/libs ]; then
-		mkdir -p $CORDEX_HOME/repos/libs
+	if [ ! -d "$CORDEX_HOME/repos/libs" ]; then
+		mkdir -p "$CORDEX_HOME/repos/libs"
 	fi
 
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_clone $CORDEX_PATH_REPOS_SPEC cordex-specializations-$specialization
+		_do_clone "$CORDEX_HOME/repos/specializations" "cordex-specializations-$specialization"
 	done
 	_do_clone $CORDEX_HOME/repos/libs esdoc-web-view-specialization
 	_do_clone $CORDEX_HOME/repos/libs esdoc-py-client
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

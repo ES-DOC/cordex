@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
-# Set of libraries that shell depends upon.
-export CMIP6_LIBS=(
+# Set of associated archives.
+export CORDEX_ARCHIVES=(
+	'esdoc-archive'
+)
+
+# Set of associated libraries.
+export CORDEX_LIBS=(
 	'esdoc-docs'
 	'esdoc-py-client'
 	'esdoc-web-view-specialization'
@@ -9,8 +14,8 @@ export CMIP6_LIBS=(
 	'pyessv-archive'
 )
 
-# Set of document archives.
-export CMIP6_ARCHIVES=(
-	'esdoc-archive'
-	'esdoc-cdf2cim-archive'
+# Set of associated specializations.
+export CORDEX_REPOS_SPEC=(
+	'cordex-specializations-atmos'
+	'cordex-specializations-toplevel'
 )

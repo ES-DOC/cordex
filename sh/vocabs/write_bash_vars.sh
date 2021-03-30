@@ -17,8 +17,5 @@ function main()
 	log "cordex vocabs bash file written to "$"$CORDEX_HOME"/sh/vocabs/definitions.sh
 }
 
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
-
 # Invoke entry point.
 main

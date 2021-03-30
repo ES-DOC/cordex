@@ -16,8 +16,5 @@ function main()
 	done
 }
 
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
-
 # Invoke entry point.
 main

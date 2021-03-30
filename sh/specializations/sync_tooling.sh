@@ -3,15 +3,15 @@
 #######################################
 # Syncs specializations tooling from toplevel.
 # Globals:
-#   CORDEX_PATH_REPOS_SPEC - path to managed specialization repos.
+#   CORDEX_HOME - path to cordex home folder.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_sync_tooling()
 {
 	local specialization=${1}
-	local path_to_repo=$CORDEX_PATH_REPOS_SPEC/cordex-specializations-$specialization
-	local path_to_toplevel_repo=$CORDEX_PATH_REPOS_SPEC/cordex-specializations-toplevel
+	local path_to_repo=$CORDEX_HOME/repos/specializations/cordex-specializations-$specialization
+	local path_to_toplevel_repo=$CORDEX_HOME/repos/specializations/cordex-specializations-toplevel
 
 	# Non toplevel specialisations.
 	if [ $specialization != "toplevel" ]; then
@@ -37,7 +37,7 @@ function _do_sync_tooling()
 	   $CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex
 	# ... sync with viewer
 	cp -r $path_to_repo/_$specialization.js \
-		  $CORDEX_PATH_REPOS_SPEC/esdoc-web-view-specialization/data/cordex_$specialization.js	
+		  $CORDEX_HOME/repos/specializations/esdoc-web-view-specialization/data/cordex_$specialization.js	
 
 	log "synced tooling: "$specialization
 }
@@ -61,9 +61,6 @@ function main()
 		_do_sync_tooling $specialization
 	done
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

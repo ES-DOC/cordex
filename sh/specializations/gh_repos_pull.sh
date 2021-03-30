@@ -2,8 +2,6 @@
 
 #######################################
 # Pulls latest changes from a remote.
-# Globals:
-#   CORDEX_PATH_REPOS_SPEC - path to managed specialization repos.
 # Arguments:
 #   Specialization repo name.
 #######################################
@@ -28,16 +26,13 @@ function _do_pull()
 #######################################
 function main()
 {
-	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_pull $CORDEX_PATH_REPOS_SPEC cordex-specializations-$specialization
+		_do_pull "$CORDEX_HOME/repos/specializations" "cordex-specializations-$SPECIALIZATION"
 	done
-	_do_pull $CORDEX_HOME/repos/libs esdoc-web-view-specialization
-	_do_pull $CORDEX_HOME/repos/libs esdoc-py-client
+	_do_pull "$CORDEX_HOME/repos/libs esdoc-web-view-specialization"
+	_do_pull "$CORDEX_HOME/repos/libs esdoc-py-client"
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

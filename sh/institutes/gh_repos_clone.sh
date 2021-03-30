@@ -27,7 +27,7 @@ function _do_clone_repos_spec()
         mkdir "$CORDEX_HOME"/repos/specializations
     fi
 
-    for repo in "${REPOS_SPEC[@]}"
+    for repo in "${CORDEX_REPOS_SPEC[@]}"
     do
         if [ ! -d "$CORDEX_HOME"/repos/specializations/$repo ]; then
             log "GH : cloning repo: "$institute
@@ -69,9 +69,6 @@ function main()
     # done
     # popd 1
 }
-
-# Import utils.
-source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main
