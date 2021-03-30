@@ -1,20 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #######################################
 # Syncs specializations tooling from toplevel.
 # Globals:
-#   CORDEX_PATH_REPOS - path to managed repos.
+#   CORDEX_PATH_REPOS_SPEC - path to managed specialization repos.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_sync_definitions()
 {
 	local specialization=${1}
-	local path_to_repo=$CORDEX_PATH_REPOS/cordex-specializations-$specialization
+	local path_to_repo=$CORDEX_PATH_REPOS_SPEC/cordex-specializations-$specialization
 
 	log "syncing py files ..."
 	cp $path_to_repo/$specialization*.py \
-	   $CORDEX_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordex
+	   $CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex
 
 	log "synced tooling: "$specialization
 }
@@ -25,9 +25,9 @@ function _do_sync_definitions()
 # Globals:
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
-main()
+function main()
 {
-	rm $CORDEX_PATH_REPOS/esdoc-py-client/pyesdoc/mp/specializations/cordex/*.py
+	rm $CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex/*.py
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
 		_do_sync_definitions $specialization
@@ -35,7 +35,7 @@ main()
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

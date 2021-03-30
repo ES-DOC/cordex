@@ -1,22 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #######################################
 # Pulls latest changes from a remote.
 # Globals:
-#   CORDEX_PATH_REPOS - path to managed repos.
+#   CORDEX_HOME - path to cordex root folder.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_clone()
 {
-	local repo=${1}
-	local path_to_repo=$CORDEX_PATH_REPOS/$repo
+	local folder=${1}
+	local repo=${2}
+	local path_to_repo=$folder/$repo
 
 	if [ ! -d $path_to_repo ]; then
 		log "cloning "$path_to_repo
-		pushd $CORDEX_PATH_REPOS
+		pushd $folder
 		git clone https://github.com/ES-DOC/$repo.git
-		popd -1
+		popd 1
 	else
 		log "already cloned -> "$repo
 	fi
@@ -27,22 +28,25 @@ function _do_clone()
 # Globals:
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
-main()
+function main()
 {
-	if [ ! -d $CORDEX_PATH_REPOS ]; then
-		mkdir -p $CORDEX_PATH_REPOS
+	if [ ! -d $CORDEX_PATH_REPOS_SPEC ]; then
+		mkdir -p $CORDEX_PATH_REPOS_SPEC
+	fi
+	if [ ! -d $CORDEX_HOME/repos/libs ]; then
+		mkdir -p $CORDEX_HOME/repos/libs
 	fi
 
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_clone cordex-specializations-$specialization
+		_do_clone $CORDEX_PATH_REPOS_SPEC cordex-specializations-$specialization
 	done
-	_do_clone esdoc-web-view-specialization
-	_do_clone esdoc-py-client
+	_do_clone $CORDEX_HOME/repos/libs esdoc-web-view-specialization
+	_do_clone $CORDEX_HOME/repos/libs esdoc-py-client
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

@@ -1,16 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Main entry point.
-main()
+function main()
 {
-	local institution=${1:-"all"}
+	local institution=${1}
 
-	export PYTHONPATH=$CORDEX_PATH_REPOS/esdoc-py-client:$PYTHONPATH
-	pipenv run python $CORDEX_PATH_LIB/models/generate_xls --institution-id=$institution
+	activate_venv
+	pipenv run python $"$CORDEX_HOME"/lib/models/generate_xls --institution-id=$institution
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
-main $1
+main ${1:-"all"}

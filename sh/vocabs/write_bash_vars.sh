@@ -1,23 +1,24 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Main entry point.
-main()
+function main()
 {
-	local output_fpath=$CORDEX_PATH_SH/vocabs/write_bash_vars_output.txt
-	local template_fpath=$CORDEX_PATH_TEMPLATES/bash_vars
+	local output_fpath=$"$CORDEX_HOME"/sh/vocabs/write_bash_vars_output.txt
+	local template_fpath=$"$CORDEX_HOME"/templates/bash_vars
 	
-	pipenv run python $CORDEX_PATH_LIB/vocabs/write_bash_vars.py \
+	activate_venv
+	pipenv run python $"$CORDEX_HOME"/lib/vocabs/write_bash_vars.py \
 		--output-fpath=$output_fpath \
 		--template-fpath=$template_fpath
 
-	cp $output_fpath $CORDEX_PATH_SH/vocabs/definitions.sh
+	cp $output_fpath $"$CORDEX_HOME"/sh/vocabs/definitions.sh
 	rm $output_fpath
 
-	log "cordex vocabs bash file written to "$CORDEX_PATH_SH/vocabs/definitions.sh
+	log "cordex vocabs bash file written to "$"$CORDEX_HOME"/sh/vocabs/definitions.sh
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

@@ -18,14 +18,17 @@ from lib.utils import logger
 
 
 # Home directory.
-CORDEX_PATH_REPOS_INST = os.getenv('CORDEX_PATH_REPOS_INST')
+CORDEX_HOME = os.getenv('CORDEX_HOME')
 
 
 def get_folder(parts, create_if_not_found=True):
     """Returns path to an institute's mip-era repository.
 
     """
-    path = os.path.join(CORDEX_PATH_REPOS_INST)
+    path = os.path.join(CORDEX_HOME)
+    path = os.path.join(path, "repos")
+    path = os.path.join(path, "institutes")
+
     for part in parts:
         if part is None:
             continue

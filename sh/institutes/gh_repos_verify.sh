@@ -1,15 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Main entry point.
-main()
+function main()
 {
-	local institution=${1:-"all"}
+	local institution=${1}
 
-	pipenv run python $CORDEX_PATH_LIB/institutes/gh_repos_verify.py --institution-id=$institution
+	activate_venv
+	pipenv run python $"$CORDEX_HOME"/lib/institutes/gh_repos_verify.py --institution-id=$institution
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
-main $1
+main ${1:-"all"}

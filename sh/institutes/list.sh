@@ -1,13 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Main entry point.
-main()
+function main()
 {
-	pipenv run python $CORDEX_PATH_LIB/institutes/list.py
+	activate_venv
+	pipenv run python $"$CORDEX_HOME"/lib/institutes/list.py
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

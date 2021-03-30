@@ -1,22 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Main entry point.
-main()
+function main()
 {
     for institute in "${INSTITUTE[@]}"
     do
-        if [ -d $CORDEX_PATH_REPOS_INST/$institute ]; then
-            rm -rf $CORDEX_PATH_REPOS_INST/$institute
+        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
+            rm -rf "$CORDEX_HOME"/repos/institutions/$institute
         fi
         log "GH : cloning repo: "$institute
-        pushd $CORDEX_PATH_REPOS_INST
+        pushd "$CORDEX_HOME"/repos/institutions
         git clone https://github.com/ES-DOC-INSTITUTIONAL/$institute.git > /dev/null
-        popd -1
+        popd 1
     done
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

@@ -1,34 +1,22 @@
-#!/bin/bash
-
-#######################################
-# Validates specialisation definitions.
-# Globals:
-#   CORDEX_PATH_REPOS - path to managed repos.
-# Arguments:
-#   Specialization repo name.
-#######################################function _do_validate()
-{
-	local repo=${1}
-	local path_to_repo=$CORDEX_PATH_REPOS/${repo}
-
-	pipenv run python $path_to_repo/validate
-}
+#!/usr/bin/env bash
 
 #######################################
 # Main entry point.
 # Globals:
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
-main()
+function main()
 {
-	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
+	local PATH_TO_REPO
+	local SPECIALIZATION
+	
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_validate cordex-specializations-$specialization
+		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/cordex-specializations-$SPECIALIZATION"
+		activate_venv
+		pipenv run python "$PATH_TO_REPO"/validate
 	done
 }
-
-# Import utils.
-source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main

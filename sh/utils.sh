@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # ###############################################################
 # SECTION: INITIALIZE PATHS / VARS
 # ###############################################################
 
 # Vocabs.
-source $CORDEX_PATH_SH/vocabs/definitions.sh
+source $"$CORDEX_HOME"/sh/vocabs/definitions.sh
 
 # ###############################################################
 # SECTION: HELPER FUNCTIONS
@@ -14,9 +14,10 @@ source $CORDEX_PATH_SH/vocabs/definitions.sh
 # Activates a virtual environment.
 activate_venv()
 {
-	export PYTHONPATH=$CORDEX_PATH_REPOS/esdoc-py-clients:$PYTHONPATH
+	pushd $CORDEX_HOME
 	export PYTHONPATH=$CORDEX_HOME:$PYTHONPATH
-	pushd $CORDEX_HOME	
+	export PYTHONPATH=$CORDEX_HOME/repos/libs/esdoc-py-client:$PYTHONPATH
+	export PYTHONPATH=$CORDEX_HOME/repos/libs/pyessv:$PYTHONPATH
 }
 
 # Wraps standard echo by adding prefix.

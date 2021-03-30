@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function do_copy_parties_xls_template() 
 {
 	local institute=${1}
-	local template=$CORDEX_PATH_TEMPLATES/parties.xlsx
+	local template=$"$CORDEX_HOME"/templates/parties.xlsx
 	local dest_fname=cordex_${institute}_parties.xlsx
-	local dest=$CORDEX_PATH_REPOS_INST/$institute/cordex/parties/$dest_fname
+	local dest="$CORDEX_HOME"/repos/institutions/$institute/cordex/parties/$dest_fname
 
 	cp $template $dest
 	log "initialised parties XLS :: "$institute
@@ -15,7 +15,7 @@ function do_copy_parties_xls_template()
 function main()
 {
 	local institution=${1:-"all"}
-	local xls_template=$CORDEX_PATH_TEMPLATES/parties.xlsx
+	local xls_template=$"$CORDEX_HOME"/templates/parties.xlsx
 
 	if [ ! -f $xls_template ]; then
 		log "parties template not found"
@@ -33,7 +33,7 @@ function main()
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main $1

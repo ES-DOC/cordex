@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function _do_clone_repo()
 {
@@ -7,36 +7,36 @@ function _do_clone_repo()
 
 function _do_clone_repos_inst()
 {
-    if [ ! -d $CORDEX_PATH_REPOS_INST ]; then
-        mkdir $CORDEX_PATH_REPOS_INST
+    if [ ! -d "$CORDEX_HOME"/repos/institutions ]; then
+        mkdir "$CORDEX_HOME"/repos/institutions
     fi
 
 }
 
 function _do_clone_repos_util()
 {
-    if [ ! -d $CORDEX_PATH_REPOS_UTIL ]; then
-        mkdir $CORDEX_PATH_REPOS_UTIL
+    if [ ! -d $CORDEX_HOME/repos/libs ]; then
+        mkdir $CORDEX_HOME/repos/libs
     fi
     
 }
 
 function _do_clone_repos_spec()
 {
-    if [ ! -d $CORDEX_PATH_REPOS_SPEC ]; then
-        mkdir $CORDEX_PATH_REPOS_SPEC
+    if [ ! -d "$CORDEX_HOME"/repos/specializations ]; then
+        mkdir "$CORDEX_HOME"/repos/specializations
     fi
 
     for repo in "${REPOS_SPEC[@]}"
     do
-        if [ ! -d $CORDEX_PATH_REPOS_SPEC/$repo ]; then
+        if [ ! -d "$CORDEX_HOME"/repos/specializations/$repo ]; then
             log "GH : cloning repo: "$institute
-            pushd $CORDEX_PATH_REPOS_SPEC
+            pushd "$CORDEX_HOME"/repos/specializations
             git clone https://github.com/ES-DOC/$repo.git > /dev/null
             popd
         else
             log "GH : pulling repo: "$repo
-            pushd $CORDEX_PATH_REPOS_SPEC/$repo
+            pushd "$CORDEX_HOME"/repos/specializations/$repo
             git pull > /dev/null
             popd
         fi
@@ -44,34 +44,34 @@ function _do_clone_repos_spec()
 }
 
 # Main entry point.
-main()
+function main()
 {
     _do_clone_repos_inst
     _do_clone_repos_spec
     _do_clone_repos_util
 
-    # if [ ! -d $CORDEX_PATH_REPOS_INST ]; then
-    #     mkdir $CORDEX_PATH_REPOS_INST
+    # if [ ! -d "$CORDEX_HOME"/repos/institutions ]; then
+    #     mkdir "$CORDEX_HOME"/repos/institutions
     # fi
 
-    # pushd $CORDEX_PATH_REPOS_INST
+    # pushd "$CORDEX_HOME"/repos/institutions
     # for institute in "${INSTITUTE[@]}"
     # do
-    #     if [ ! -d $CORDEX_PATH_REPOS_INST/$institute ]; then
+    #     if [ ! -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
     #         log "GH : cloning repo: "$institute
     #         git clone https://github.com/ES-DOC-INSTITUTIONAL/$institute.git > /dev/null
     #     else
     #         log "GH : pulling repo: "$institute
-    #         pushd $CORDEX_PATH_REPOS_INST/$institute
+    #         pushd "$CORDEX_HOME"/repos/institutions/$institute
     #         git pull > /dev/null
-    #         popd -1
+    #         popd 1
     #     fi
     # done
-    # popd -1
+    # popd 1
 }
 
 # Import utils.
-source $CORDEX_PATH_SH/utils.sh
+source $"$CORDEX_HOME"/sh/utils.sh
 
 # Invoke entry point.
 main

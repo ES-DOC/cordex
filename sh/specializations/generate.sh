@@ -1,19 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #######################################
 # Generates various specialisation assets definitions.
 # Globals:
-#   CORDEX_PATH_REPOS - path to managed repos.
+#   CORDEX_HOME - path to cordex shell.
 # Arguments:
 #   Specialization repo name.
 #######################################
 function _do_generate()
 {
-	local repo=${1}
-	local path_to_repo=$CORDEX_PATH_REPOS/${repo}
+	local REPO_NAME=${1}
+	local PATH_TO_REPO
 
-	log "generating "$repo
-	pipenv run python $path_to_repo/generate
+	PATH_TO_REPO="$CORDEX_HOME"/repos/specializations/"$REPO_NAME"
+
+	log "generating $REPO_NAME"
+	activate_venv
+	pipenv run python "$PATH_TO_REPO"/generate
 }
 
 #######################################
@@ -21,16 +24,15 @@ function _do_generate()
 # Globals:
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
-main()
+function main()
 {
-	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
+	local SPECIALIZATION
+
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_generate cordex-specializations-$specialization
+		_do_generate "cordex-specializations-$SPECIALIZATION"
 	done
 }
-
-# Import utils.
-source $CORDEX_PATH_SH/utils.sh
 
 # Invoke entry point.
 main
