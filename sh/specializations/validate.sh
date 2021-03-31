@@ -12,9 +12,10 @@ function main()
 	
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/cordex-specializations-$SPECIALIZATION"
-		activate_venv
-		pipenv run python "$PATH_TO_REPO"/validate
+		echo $SPECIALIZATION 
+		# PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
+		# activate_venv
+		# pipenv run python "$PATH_TO_REPO"/validate
 	done
 }
 

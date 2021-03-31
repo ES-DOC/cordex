@@ -38,7 +38,7 @@ function main()
 
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_push "$CORDEX_HOME/repos/specializations" "cordex-specializations-$specialization" "$comment"
+		_do_push "$CORDEX_HOME/repos/specializations" "$specialization" "$comment"
 	done
 	_do_push "$CORDEX_HOME/repos/libs esdoc-web-view-specialization" "$comment"
 	_do_push "$CORDEX_HOME/repos/libs esdoc-py-client" "$comment"

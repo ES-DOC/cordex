@@ -3,35 +3,56 @@
 # Main entry point.
 function main()
 {
-    local ARCHIVE
-    local INSTITUTION_ID
-    local LIB
-    local SPECIALIZATION
-
-    log "setting directories"
-    mkdir -p "$CMIP6_HOME"/repos
-
     log "setting repos:"
+    mkdir -p "$CORDEX_HOME"/repos
+    _set_archives
+    _set_institutions
+    _set_libs
+    _set_specializations
+}
+
+function _set_archives()
+{
+    local ARCHIVE
+
     log "... archives:"
-	for ARCHIVE in "${CMIP6_ARCHIVES[@]}"
-	do      
-        _set_repo "archives" "$LIB" https://github.com/ES-DOC/"$ARCHIVE".git
-	done     
+	for ARCHIVE in "${CORDEX_ARCHIVES[@]}"
+	do
+        _set_repo "archives" "$ARCHIVE" https://github.com/ES-DOC/"$ARCHIVE".git
+	done
+}
+
+function _set_institutions()
+{
+    local INSTITUTION_ID
+
     log "... institutions:"
-	for INSTITUTION_ID in "${CMIP6_INSTITUTION_ID[@]}"
+	for INSTITUTION_ID in "${CORDEX_INSTITUTE[@]}"
 	do     
         _set_repo "institutions" "$INSTITUTION_ID" https://github.com/ES-DOC-INSTITUTIONAL/"$INSTITUTION_ID".git
-	done    
+	done  
+}
+
+function _set_libs()
+{
+    local LIB
+
     log "... libs:"
-	for LIB in "${CMIP6_LIBS[@]}"
+	for LIB in "${CORDEX_LIBS[@]}"
 	do      
         _set_repo "libs" "$LIB" https://github.com/ES-DOC/"$LIB".git
-	done       
+	done      
+}
+
+function _set_specializations()
+{
+    local SPECIALIZATION
+
     log "... specializations:"
-	for SPECIALIZATION in "${CMIP6_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do     
-        _set_repo "specializations" cmip6-specializations-"$SPECIALIZATION" https://github.com/ES-DOC/cmip6-specializations-"$SPECIALIZATION".git
-	done
+        _set_repo "specializations" "$SPECIALIZATION" "https://github.com/ES-DOC/cordex-specializations-$SPECIALIZATION.git"
+	done 
 }
 
 function _set_repo()
@@ -40,8 +61,8 @@ function _set_repo()
     local REPO_NAME=${2}
     local REPO_URL=${3}
 
-    local PATH_TO_REPO_TYPE="$CMIP6_HOME"/repos/"$REPO_TYPE"
-    local PATH_TO_REPO="$PATH_TO_REPO_TYPE"/"$REPO_NAME"
+    local PATH_TO_REPO_TYPE="$CORDEX_HOME/repos/$REPO_TYPE"
+    local PATH_TO_REPO="$PATH_TO_REPO_TYPE/$REPO_NAME"
 
     mkdir -p "$PATH_TO_REPO_TYPE"
 
@@ -53,7 +74,7 @@ function _set_repo()
     else
         log "... ... cloning $REPO_URL"
         pushd "$PATH_TO_REPO_TYPE" || exit
-        git clone "$REPO_URL" > /dev/null 2>&1
+        git clone "$REPO_URL" "$REPO_NAME" > /dev/null 2>&1
         popd || exit
     fi
 }

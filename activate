@@ -53,11 +53,14 @@ exec_cmd()
 # ALIASES
 # ###############################################################
 
-# ... citations
+# ... setup
+alias cordex-setup='exec_cmd setup utils/setup.sh'
+
+# Citations
 alias cordex-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh $1'
 alias cordex-citations-generate-json='exec_cmd citations-generate-json citations/generate_json.sh $1'
 
-# ... institutes
+# Institutes
 alias cordex-institutes-list='exec_cmd institutes-list institutes/list.sh'
 alias cordex-institutes-gh-repos-add='exec_cmd institutes-gh-repos-clone institutes/gh_repos_add.sh'
 alias cordex-institutes-gh-repos-clean='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clean.sh'
@@ -71,7 +74,7 @@ alias cordex-institutes-gh-repos-reset='exec_cmd institutes-gh-repos-push instit
 alias cordex-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone institutes/gh_repos_status.sh'
 alias cordex-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh $1'
 
-# ... models
+# Models
 # alias cordex-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
 # alias cordex-models-generate-cim='exec_cmd models-generate-cim models/generate_cim.sh'
 # alias cordex-models-generate-json='exec_cmd models-generate-json models/generate_json.sh'
@@ -79,11 +82,11 @@ alias cordex-models-generate-xls='exec_cmd models-generate-xls models/generate_x
 # alias cordex-models-reset-cim='exec_cmd models-reset-cim models/reset_cim.sh'
 # alias cordex-models-reset-json='exec_cmd models-reset-json models/reset_json.sh'
 
-# ... parties
+# Parties
 alias cordex-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh $1'
 alias cordex-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh $1'
 
-# ... specializations
+# Specializations
 alias cordex-specializations-gh-repos-clone='exec_cmd specializations-clone specializations/gh_repos_clone.sh'
 alias cordex-specializations-gh-repos-pull='exec_cmd specializations-pull specializations/gh_repos_pull.sh'
 alias cordex-specializations-gh-repos-push='exec_cmd specializations-push specializations/gh_repos_push.sh'
@@ -97,5 +100,5 @@ alias cordex-specializations-sync-cim-profile='exec_cmd specializations-sync-cim
 alias cordex-specializations-sync-definitions='exec_cmd specializations-sync-definitions specializations/sync_definitions.sh'
 alias cordex-specializations-sync-tooling='exec_cmd specializations-sync-tooling specializations/sync_tooling.sh'
 
-# ... vocabs
+# Vocabs
 alias cordex-vocabs-write-bash-vars='exec_cmd vocabs-write-bash-vars vocabs/write_bash_vars.sh'

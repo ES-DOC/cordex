@@ -10,8 +10,8 @@
 function _do_sync_tooling()
 {
 	local specialization=${1}
-	local path_to_repo=$CORDEX_HOME/repos/specializations/cordex-specializations-$specialization
-	local path_to_toplevel_repo=$CORDEX_HOME/repos/specializations/cordex-specializations-toplevel
+	local path_to_repo=$CORDEX_HOME/repos/specializations/$specialization
+	local path_to_toplevel_repo=$CORDEX_HOME/repos/specializations/toplevel
 
 	# Non toplevel specialisations.
 	if [ $specialization != "toplevel" ]; then

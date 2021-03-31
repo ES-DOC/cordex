@@ -3,6 +3,7 @@
 # Set of associated archives.
 export CORDEX_ARCHIVES=(
 	'esdoc-archive'
+	'pyessv-archive'
 )
 
 # Set of associated libraries.
@@ -11,7 +12,6 @@ export CORDEX_LIBS=(
 	'esdoc-py-client'
 	'esdoc-web-view-specialization'
 	'pyessv'
-	'pyessv-archive'
 )
 
 # Set of associated specializations.

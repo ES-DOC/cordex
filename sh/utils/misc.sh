@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
 
+# Activates a virtual environment.
+activate_venv()
+{
+	pushd $CORDEX_HOME
+	export PYTHONPATH=$CORDEX_HOME:$PYTHONPATH
+	export PYTHONPATH=$CORDEX_HOME/repos/libs/esdoc-py-client:$PYTHONPATH
+	export PYTHONPATH=$CORDEX_HOME/repos/libs/pyessv:$PYTHONPATH
+}
+
 # Wraps standard echo.
 function log()
 {

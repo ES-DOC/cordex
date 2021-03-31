@@ -39,7 +39,7 @@ function main()
 
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_clone "$CORDEX_HOME/repos/specializations" "cordex-specializations-$specialization"
+		_do_clone "$CORDEX_HOME/repos/specializations" "$specialization"
 	done
 	_do_clone $CORDEX_HOME/repos/libs esdoc-web-view-specialization
 	_do_clone $CORDEX_HOME/repos/libs esdoc-py-client

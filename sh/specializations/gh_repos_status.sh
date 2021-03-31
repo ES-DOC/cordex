@@ -32,7 +32,7 @@ function main()
 {
 	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_render_status $CORDEX_HOME/repos/specializations cordex-specializations-$specialization
+		_do_render_status $CORDEX_HOME/repos/specializations "$specialization"
 	done
 	_do_render_status $CORDEX_HOME/repos/specializations esdoc-web-view-specialization
 	_do_render_status $CORDEX_HOME/repos/libs esdoc-py-client

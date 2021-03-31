@@ -30,7 +30,7 @@ function main()
 
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_generate "cordex-specializations-$SPECIALIZATION"
+		_do_generate "$SPECIALIZATION"
 	done
 }
 

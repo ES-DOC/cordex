@@ -5,7 +5,7 @@
 # ###############################################################
 
 # Institute - canonical name
-declare -a INSTITUTE=(
+export CORDEX_INSTITUTE=(
 	'auth-lhtee'
 	'auth-met'
 	'awi'
@@ -42,7 +42,7 @@ declare -a INSTITUTE=(
 )
 
 # Institute - raw name
-declare -a INSTITUTE_RAW=(
+export CORDEX_INSTITUTE_RAW=(
 	'AUTH-LHTEE'
 	'AUTH-Met'
 	'AWI'
@@ -79,7 +79,7 @@ declare -a INSTITUTE_RAW=(
 )
 
 # Source ID - canonical name
-declare -a RCM_MODEL=(
+export CORDEX_RCM_MODEL=(
 	'auth-lhtee-wrf321b'
 	'auth-met-wrf331a'
 	'awi-hirham5'
@@ -129,7 +129,7 @@ declare -a RCM_MODEL=(
 )
 
 # Source ID - raw name
-declare -a RCM_MODEL_RAW=(
+export CORDEX_RCM_MODEL_RAW=(
 	'AUTH-LHTEE-WRF321B'
 	'AUTH-Met-WRF331A'
 	'AWI-HIRHAM5'
@@ -183,7 +183,7 @@ declare -a RCM_MODEL_RAW=(
 # ###############################################################
 
 # Array of specifications.
-declare -a CORDEX_SPECIALIZATIONS=(
+export CORDEX_SPECIALIZATIONS=(
 	'toplevel'
 	'atmos'
 )

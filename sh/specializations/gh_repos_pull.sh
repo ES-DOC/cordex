@@ -28,7 +28,7 @@ function main()
 {
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_pull "$CORDEX_HOME/repos/specializations" "cordex-specializations-$SPECIALIZATION"
+		_do_pull "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION"
 	done
 	_do_pull "$CORDEX_HOME/repos/libs esdoc-web-view-specialization"
 	_do_pull "$CORDEX_HOME/repos/libs esdoc-py-client"

@@ -10,7 +10,7 @@
 function _do_sync_definitions()
 {
 	local specialization=${1}
-	local path_to_repo=$CORDEX_HOME/repos/specializations/cordex-specializations-$specialization
+	local path_to_repo=$CORDEX_HOME/repos/specializations/$specialization
 
 	log "syncing py files ..."
 	cp $path_to_repo/$specialization*.py \
