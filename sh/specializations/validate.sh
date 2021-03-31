@@ -3,6 +3,7 @@
 #######################################
 # Main entry point.
 # Globals:
+#   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
@@ -12,10 +13,10 @@ function main()
 	
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		echo $SPECIALIZATION 
-		# PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
-		# activate_venv
-		# pipenv run python "$PATH_TO_REPO"/validate
+		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
+		pushd "$CORDEX_HOME" || exit
+		pipenv run python "$PATH_TO_REPO"/validate
+		popd || exit
 	done
 }
 
