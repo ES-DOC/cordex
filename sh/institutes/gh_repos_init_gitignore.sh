@@ -3,14 +3,16 @@
 # Main entry point.
 function main()
 {
-	for institution_id in "${CORDEX_INSTITUTE[@]}"
+	local INSTITUTION
+
+	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
 	do
-        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
-			log "GH : initialising .gitignore of "$institution_id
-			pushd "$CORDEX_HOME"/repos/institutions/$institution_id
-            cp $"$CORDEX_HOME"/templates/repo_gitignore ./.gitignore
+        if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
+			log "GH : initialising .gitignore of $INSTITUTION"
+			pushd "$CORDEX_HOME/repos/institutions/$INSTITUTION" || exit
+            cp $"$CORDEX_HOME/templates/repo_gitignore" ./.gitignore
             git init > /dev/null
-			popd 1
+			popd || exit
         fi
 	done
 }

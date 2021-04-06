@@ -3,13 +3,15 @@
 # Main entry point.
 function main()
 {
-	for institute in "${CORDEX_INSTITUTE[@]}"
+	local INSTITUTION
+
+	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
 	do
-        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
-			pushd "$CORDEX_HOME"/repos/institutions/$institute
-			log "GH : adding files to  "$institute
-			git add *
-			popd 1
+        if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
+			pushd "$CORDEX_HOME/repos/institutions/$INSTITUTION" || exit
+			log "GH : adding files to  $INSTITUTION"
+			git add "*"
+			popd || exit
         fi
 	done
 }
