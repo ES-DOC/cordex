@@ -3,19 +3,22 @@
 # Main entry point.
 function main()
 {
-	for institute in "${CORDEX_INSTITUTE[@]}"
+	local MSG=${1}
+	local INSTITUTION
+
+	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
 	do
-        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
-			pushd "$CORDEX_HOME"/repos/institutions/$institute
-			log "GH : pushing  "$institute
-			git add *
+        if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
+			log "GH : pushing $INSTITUTION"
+			pushd "$CORDEX_HOME/repos/institutions/$INSTITUTION" || exit
+			git add "*"
 			git add ./.gitignore
-			git commit -S -a -m $1
+			git commit -S -a -m "$MSG"
 			git push
-			popd 1
+			popd || exit
         fi
 	done
 }
 
 # Invoke entry point.
-main $1
+main "$1"

@@ -64,7 +64,6 @@ alias cordex-citations-generate-json='exec_cmd citations-generate-json citations
 alias cordex-institutes-list='exec_cmd institutes-list institutes/list.sh'
 alias cordex-institutes-gh-repos-add='exec_cmd institutes-gh-repos-clone institutes/gh_repos_add.sh'
 alias cordex-institutes-gh-repos-clean='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clean.sh'
-alias cordex-institutes-gh-repos-clone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_clone.sh'
 alias cordex-institutes-gh-repos-create='exec_cmd institutes-gh-repos-sync institutes/gh_repos_create.sh'
 alias cordex-institutes-gh-repos-init-gitignore='exec_cmd institutes-gh-repos-clone institutes/gh_repos_init_gitignore.sh'
 alias cordex-institutes-gh-repos-pull='exec_cmd institutes-gh-repos-pull institutes/gh_repos_pull.sh'

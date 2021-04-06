@@ -3,16 +3,18 @@
 # Main entry point.
 function main()
 {
-    for institute in "${CORDEX_INSTITUTE[@]}"
-    do
-        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
-            rm -rf "$CORDEX_HOME"/repos/institutions/$institute
+	local INSTITUTION
+
+	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
+	do
+        if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
+            rm -rf "$CORDEX_HOME/repos/institutions/$INSTITUTION"
         fi
-        log "GH : cloning repo: "$institute
-        pushd "$CORDEX_HOME"/repos/institutions
-        git clone https://github.com/ES-DOC-INSTITUTIONAL/$institute.git > /dev/null
-        popd 1
-    done
+        log "GH : cloning repo: $INSTITUTION"
+        pushd "$CORDEX_HOME/repos/institutions" || exit
+        git clone "https://github.com/ES-DOC-INSTITUTIONAL/$INSTITUTION.git" > /dev/null
+        popd || exit
+	done
 }
 
 # Invoke entry point.

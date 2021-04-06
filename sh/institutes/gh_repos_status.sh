@@ -3,15 +3,17 @@
 # Main entry point.
 function main()
 {
-	for institution_id in "${CORDEX_INSTITUTE[@]}"
+	local INSTITUTION
+
+	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
 	do
-        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
-			log "GH : status of "$institution_id
-			pushd "$CORDEX_HOME"/repos/institutions/$institution_id
+        if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
+			pushd "$CORDEX_HOME/repos/institutions/$INSTITUTION" || exit
+			log "GH : status of $INSTITUTION"
 			git status
-			popd 1
+			popd || exit
 		else
-			log "Institutional repo not found: ""$CORDEX_HOME"/repos/institutions/$institute
+			log "Institutional repo not found: $CORDEX_HOME/repos/institutions/$INSTITUTION"
         fi
 	done
 }

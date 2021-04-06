@@ -9,7 +9,7 @@ function main()
 	do
         if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
 			pushd "$CORDEX_HOME/repos/institutions/$INSTITUTION" || exit
-			log "GH : adding files to  $INSTITUTION"
+			log "GH : adding files to $INSTITUTION"
 			git add "*"
 			popd || exit
         fi

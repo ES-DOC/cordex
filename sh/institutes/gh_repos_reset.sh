@@ -3,13 +3,15 @@
 # Main entry point.
 function main()
 {
-	for institute in "${CORDEX_INSTITUTE[@]}"
+	local INSTITUTION
+
+	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
 	do
-        if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
-			pushd "$CORDEX_HOME"/repos/institutions/$institute
-			log "GH : resetting  "$institute
+        if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
+			pushd "$CORDEX_HOME/repos/institutions/$INSTITUTION" || exit
+			log "GH : resetting $INSTITUTION"
 			git reset HEAD
-			popd 1
+			popd || exit
         fi
 	done
 }

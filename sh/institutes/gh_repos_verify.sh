@@ -3,11 +3,11 @@
 # Main entry point.
 function main()
 {
-	local institution=${1}
+	local INSTITUTION=${1}
 
 	activate_venv
-	pipenv run python $"$CORDEX_HOME"/lib/institutes/gh_repos_verify.py --institution-id=$institution
+	pipenv run python "$CORDEX_HOME/lib/institutes/gh_repos_verify.py" --institution-id="$INSTITUTION"
 }
 
 # Invoke entry point.
-main ${1:-"all"}
+main "${1:-"all"}"
