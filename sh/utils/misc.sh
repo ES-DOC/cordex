@@ -9,12 +9,6 @@ activate_venv()
 	export PYTHONPATH=$CORDEX_HOME/repos/libs/pyessv:$PYTHONPATH
 }
 
-# De-activates a virtual environment.
-deactivate_venv()
-{
-	popd || exit
-}
-
 # Wraps standard echo.
 function log()
 {

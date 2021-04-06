@@ -5,20 +5,23 @@
 # Globals:
 #   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
+# Arguments:
+#   Commit message.
 #######################################
 function main()
 {
-	local comment=${1}
+	local MSG=${1}
+	local SPECIALIZATION
 
-	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_push "$CORDEX_HOME/repos/specializations" "$specialization" "$comment"
+		_do "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION" "$MSG"
 	done
-	_do_push "$CORDEX_HOME/repos/libs esdoc-web-view-specialization" "$comment"
-	_do_push "$CORDEX_HOME/repos/libs esdoc-py-client" "$comment"
+	_do "$CORDEX_HOME/repos/libs" "esdoc-web-view-specialization" "$MSG"
+	_do "$CORDEX_HOME/repos/libs" "esdoc-py-client" "$MSG"
 }
 
-function _do_push()
+function _do()
 {
 	local PATH_TO_FOLDER=${1}
 	local REPO_NAME=${2}
@@ -28,19 +31,19 @@ function _do_push()
 	PATH_TO_REPO="$PATH_TO_FOLDER/$REPO_NAME"
 
 	if [ -d "$PATH_TO_REPO" ]; then
-		pushd "$PATH_TO_REPO"
-		if [ ! -z "$(git status --porcelain)" ]; then
-			log "pushing -> "$repo
-			git add *
+		pushd "$PATH_TO_REPO" || exit
+		if [ -n "$(git status --porcelain)" ]; then
+			log "pushing -> $REPO_NAME"
+			git add "*"
 			git add ./.gitignore
-			git commit -m $MSG
+			git commit -m "$MSG"
 			git push > /dev/null
 		else
-			log "nothing to push -> "$repo
+			log "nothing to push -> $REPO_NAME"
 		fi
-		popd 1
+		popd || exit
 	fi
 }
 
 # Invoke entry point.
-main $1
+main "$1"

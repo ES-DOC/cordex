@@ -1,27 +1,24 @@
 #!/usr/bin/env bash
 
 #######################################
-# Emits to stdout the change status of managed repos.
+# Emits to stdout change status of managed repos.
 # Globals:
 #   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
 {
-	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
+	local SPECIALIZATION
+
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_render_status $CORDEX_HOME/repos/specializations "$specialization"
+		_do "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION"
 	done
-	_do_render_status $CORDEX_HOME/repos/libs esdoc-web-view-specialization
-	_do_render_status $CORDEX_HOME/repos/libs esdoc-py-client
+	_do "$CORDEX_HOME/repos/libs" esdoc-web-view-specialization
+	_do "$CORDEX_HOME/repos/libs" esdoc-py-client
 }
 
-#######################################
-# Renders local repo status.
-# Arguments:
-#   Repo name.
-#######################################
-function _do_render_status()
+function _do()
 {
 	local PATH_TO_FOLDER=${1}
 	local REPO_NAME=${2}

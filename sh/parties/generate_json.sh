@@ -7,7 +7,7 @@ function main()
 
 	activate_venv
 	pipenv run python $"$CORDEX_HOME"/lib/parties/generate_json.py --institution-id="$INSTITUTION"
-	deactivate_venv
+	popd || exit
 }
 
 # Invoke entry point.

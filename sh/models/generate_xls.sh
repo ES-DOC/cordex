@@ -7,7 +7,7 @@ function main()
 
 	activate_venv
 	pipenv run python "$CORDEX_HOME/lib/models/generate_xls" --institution-id="$INSTITUTION"
-	deactivate_venv
+	popd || exit
 }
 
 # Invoke entry point.

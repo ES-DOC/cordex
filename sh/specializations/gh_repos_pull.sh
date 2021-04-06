@@ -2,36 +2,34 @@
 
 #######################################
 # Pulls latest changes from a remote.
-# Arguments:
-#   Specialization repo name.
-#######################################
-function _do_pull()
-{
-	local folder=${1}
-	local repo=${1}
-	local path_to_repo=$folder/${repo}
-
-	if [ -d $path_to_repo ]; then
-		log "pulling "$repo
-		pushd $path_to_repo
-		git pull > /dev/null
-		popd 1
-	fi
-}
-
-#######################################
-# Main entry point.
 # Globals:
+#   CORDEX_HOME - path to cordex shall root folder.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
 {
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_pull "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION"
+		_do "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION"
 	done
-	_do_pull "$CORDEX_HOME/repos/libs esdoc-web-view-specialization"
-	_do_pull "$CORDEX_HOME/repos/libs esdoc-py-client"
+	_do "$CORDEX_HOME/repos/libs" "esdoc-web-view-specialization"
+	_do "$CORDEX_HOME/repos/libs" "esdoc-py-client"
+}
+
+function _do()
+{
+	local REPO_FOLDER=${1}
+	local REPO_NAME=${2}
+	local PATH_TO_REPO
+	
+	PATH_TO_REPO=$REPO_FOLDER/${REPO_NAME}
+
+	if [ -d "$PATH_TO_REPO" ]; then
+		log "pulling $REPO_NAME"
+		pushd "$PATH_TO_REPO" || exit
+		git pull > /dev/null
+		popd || exit
+	fi
 }
 
 # Invoke entry point.

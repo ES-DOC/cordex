@@ -1,24 +1,25 @@
 #!/usr/bin/env bash
 
 #######################################
-# Main entry point.
+# Validates specialization artefacts.
 # Globals:
 #   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
 {
-	local PATH_TO_REPO
 	local SPECIALIZATION
-	
+	local PATH_TO_REPO
+
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
 		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
+		log "validating $SPECIALIZATION"
 		activate_venv
 		pipenv run python "$PATH_TO_REPO"/validate
-		deactivate_venv
+		popd || exit
 	done
 }
 
 # Invoke entry point.
-main
+main "$1"

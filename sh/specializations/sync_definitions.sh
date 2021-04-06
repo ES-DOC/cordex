@@ -3,35 +3,50 @@
 #######################################
 # Syncs specializations tooling from toplevel.
 # Globals:
-#   CORDEX_HOME - path to cordex hsell home directory.
+#   CORDEX_HOME - path to cordex shell home directory.
+#   CORDEX_SPECIALIZATIONS - array of specializations.
 # Arguments:
 #   Specialization repo name.
 #######################################
-function _do_sync_definitions()
-{
-	local specialization=${1}
-	local path_to_repo=$CORDEX_HOME/repos/specializations/$specialization
-
-	log "syncing py files ..."
-	cp $path_to_repo/$specialization*.py \
-	   $CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex
-
-	log "synced tooling: "$specialization
-}
-
-
-#######################################
-# Main entry point.
-# Globals:
-#   CORDEX_SPECIALIZATIONS - array of specializations.
-#######################################
 function main()
 {
-	rm $CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex/*.py
-	for specialization in "${CORDEX_SPECIALIZATIONS[@]}"
+	local SPECIALIZATION
+
+	if [ -d "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex" ]; then
+		rm "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex/*.py"
+	else
+		mkdir -p "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
+	fi
+
+	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
-		_do_sync_definitions $specialization
+		_do "$SPECIALIZATION"
 	done
+}
+
+function _do()
+{
+	local SPECIALIZATION=${1}
+	local PATH_TO_REPO
+
+	PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
+
+	mkdir -p "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
+	cp "$PATH_TO_REPO/$SPECIALIZATION"_*.py"" \
+	   "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
+
+	cp "$PATH_TO_REPO/_$SPECIALIZATION.js" \
+	   "$CORDEX_HOME/repos/libs/esdoc-web-view-specialization/data/cordex_$SPECIALIZATION.js"
+
+	mkdir -p "$CORDEX_HOME/repos/libs/esdoc-docs/cordex/models/config"
+	cp "$PATH_TO_REPO/_$SPECIALIZATION.json" \
+	   "$CORDEX_HOME/repos/libs/esdoc-docs/cordex/models/config/$SPECIALIZATION.json"
+
+	mkdir -p "$CORDEX_HOME/repos/libs/esdoc-docs/cordex/models/mindmaps"
+	cp "$PATH_TO_REPO/_$SPECIALIZATION.mm" \
+	   "$CORDEX_HOME/repos/libs/esdoc-docs/cordex/models/mindmaps/$SPECIALIZATION.mm"
+
+	log "synced tooling: $SPECIALIZATION"
 }
 
 # Invoke entry point.
