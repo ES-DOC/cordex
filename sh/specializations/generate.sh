@@ -16,9 +16,9 @@ function main()
 	do
 		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
 		log "generating $REPO_NAME"
-		pushd "$CORDEX_HOME" || exit
+		activate_venv
 		pipenv run python "$PATH_TO_REPO"/generate
-		popd || exit
+		deactivate_venv
 	done
 }
 

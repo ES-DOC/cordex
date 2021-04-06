@@ -10,6 +10,7 @@ function main()
 	pipenv run python $"$CORDEX_HOME"/lib/vocabs/write_bash_vars.py \
 		--output-fpath=$output_fpath \
 		--template-fpath=$template_fpath
+	deactivate_venv
 
 	cp $output_fpath $"$CORDEX_HOME"/sh/vocabs/definitions.sh
 	rm $output_fpath

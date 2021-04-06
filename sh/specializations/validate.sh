@@ -14,9 +14,9 @@ function main()
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
 		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
-		pushd "$CORDEX_HOME" || exit
+		activate_venv
 		pipenv run python "$PATH_TO_REPO"/validate
-		popd || exit
+		deactivate_venv
 	done
 }
 
