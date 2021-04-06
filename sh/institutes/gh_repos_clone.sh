@@ -55,7 +55,7 @@ function main()
     # fi
 
     # pushd "$CORDEX_HOME"/repos/institutions
-    # for institute in "${INSTITUTE[@]}"
+    # for institute in "${CORDEX_INSTITUTE[@]}"
     # do
     #     if [ ! -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
     #         log "GH : cloning repo: "$institute

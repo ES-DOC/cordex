@@ -3,7 +3,7 @@
 # Main entry point.
 function main()
 {
-	for institute in "${INSTITUTE[@]}"
+	for institute in "${CORDEX_INSTITUTE[@]}"
 	do
         if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
 			pushd "$CORDEX_HOME"/repos/institutions/$institute

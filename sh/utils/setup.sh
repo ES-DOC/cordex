@@ -27,7 +27,7 @@ function _set_institutions()
     local INSTITUTION_ID
 
     log "... institutions:"
-	for INSTITUTION_ID in "${CORDEX_INSTITUTE[@]}"
+	for INSTITUTION_ID in "${CORDEX_CORDEX_INSTITUTE[@]}"
 	do     
         _set_repo "institutions" "$INSTITUTION_ID" https://github.com/ES-DOC-INSTITUTIONAL/"$INSTITUTION_ID".git
 	done  

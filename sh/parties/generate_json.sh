@@ -3,12 +3,11 @@
 # Main entry point.
 function main()
 {
-	local institution=${1}
+	local INSTITUTION=${1}
 
-	echo "TODO: reactivate JSON generation script"
 	activate_venv
-	# pipenv run python $"$CORDEX_HOME"/lib/parties/generate_json.py --institution-id=$institution
+	pipenv run python $"$CORDEX_HOME"/lib/parties/generate_json.py --institution-id="$INSTITUTION"
 }
 
 # Invoke entry point.
-main ${1:-"all"}
+main "${1:-"all"}"

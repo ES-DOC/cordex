@@ -1,36 +1,40 @@
 #!/usr/bin/env bash
 
-function do_copy_citations_xls_template() 
-{
-	local institute=${1}
-	local template=$"$CORDEX_HOME"/templates/citations.xlsx
-	local dest_fname=cordex_${institute}_citations.xlsx
-	local dest="$CORDEX_HOME"/repos/institutions/$institute/cordex/citations/$dest_fname
-
-	cp $template $dest
-	log "initialised citations XLS :: "$institute
-}
-
 # Main entry point.
 function main()
 {
-	local institution=${1:-"all"}
-	local xls_template=$"$CORDEX_HOME"/templates/citations.xlsx
+	local INSTITUTION=${1:-"all"}
+	local TEMPLATE
+	
+	TEMPLATE="$CORDEX_HOME/templates/citations.xlsx"
 
-	if [ ! -f $xls_template ]; then
+	if [ ! -f "$TEMPLATE" ]; then
 		log "citations template not found"
 		exit 1
 	fi
 
-	if [ $institution == "all" ]; then
-		for institute in "${INSTITUTE[@]}"
+	if [ "$INSTITUTION" == "all" ]; then
+		for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
 		do
-			do_copy_citations_xls_template $institute
+			do_copy_template "$INSTITUTION" "$TEMPLATE"
 		done	
 	else
-		do_copy_citations_xls_template $institution
+		do_copy_template "$INSTITUTION" "$TEMPLATE"
 	fi
 }
 
+function do_copy_template() 
+{
+	local INSTITUTION=${1}
+	local TEMPLATE=${2}
+	local DEST
+
+	DEST="cordex_${INSTITUTION}_citations.xlsx"
+	DEST="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/citations/$DEST"
+
+	cp "$TEMPLATE" "$DEST"
+	log "initialised citations XLS :: $INSTITUTION"
+}
+
 # Invoke entry point.
-main $1
+main "$1"

@@ -1,35 +1,9 @@
 #!/usr/bin/env bash
 
 #######################################
-# Pushes latest changes to a remote.
-# Arguments:
-#   Specialization repo name.
-#######################################
-function _do_push()
-{
-	local folder=${1}
-	local repo=${2}
-	local path_to_repo=$folder/$repo
-	local comment=${3}
-
-	if [ -d $path_to_repo ]; then
-		pushd $path_to_repo
-		if [ ! -z "$(git status --porcelain)" ]; then
-			log "pushing -> "$repo
-			git add *
-			git add ./.gitignore
-			git commit -m $comment
-			git push > /dev/null
-		else
-			log "nothing to push -> "$repo
-		fi
-		popd 1
-	fi
-}
-
-#######################################
-# Main entry point.
+# Pushes latest specialization changes to a remote.
 # Globals:
+#   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
@@ -42,6 +16,30 @@ function main()
 	done
 	_do_push "$CORDEX_HOME/repos/libs esdoc-web-view-specialization" "$comment"
 	_do_push "$CORDEX_HOME/repos/libs esdoc-py-client" "$comment"
+}
+
+function _do_push()
+{
+	local PATH_TO_FOLDER=${1}
+	local REPO_NAME=${2}
+	local MSG=${3}
+	local PATH_TO_REPO
+
+	PATH_TO_REPO="$PATH_TO_FOLDER/$REPO_NAME"
+
+	if [ -d "$PATH_TO_REPO" ]; then
+		pushd "$PATH_TO_REPO"
+		if [ ! -z "$(git status --porcelain)" ]; then
+			log "pushing -> "$repo
+			git add *
+			git add ./.gitignore
+			git commit -m $MSG
+			git push > /dev/null
+		else
+			log "nothing to push -> "$repo
+		fi
+		popd 1
+	fi
 }
 
 # Invoke entry point.

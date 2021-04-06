@@ -3,7 +3,7 @@
 # Main entry point.
 function main()
 {
-	for institution_id in "${INSTITUTE[@]}"
+	for institution_id in "${CORDEX_INSTITUTE[@]}"
 	do
         if [ -d "$CORDEX_HOME"/repos/institutions/$institute ]; then
 			log "GH : initialising .gitignore of "$institution_id

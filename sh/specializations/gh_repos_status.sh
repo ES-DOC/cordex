@@ -1,31 +1,9 @@
 #!/usr/bin/env bash
 
 #######################################
-# Renders local repo status.
-# Arguments:
-#   Repo name.
-#######################################
-function _do_render_status()
-{
-	local PATH_TO_FOLDER=${1}
-	local REPO_NAME=${2}
-
-	local PATH_TO_REPO="$PATH_TO_FOLDER/$REPO_NAME"
-
-	if [ -d "$PATH_TO_REPO" ]; then
-		log_banner
-		log "status : $REPO_NAME"
-		log_banner
-
-		pushd "$PATH_TO_REPO" || exit
-		git status 
-		popd || exit
-	fi
-}
-
-#######################################
-# Main entry point.
+# Emits to stdout the change status of managed repos.
 # Globals:
+#   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEX_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
@@ -36,6 +14,30 @@ function main()
 	done
 	_do_render_status $CORDEX_HOME/repos/libs esdoc-web-view-specialization
 	_do_render_status $CORDEX_HOME/repos/libs esdoc-py-client
+}
+
+#######################################
+# Renders local repo status.
+# Arguments:
+#   Repo name.
+#######################################
+function _do_render_status()
+{
+	local PATH_TO_FOLDER=${1}
+	local REPO_NAME=${2}
+	local PATH_TO_REPO
+
+	PATH_TO_REPO="$PATH_TO_FOLDER/$REPO_NAME"
+
+	if [ -d "$PATH_TO_REPO" ]; then
+		log_banner
+		log "status : $REPO_NAME"
+		log_banner
+
+		pushd "$PATH_TO_REPO" || exit
+		git status 
+		popd || exit
+	fi
 }
 
 # Invoke entry point.
