@@ -13,10 +13,9 @@ function main()
 	local SPECIALIZATION
 
 	if [ -d "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex" ]; then
-		rm "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex/*.py"
-	else
-		mkdir -p "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
+		rm -rf "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
 	fi
+	mkdir -p "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
 
 	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
 	do
@@ -31,8 +30,9 @@ function _do()
 
 	PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
 
-	mkdir -p "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
-	cp "$PATH_TO_REPO/$SPECIALIZATION"_*.py"" \
+	# cp "$PATH_TO_REPO/${SPECIALIZATION}.py" \
+	#    "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
+	cp "$PATH_TO_REPO"/*.py \
 	   "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
 
 	cp "$PATH_TO_REPO/_$SPECIALIZATION.js" \

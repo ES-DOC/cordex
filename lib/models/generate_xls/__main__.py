@@ -52,7 +52,7 @@ def _main(args):
         for m in vocabs.get_models_by_institute(i):
             for t in vocabs.get_topics():
                 xl = Spreadsheet(i, m, t)
-                xl.write()
+                # xl.write()
 
 
 class Spreadsheet(object):

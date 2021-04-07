@@ -19,19 +19,22 @@ function _do()
 	# Non toplevel specialisations.
 	if [ "$SPECIALIZATION" != "toplevel" ]; then
 		# ... sync generator
-		rm -rf "$PATH_TO_REPO/generate"
-		mkdir "$PATH_TO_REPO/generate"
-		cp -r "$PATH_TO_REPO_TOPLEVEL/generate/*" "$PATH_TO_REPO/generate"
+		if [ -d "$PATH_TO_REPO/generate" ]; then
+			rm -rf "$PATH_TO_REPO/generate"
+		fi
+		cp -r "$PATH_TO_REPO_TOPLEVEL/generate" "$PATH_TO_REPO"
 	
 		# ... sync validator
-		rm -rf "$PATH_TO_REPO/validate"
-		mkdir "$PATH_TO_REPO/validate"
-		cp -r "$PATH_TO_REPO_TOPLEVEL/validate/*" "$PATH_TO_REPO/validate"
+		if [ -d "$PATH_TO_REPO/validate" ]; then
+			rm -rf "$PATH_TO_REPO/validate"
+		fi
+		cp -r "$PATH_TO_REPO_TOPLEVEL/validate" "$PATH_TO_REPO"
 
 		# ... sync templates
-		rm -rf "$PATH_TO_REPO/templates"
-		mkdir "$PATH_TO_REPO/templates"
-		cp -r "$PATH_TO_REPO_TOPLEVEL/templates/*" "$PATH_TO_REPO/templates"
+		if [ -d "$PATH_TO_REPO/templates" ]; then
+			rm -rf "$PATH_TO_REPO/templates"
+		fi
+		cp -r "$PATH_TO_REPO_TOPLEVEL/templates" "$PATH_TO_REPO"
 	fi
 
 	log "synced tooling: $SPECIALIZATION"

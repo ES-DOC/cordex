@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 pyessv = "*"
+pyesdoc = "*"
 xlrd = "*"
 openpyxl = "*"
 latex = "*"

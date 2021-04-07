@@ -20,7 +20,7 @@ _INSTITUTION_IDS = pyessv.ECMWF.c3s_cordex.institute
 _MODELS = pyessv.ECMWF.c3s_cordex.rcm_model
 
 # Set of model topics to be documented.
-_TOPICS = pyessv.ESDOC.cordex.model_topic
+_TOPICS = pyessv.ESDOC.cordexp.model_topic
 
 
 def get_institute(institution_id):
@@ -73,4 +73,4 @@ def get_topics():
     """Returns set of topics to be documented.
 
     """
-    return [i for i in _TOPICS if i.canonical_name == "toplevel"]
+    return _TOPICS
