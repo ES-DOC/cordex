@@ -6,7 +6,7 @@ function main()
 	local MSG=${1}
 	local INSTITUTION
 
-	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
+	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
 	do
         if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
 			log "GH : pushing $INSTITUTION"

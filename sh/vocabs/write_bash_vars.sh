@@ -3,19 +3,26 @@
 # Main entry point.
 function main()
 {
-	local output_fpath=$"$CORDEX_HOME"/sh/vocabs/write_bash_vars_output.txt
-	local template_fpath=$"$CORDEX_HOME"/templates/bash_vars
+	local PATH_TO_DEFINITIONS
+	local PATH_TO_OUTPUT_FILE
+	local PATH_TO_TEMPLATE
+
+	PATH_TO_DEFINITIONS="$CORDEX_HOME/sh/vocabs/definitions.sh"
+	PATH_TO_OUTPUT_FILE="$CORDEX_HOME/sh/vocabs/write_bash_vars_output.txt"
+	PATH_TO_TEMPLATE="$CORDEX_HOME/templates/bash_vars"
 	
 	activate_venv
-	pipenv run python $"$CORDEX_HOME"/lib/vocabs/write_bash_vars.py \
-		--output-fpath=$output_fpath \
-		--template-fpath=$template_fpath
+	pipenv run python "$CORDEX_HOME/lib/vocabs/write_bash_vars.py" \
+		--output-fpath="$PATH_TO_OUTPUT_FILE" \
+		--template-fpath="$PATH_TO_TEMPLATE"
 	popd || exit
 
-	cp $output_fpath $"$CORDEX_HOME"/sh/vocabs/definitions.sh
-	rm $output_fpath
+	cp "$PATH_TO_OUTPUT_FILE" "$PATH_TO_DEFINITIONS"
+	rm "$PATH_TO_OUTPUT_FILE"
 
-	log "cordex vocabs bash file written to "$"$CORDEX_HOME"/sh/vocabs/definitions.sh
+	source "$PATH_TO_DEFINITIONS"
+
+	log "cordex vocabs bash file written to $PATH_TO_DEFINITIONS"
 }
 
 # Invoke entry point.

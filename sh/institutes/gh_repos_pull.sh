@@ -5,7 +5,7 @@ function main()
 {
 	local INSTITUTION
 
-	for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
+	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
 	do
         if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
 			log "GH : pulling $INSTITUTION"

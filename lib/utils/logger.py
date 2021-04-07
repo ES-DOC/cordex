@@ -23,7 +23,6 @@ LOG_LEVEL_CRITICAL = 'CRITICAL'
 LOG_LEVEL_FATAL = 'FATAL'
 
 _DEFAULT_APP = 'CORDEX'
-_DEFAULT_INSTITUTE = 'ESDOC'
 
 _NULL_MSG = '-------------------------------------------------------------------------------'
 

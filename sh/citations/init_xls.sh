@@ -5,22 +5,24 @@ function main()
 {
 	local INSTITUTION=${1:-"all"}
 	local TEMPLATE
-	
-	TEMPLATE="$CORDEX_HOME/templates/citations.xlsx"
 
-	if [ ! -f "$TEMPLATE" ]; then
-		log "citations template not found"
-		exit 1
-	fi
+	echo $INSTITUTION
 
-	if [ "$INSTITUTION" == "all" ]; then
-		for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
-		do
-			do_copy_template "$INSTITUTION" "$TEMPLATE"
-		done	
-	else
-		do_copy_template "$INSTITUTION" "$TEMPLATE"
-	fi
+	# TEMPLATE="$CORDEX_HOME/templates/citations.xlsx"
+
+	# if [ ! -f "$TEMPLATE" ]; then
+	# 	log "citations template not found"
+	# 	exit 1
+	# fi
+
+	# if [ "$INSTITUTION" == "all" ]; then
+	# 	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
+	# 	do
+	# 		do_copy_template "$INSTITUTION" "$TEMPLATE"
+	# 	done	
+	# else
+	# 	do_copy_template "$INSTITUTION" "$TEMPLATE"
+	# fi
 }
 
 function do_copy_template() 

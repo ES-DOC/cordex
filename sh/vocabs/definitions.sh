@@ -5,7 +5,7 @@
 # ###############################################################
 
 # Institute - canonical name
-export CORDEX_INSTITUTE=(
+export CORDEX_INSTITUTION_ID=(
 	'auth-lhtee'
 	'auth-met'
 	'awi'
@@ -42,7 +42,7 @@ export CORDEX_INSTITUTE=(
 )
 
 # Institute - raw name
-export CORDEX_INSTITUTE_RAW=(
+export CORDEX_INSTITUTION_ID_RAW=(
 	'AUTH-LHTEE'
 	'AUTH-Met'
 	'AWI'

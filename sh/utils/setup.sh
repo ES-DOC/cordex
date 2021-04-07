@@ -24,12 +24,12 @@ function _set_archives()
 
 function _set_institutions()
 {
-    local INSTITUTION_ID
+    local INSTITUTION
 
     log "... institutions:"
-	for INSTITUTION_ID in "${CORDEX_CORDEX_INSTITUTE[@]}"
+	for INSTITUTION in "${CORDEX_CORDEX_INSTITUTION_ID[@]}"
 	do     
-        _set_repo "institutions" "$INSTITUTION_ID" https://github.com/ES-DOC-INSTITUTIONAL/"$INSTITUTION_ID".git
+        _set_repo "institutions" "$INSTITUTION" https://github.com/ES-DOC-INSTITUTIONAL/"$INSTITUTION".git
 	done  
 }
 

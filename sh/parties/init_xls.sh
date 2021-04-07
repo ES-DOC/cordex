@@ -14,7 +14,7 @@ function main()
 	fi
 
 	if [ "$INSTITUTION" == "all" ]; then
-		for INSTITUTION in "${CORDEX_INSTITUTE[@]}"
+		for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
 		do
 			do_copy_template "$INSTITUTION" "$TEMPLATE"
 		done	

@@ -11,9 +11,9 @@ export CORDEX_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 chmod a+x "$CORDEX_HOME"/sh/*/*.sh
 
 # Set python path.
-export PYTHONPATH="$CORDEX_HOME":"$PYTHONPATH"
-export PYTHONPATH="$CORDEX_HOME/repos/libs/esdoc-py-client":"$PYTHONPATH"
-export PYTHONPATH="$CORDEX_HOME/repos/libs/pyessv":"$PYTHONPATH"
+export PYTHONPATH="$CORDEX_HOME":$PYTHONPATH
+export PYTHONPATH="$CORDEX_HOME/repos/libs/esdoc-py-client":$PYTHONPATH
+export PYTHONPATH="$CORDEX_HOME/repos/libs/pyessv":$PYTHONPATH
 
 # ###############################################################
 # UTILS
@@ -28,25 +28,31 @@ source "$CORDEX_HOME"/sh/utils/main.sh
 # Command executor.
 exec_cmd()
 {
-	log_banner
-	log $1" :: BEGINS"
+	local CMD_TYPE=${1}
+	local CMD_SCRIPT=${2}
+	local CMD_TARGET="$CORDEX_HOME"/sh/"$CMD_SCRIPT"
+
 	activate_venv
+
+	log_banner
+	log "$CMD_TYPE :: BEGINS"
 	log_banner
 
-	target=$"$CORDEX_HOME"/sh/$2
 	if [ "$3" ] && [ "$4" ] && [ "$5" ]; then
-		source $target $3 $4 $5
+		source "$CMD_TARGET" "$3" "$4" "$5"
 	elif [ "$3" ] && [ "$4" ]; then
-		source $target $3 $4 ""
+		source "$CMD_TARGET" "$3" "$4" ""
 	elif [ "$3" ]; then
-		source $target $3 "" ""
+		source "$CMD_TARGET" "$3" "" ""
 	else
-		source $target ""
+		source "$CMD_TARGET" ""
 	fi
 
 	log_banner
-	log $1" :: ENDS"
+	log "$CMD_TYPE :: ENDS"
 	log_banner
+
+	popd || exit
 }
 
 # ###############################################################
@@ -57,8 +63,8 @@ exec_cmd()
 alias cordex-setup='exec_cmd setup utils/setup.sh'
 
 # Citations
-alias cordex-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh $1'
-alias cordex-citations-generate-json='exec_cmd citations-generate-json citations/generate_json.sh $1'
+alias cordex-citations-init-xls='exec_cmd citations-init-xls citations/init_xls.sh'
+alias cordex-citations-generate-json='exec_cmd citations-generate-json citations/generate_json.sh'
 
 # Institutes
 alias cordex-institutes-list='exec_cmd institutes-list institutes/list.sh'
@@ -71,7 +77,7 @@ alias cordex-institutes-gh-repos-push='exec_cmd institutes-gh-repos-push institu
 alias cordex-institutes-gh-repos-reclone='exec_cmd institutes-gh-repos-clone institutes/gh_repos_reclone.sh'
 alias cordex-institutes-gh-repos-reset='exec_cmd institutes-gh-repos-push institutes/gh_repos_reset.sh'
 alias cordex-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone institutes/gh_repos_status.sh'
-alias cordex-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh $1'
+alias cordex-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh'
 
 # Models
 # alias cordex-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
@@ -82,8 +88,8 @@ alias cordex-models-generate-xls='exec_cmd models-generate-xls models/generate_x
 # alias cordex-models-reset-json='exec_cmd models-reset-json models/reset_json.sh'
 
 # Parties
-alias cordex-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh $1'
-alias cordex-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh $1'
+alias cordex-parties-init-xls='exec_cmd parties-init-xls parties/init_xls.sh'
+alias cordex-parties-generate-json='exec_cmd parties-generate-json parties/generate_json.sh'
 
 # Specializations
 alias cordex-specializations-generate='exec_cmd specializations-generate specializations/generate.sh'

@@ -14,7 +14,7 @@ import pyessv
 
 
 # Set of participating institutes.
-_INSTITUTES = pyessv.ECMWF.c3s_cordex.institute
+_INSTITUTION_IDS = pyessv.ECMWF.c3s_cordex.institute
 
 # Set of models run in support of project.
 _MODELS = pyessv.ECMWF.c3s_cordex.rcm_model
@@ -27,7 +27,7 @@ def get_institute(institution_id):
     """Returns institute to be processed.
 
     """
-    return _INSTITUTES[institution_id]
+    return _INSTITUTION_IDS[institution_id]
 
 
 def get_institutes(institution_id=None):
@@ -35,7 +35,7 @@ def get_institutes(institution_id=None):
 
     """
     if institution_id in (None, '', 'all'):
-        return _INSTITUTES
+        return _INSTITUTION_IDS
     
     return [get_institute(institution_id)]
 
