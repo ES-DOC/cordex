@@ -20,6 +20,13 @@ function _set_archives()
 	do
         _set_repo "archives" "$ARCHIVE" https://github.com/ES-DOC/"$ARCHIVE".git
 	done
+
+    if [ ! -d "$CORDEX_HOME/repos/archives/esdoc-archive/esdoc" ]; then
+        log "... ... uncompressing"
+        pushd "$CORDEX_HOME/repos/archives/esdoc-archive" || exit
+        cat docs_* | tar xz
+        popd || exit
+    fi
 }
 
 function _set_institutions()
@@ -27,7 +34,7 @@ function _set_institutions()
     local INSTITUTION
 
     log "... institutions:"
-	for INSTITUTION in "${CORDEX_CORDEX_INSTITUTION_ID[@]}"
+	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
 	do     
         _set_repo "institutions" "$INSTITUTION" https://github.com/ES-DOC-INSTITUTIONAL/"$INSTITUTION".git
 	done  
