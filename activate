@@ -10,6 +10,9 @@ export CORDEX_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Ensure target scripts are executable.
 chmod a+x "$CORDEX_HOME"/sh/*/*.sh
 
+# Set pyessv archive.
+export PYESSV_ARCHIVE_HOME="$CORDEX_HOME/repos/archives/pyessv-archive"
+
 # Set python path.
 export PYTHONPATH="$CORDEX_HOME":$PYTHONPATH
 export PYTHONPATH="$CORDEX_HOME/repos/libs/esdoc-py-client":$PYTHONPATH

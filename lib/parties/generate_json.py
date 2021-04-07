@@ -2,7 +2,7 @@
 .. module:: generate_cim.py
    :license: GPL/CeCIL
    :platform: Unix, Windows
-   :synopsis: Generates CMIP6 JSON documents from XLS files.
+   :synopsis: Generates JSON documents from XLS files.
 
 .. moduleauthor:: Mark Conway-Greenslade <momipsl@ipsl.jussieu.fr>
 
@@ -20,7 +20,7 @@ from lib.utils import vocabs
 
 
 # Define command line argument parser.
-_ARGS = argparse.ArgumentParser("Generates CMIP6 responsible parties JSON files.")
+_ARGS = argparse.ArgumentParser("Generates responsible parties JSON files.")
 _ARGS.add_argument(
     "--institution-id",
     help="An institution identifier",

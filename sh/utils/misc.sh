@@ -24,12 +24,12 @@ function log()
 			do
 				TABS+='\t'
 			done
-	    	echo -e "$NOW [INFO] :: CMIP6 :: $TABS$1"
+	    	echo -e "$NOW [INFO] :: CORDEX :: $TABS$1"
 	    else
-	    	echo -e "$NOW [INFO] :: CMIP6 :: $1"
+	    	echo -e "$NOW [INFO] :: CORDEX :: $1"
 	    fi
 	else
-	    echo -e "$NOW [INFO] :: CMIP6 :: "
+	    echo -e "$NOW [INFO] :: CORDEX :: "
 	fi
 }
 
