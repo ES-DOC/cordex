@@ -27,7 +27,7 @@ def get_folder(parts, create_if_not_found=True):
     """
     path = os.path.join(CORDEX_HOME)
     path = os.path.join(path, "repos")
-    path = os.path.join(path, "institutes")
+    path = os.path.join(path, "institutions")
 
     for part in parts:
         if part is None:

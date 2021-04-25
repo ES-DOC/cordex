@@ -22,4 +22,4 @@ function main()
 }
 
 # Invoke entry point.
-main "$1"
+main

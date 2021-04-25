@@ -5,19 +5,19 @@
 # ###############################################################
 
 # Institute - canonical name
-export CORDEX_INSTITUTION_ID=(
-[INSTITUTE])
+export CORDEXP_INSTITUTION_ID=(
+[INSTITUTION_ID])
 
 # Institute - raw name
-export CORDEX_INSTITUTION_ID_RAW=(
-[INSTITUTE_RAW])
+export CORDEXP_INSTITUTION_ID_RAW=(
+[INSTITUTION_ID_RAW])
 
 # Source ID - canonical name
-export CORDEX_RCM_MODEL=(
+export CORDEXP_RCM_MODEL=(
 [RCM_MODEL])
 
 # Source ID - raw name
-export CORDEX_RCM_MODEL_RAW=(
+export CORDEXP_RCM_MODEL_RAW=(
 [RCM_MODEL_RAW])
 
 # ###############################################################
@@ -25,7 +25,7 @@ export CORDEX_RCM_MODEL_RAW=(
 # ###############################################################
 
 # Array of specifications.
-export CORDEX_SPECIALIZATIONS=(
+export CORDEXP_SPECIALIZATIONS=(
 	'toplevel'
 	'atmos'
 )

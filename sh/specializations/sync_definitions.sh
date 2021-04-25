@@ -30,8 +30,6 @@ function _do()
 
 	PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
 
-	# cp "$PATH_TO_REPO/${SPECIALIZATION}.py" \
-	#    "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
 	cp "$PATH_TO_REPO"/*.py \
 	   "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
 

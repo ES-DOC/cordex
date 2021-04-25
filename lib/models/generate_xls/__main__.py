@@ -36,6 +36,12 @@ _ARGS.add_argument(
     dest="institution_id",
     type=str
     )
+_ARGS.add_argument(
+    "--model-id",
+    help="A model identifier",
+    dest="model_id",
+    type=str
+    )
 
 # MIP era.
 _MIP_ERA = "cordex"
@@ -48,11 +54,14 @@ def _main(args):
     """Main entry point.
 
     """
+    # print(args.institution_id)
+    # print(args.model_id)
     for i in vocabs.get_institutes(args.institution_id):
-        for m in vocabs.get_models_by_institute(i):
-            for t in vocabs.get_topics():
-                xl = Spreadsheet(i, m, t)
-                # xl.write()
+        print(i)
+        # for m in vocabs.get_models_by_institute(i):
+        #     for t in vocabs.get_topics():
+        #         xl = Spreadsheet(i, m, t)
+        #         xl.write()
 
 
 class Spreadsheet(object):

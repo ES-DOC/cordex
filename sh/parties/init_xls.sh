@@ -4,11 +4,10 @@
 function main()
 {
 	local INSTITUTION=${1:-"all"}
-	local TEMPLATE
-	
-	TEMPLATE="$CORDEX_HOME/templates/parties.xlsx"
+	local PATH_TO_TEMPLATE
 
-	if [ ! -f "$TEMPLATE" ]; then
+	PATH_TO_TEMPLATE="$CORDEX_HOME/templates/parties.xlsx"
+	if [ ! -f "$PATH_TO_TEMPLATE" ]; then
 		log "parties template not found"
 		exit 1
 	fi
@@ -16,23 +15,26 @@ function main()
 	if [ "$INSTITUTION" == "all" ]; then
 		for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
 		do
-			do_copy_template "$INSTITUTION" "$TEMPLATE"
+			_do "$INSTITUTION" "$PATH_TO_TEMPLATE"
 		done	
 	else
-		do_copy_template "$INSTITUTION" "$TEMPLATE"
+		_do "$INSTITUTION" "$PATH_TO_TEMPLATE"
 	fi
 }
 
-function do_copy_template() 
+function _do() 
 {
 	local INSTITUTION=${1}
-	local TEMPLATE=${2}
-	local DEST
+	local PATH_TO_TEMPLATE=${2}
+	local PATH_TO_DEST_FOLDER
+	local PATH_TO_DEST
 
-	DEST="cordex_${INSTITUTION}_parties.xlsx"
-	DEST="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/parties/$DEST"
+	PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/parties"
+	mkdir -p "$PATH_TO_DEST_FOLDER"
 
-	cp "$TEMPLATE" "$DEST"
+	PATH_TO_DEST_FILE="$PATH_TO_DEST_FOLDER/cordex_${INSTITUTION}_parties.xlsx"
+	cp "$PATH_TO_TEMPLATE" "$PATH_TO_DEST_FILE"
+
 	log "initialised parties XLS :: $INSTITUTION"
 }
 

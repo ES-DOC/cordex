@@ -13,7 +13,7 @@ def write(ctx):
     """
     path = os.getenv("CORDEX_HOME")
     path = os.path.join(path, "repos")
-    path = os.path.join(path, "institutes")
+    path = os.path.join(path, "institutions")
     path = os.path.join(path, ctx.institution_id)
     path = os.path.join(path, ctx.MIP_ERA)
     path = os.path.join(path, "models")

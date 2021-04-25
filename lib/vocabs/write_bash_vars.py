@@ -33,8 +33,8 @@ _ARGS.add_argument(
 
 # Map of CORDEX collections to data factories / name pre-formatters.
 _VOCABS = {
-    'c3s-cordex': {
-        'institute',
+    'cordex': {
+        'institution_id',
         'rcm_model'
         },
 }
@@ -53,17 +53,12 @@ def _main(args):
         content = fstream.read()
 
     # Create CORDEX collections.
-    for scope in _VOCABS:
-        for collection in [pyessv.load('ecmwf:{}:{}'.format(scope, i)) for i in _VOCABS[scope]]:
-            data = ''
-            for term in collection:
-                data += '\t\'{}\'\n'.format(term.canonical_name)
-            content = content.replace('[{}]'.format(collection.raw_name.upper()), data)
-
-            data = ''
-            for term in collection:
-                data += '\t\'{}\'\n'.format(term.raw_name)
-            content = content.replace('[{}_RAW]'.format(collection.raw_name.upper()), data)
+    for collection in pyessv.load("copernicus:cordexp"):
+        data = ''
+        for term in collection:
+            data += '\t\'{}\'\n'.format(term.canonical_name)
+        content = content.replace('[{}]'.format(collection.raw_name.upper()), data)
+        content = content.replace('[{}_RAW]'.format(collection.raw_name.upper()), data)
 
     # Write output to file system.
     with open(args.output_fpath, 'w') as fstream:

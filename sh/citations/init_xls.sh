@@ -4,37 +4,37 @@
 function main()
 {
 	local INSTITUTION=${1:-"all"}
-	local TEMPLATE
+	local PATH_TO_TEMPLATE
 
-	echo $INSTITUTION
+	PATH_TO_TEMPLATE="$CORDEX_HOME/templates/citations.xlsx"
+	if [ ! -f "$PATH_TO_TEMPLATE" ]; then
+		log "citations template not found"
+		exit 1
+	fi
 
-	# TEMPLATE="$CORDEX_HOME/templates/citations.xlsx"
-
-	# if [ ! -f "$TEMPLATE" ]; then
-	# 	log "citations template not found"
-	# 	exit 1
-	# fi
-
-	# if [ "$INSTITUTION" == "all" ]; then
-	# 	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
-	# 	do
-	# 		do_copy_template "$INSTITUTION" "$TEMPLATE"
-	# 	done	
-	# else
-	# 	do_copy_template "$INSTITUTION" "$TEMPLATE"
-	# fi
+	if [ "$INSTITUTION" == "all" ]; then
+		for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
+		do
+			_do "$INSTITUTION" "$PATH_TO_TEMPLATE"
+		done	
+	else
+		_do "$INSTITUTION" "$PATH_TO_TEMPLATE"
+	fi
 }
 
-function do_copy_template() 
+function _do() 
 {
 	local INSTITUTION=${1}
-	local TEMPLATE=${2}
-	local DEST
+	local PATH_TO_TEMPLATE=${2}
+	local PATH_TO_DEST_FOLDER
+	local PATH_TO_DEST
 
-	DEST="cordex_${INSTITUTION}_citations.xlsx"
-	DEST="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/citations/$DEST"
+	PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/citations"
+	mkdir -p "$PATH_TO_DEST_FOLDER"
 
-	cp "$TEMPLATE" "$DEST"
+	PATH_TO_DEST_FILE="$PATH_TO_DEST_FOLDER/cordex_${INSTITUTION}_citations.xlsx"
+	cp "$PATH_TO_TEMPLATE" "$PATH_TO_DEST_FILE"
+
 	log "initialised citations XLS :: $INSTITUTION"
 }
 
