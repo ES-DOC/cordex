@@ -11,11 +11,11 @@ function main()
 	PATH_TO_OUTPUT_FILE="$CORDEX_HOME/sh/vocabs/write_bash_vars_output.txt"
 	PATH_TO_TEMPLATE="$CORDEX_HOME/templates/bash_vars"
 	
-	activate_venv
+	cordex_venv_activate
 	pipenv run python "$CORDEX_HOME/lib/vocabs/write_bash_vars.py" \
 		--output-fpath="$PATH_TO_OUTPUT_FILE" \
 		--template-fpath="$PATH_TO_TEMPLATE"
-	popd || exit
+	cordex_venv_deactivate
 
 	cp "$PATH_TO_OUTPUT_FILE" "$PATH_TO_DEFINITIONS"
 	rm "$PATH_TO_OUTPUT_FILE"

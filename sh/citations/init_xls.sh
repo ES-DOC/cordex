@@ -29,10 +29,10 @@ function _do()
 	local PATH_TO_DEST_FOLDER
 	local PATH_TO_DEST
 
-	PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/citations"
+	PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordexp/citations"
 	mkdir -p "$PATH_TO_DEST_FOLDER"
 
-	PATH_TO_DEST_FILE="$PATH_TO_DEST_FOLDER/cordex_${INSTITUTION}_citations.xlsx"
+	PATH_TO_DEST_FILE="$PATH_TO_DEST_FOLDER/cordexp_${INSTITUTION}_citations.xlsx"
 	cp "$PATH_TO_TEMPLATE" "$PATH_TO_DEST_FILE"
 
 	log "initialised citations XLS :: $INSTITUTION"

@@ -15,9 +15,9 @@ function main()
 	do
 		PATH_TO_REPO="$CORDEX_HOME/repos/specializations/$SPECIALIZATION"
 		log "validating $SPECIALIZATION"
-		activate_venv
+		cordex_venv_activate
 		pipenv run python "$PATH_TO_REPO"/validate
-		popd || exit
+		cordex_venv_deactivate
 	done
 }
 

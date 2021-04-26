@@ -40,7 +40,7 @@ exec_cmd()
 	local CMD_SCRIPT=${2}
 	local CMD_TARGET="$CORDEX_HOME"/sh/"$CMD_SCRIPT"
 
-	activate_venv
+	cordex_venv_activate
 
 	log_banner
 	log "$CMD_TYPE :: BEGINS"
@@ -60,7 +60,7 @@ exec_cmd()
 	log "$CMD_TYPE :: ENDS"
 	log_banner
 
-	popd || exit
+	cordex_venv_deactivate
 }
 
 # ###############################################################

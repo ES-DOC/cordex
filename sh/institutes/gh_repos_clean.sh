@@ -19,9 +19,7 @@ function do_clean() {
     local INSTITUTION=${1}
     local PATH_TO_REPO=${2}
 
-    pushd "$PATH_TO_REPO" || exit
-    git status
-    popd || exit
+    echo "TODO : clean repo :: "$PATH_TO_REPO/cordex""
 }
 
 # Invoke entry point.

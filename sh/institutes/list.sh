@@ -3,9 +3,9 @@
 # Main entry point.
 function main()
 {
-	activate_venv
+	cordex_venv_activate
 	pipenv run python "$CORDEX_HOME/lib/institutes/list.py"
-	popd || exit
+	cordex_venv_deactivate
 }
 
 # Invoke entry point.

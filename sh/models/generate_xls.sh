@@ -15,14 +15,14 @@ function main()
 		INSTITUTION=${DEFINITION[0]}
 		RCM_MODEL=${DEFINITION[1]}
 
-		activate_venv
+		cordex_venv_activate
 		pipenv run python "$CORDEX_HOME/lib/models/generate_xls" --institution-id="$INSTITUTION" --model-id="$RCM_MODEL"
-		popd || exit		
+		cordex_venv_deactivate
 	done
 
-	# activate_venv
+	# cordex_venv_activate
 	# pipenv run python "$CORDEX_HOME/lib/models/generate_xls" --institution-id="$INSTITUTION"
-	# popd || exit
+	# cordex_venv_deactivate
 }
 
 # Invoke entry point.

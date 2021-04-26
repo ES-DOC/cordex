@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
-# Activates a virtual environment.
-activate_venv()
+# Activates associated virtual environment.
+cordex_venv_activate()
 {
 	pushd "$CORDEX_HOME" || exit
 	export PYTHONPATH=$CORDEX_HOME:$PYTHONPATH
 	export PYTHONPATH=$CORDEX_HOME/repos/libs/esdoc-py-client:$PYTHONPATH
 	export PYTHONPATH=$CORDEX_HOME/repos/libs/pyessv:$PYTHONPATH
+}
+
+# Deactivates associated virtual environment.
+cordex_venv_deactivate()
+{
+	popd || exit
 }
 
 # Wraps standard echo.
