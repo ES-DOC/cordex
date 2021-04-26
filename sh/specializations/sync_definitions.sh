@@ -4,7 +4,7 @@
 # Syncs specializations tooling from toplevel.
 # Globals:
 #   CORDEX_HOME - path to cordex shell home directory.
-#   CORDEX_SPECIALIZATIONS - array of specializations.
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
 # Arguments:
 #   Specialization repo name.
 #######################################
@@ -17,7 +17,7 @@ function main()
 	fi
 	mkdir -p "$CORDEX_HOME/repos/libs/esdoc-py-client/pyesdoc/mp/specializations/cordex"
 
-	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
 		_do "$SPECIALIZATION"
 	done

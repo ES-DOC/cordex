@@ -13,7 +13,7 @@ function main()
 	fi
 
 	if [ "$INSTITUTION" == "all" ]; then
-		for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
+		for INSTITUTION in "${CORDEXP_INSTITUTION_ID[@]}"
 		do
 			_do "$INSTITUTION" "$PATH_TO_TEMPLATE"
 		done	

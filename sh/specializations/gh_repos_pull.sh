@@ -4,11 +4,11 @@
 # Pulls latest changes from a remote.
 # Globals:
 #   CORDEX_HOME - path to cordex shall root folder.
-#   CORDEX_SPECIALIZATIONS - array of specializations.
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
 {
-	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
 		_do "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION"
 	done

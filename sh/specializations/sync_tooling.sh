@@ -43,7 +43,7 @@ function _do()
 #######################################
 # Main entry point.
 # Globals:
-#   CORDEX_SPECIALIZATIONS - array of specializations.
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
 {
@@ -56,7 +56,7 @@ function main()
 	fi
 	mkdir -p "$PATH_TO_PYESDOC_MP"
 
-	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
 		_do "$SPECIALIZATION"
 	done

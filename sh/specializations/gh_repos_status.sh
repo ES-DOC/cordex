@@ -4,13 +4,13 @@
 # Emits to stdout change status of managed repos.
 # Globals:
 #   CORDEX_HOME - path to cordex shell home directory.
-#   CORDEX_SPECIALIZATIONS - array of specializations.
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
 #######################################
 function main()
 {
 	local SPECIALIZATION
 
-	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
 		_do "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION"
 	done

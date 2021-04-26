@@ -34,7 +34,7 @@ function _set_institutions()
     local INSTITUTION
 
     log "... institutions:"
-	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
+	for INSTITUTION in "${CORDEXP_INSTITUTION_ID[@]}"
 	do     
         _set_repo "institutions" "$INSTITUTION" https://github.com/ES-DOC-INSTITUTIONAL/"$INSTITUTION".git
 	done  
@@ -56,7 +56,7 @@ function _set_specializations()
     local SPECIALIZATION
 
     log "... specializations:"
-	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do     
         _set_repo "specializations" "$SPECIALIZATION" "https://github.com/ES-DOC/cordex-specializations-$SPECIALIZATION.git"
 	done 

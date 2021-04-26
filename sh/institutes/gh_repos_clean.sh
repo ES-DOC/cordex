@@ -5,7 +5,7 @@ function main()
 {
     local INSTITUTION
 
-	for INSTITUTION in "${CORDEX_INSTITUTION_ID[@]}"
+	for INSTITUTION in "${CORDEXP_INSTITUTION_ID[@]}"
 	do
         if [ -d "$CORDEX_HOME/repos/institutions/$INSTITUTION" ]; then
             do_clean "$INSTITUTION"

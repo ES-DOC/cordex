@@ -4,7 +4,7 @@
 # Pushes latest specialization changes to a remote.
 # Globals:
 #   CORDEX_HOME - path to cordex shell home directory.
-#   CORDEX_SPECIALIZATIONS - array of specializations.
+#   CORDEXP_SPECIALIZATIONS - array of specializations.
 # Arguments:
 #   Commit message.
 #######################################
@@ -13,7 +13,7 @@ function main()
 	local MSG=${1}
 	local SPECIALIZATION
 
-	for SPECIALIZATION in "${CORDEX_SPECIALIZATIONS[@]}"
+	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
 		_do "$CORDEX_HOME/repos/specializations" "$SPECIALIZATION" "$MSG"
 	done
