@@ -73,7 +73,7 @@ def _get_content(i, spreadsheet):
     """
         # Initialise output.
     obj = collections.OrderedDict()
-    obj['mipEra'] = "cordex"
+    obj['mipEra'] = "cordexp"
     obj['institute'] = i.canonical_name
     obj['seedingSource'] = 'Spreadsheet'
     obj['content'] = []
