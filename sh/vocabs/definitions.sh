@@ -4,7 +4,81 @@
 # SECTION: VOCABULARY BASH VARS
 # ###############################################################
 
-# Institute - canonical name
+# CORDEX: Institute - canonical name
+export CORDEX_INSTITUTION_ID=(
+	'auth-lhtee'
+	'auth-met'
+	'awi'
+	'bccr'
+	'cccma'
+	'chmi'
+	'clmcom'
+	'cnrm'
+	'crp-gl'
+	'cuni'
+	'dhmz'
+	'dmi'
+	'enea'
+	'gerics'
+	'hms'
+	'ictp'
+	'idl'
+	'iitm'
+	'ipsl'
+	'ipsl-ineris'
+	'knmi'
+	'mgo'
+	'miub'
+	'mohc'
+	'mpi-csc'
+	'nuim'
+	'rmib-ugent'
+	'smhi'
+	'ucan'
+	'uclm'
+	'uhoh'
+	'ulg'
+	'uqam'
+)
+
+# CORDEX: Institute - raw name
+export CORDEX_INSTITUTION_ID_RAW=(
+	'auth-lhtee'
+	'auth-met'
+	'awi'
+	'bccr'
+	'cccma'
+	'chmi'
+	'clmcom'
+	'cnrm'
+	'crp-gl'
+	'cuni'
+	'dhmz'
+	'dmi'
+	'enea'
+	'gerics'
+	'hms'
+	'ictp'
+	'idl'
+	'iitm'
+	'ipsl'
+	'ipsl-ineris'
+	'knmi'
+	'mgo'
+	'miub'
+	'mohc'
+	'mpi-csc'
+	'nuim'
+	'rmib-ugent'
+	'smhi'
+	'ucan'
+	'uclm'
+	'uhoh'
+	'ulg'
+	'uqam'
+)
+
+# CORDEXP: Institute - canonical name
 export CORDEXP_INSTITUTION_ID=(
 	'cnrm'
 	'dmi'
@@ -18,7 +92,7 @@ export CORDEXP_INSTITUTION_ID=(
 	'uhoh'
 )
 
-# Institute - raw name
+# CORDEXP: Institute - raw name
 export CORDEXP_INSTITUTION_ID_RAW=(
 	'cnrm'
 	'dmi'
@@ -32,7 +106,7 @@ export CORDEXP_INSTITUTION_ID_RAW=(
 	'uhoh'
 )
 
-# Source ID - canonical name
+# CORDEXP: Source ID - canonical name
 export CORDEXP_RCM_MODEL=(
 	'cnrm-aladin63'
 	'dmi-hirham5'
@@ -46,7 +120,7 @@ export CORDEXP_RCM_MODEL=(
 	'uhoh-wrf361h'
 )
 
-# Source ID - raw name
+# CORDEXP: Source ID - raw name
 export CORDEXP_RCM_MODEL_RAW=(
 	'cnrm-aladin63'
 	'dmi-hirham5'

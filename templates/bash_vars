@@ -4,21 +4,29 @@
 # SECTION: VOCABULARY BASH VARS
 # ###############################################################
 
-# Institute - canonical name
+# CORDEX: Institute - canonical name
+export CORDEX_INSTITUTION_ID=(
+[__CORDEX_INSTITUTION_ID__])
+
+# CORDEX: Institute - raw name
+export CORDEX_INSTITUTION_ID_RAW=(
+[__CORDEX_INSTITUTION_ID_RAW__])
+
+# CORDEXP: Institute - canonical name
 export CORDEXP_INSTITUTION_ID=(
-[INSTITUTION_ID])
+[__CORDEXP_INSTITUTION_ID__])
 
-# Institute - raw name
+# CORDEXP: Institute - raw name
 export CORDEXP_INSTITUTION_ID_RAW=(
-[INSTITUTION_ID_RAW])
+[__CORDEXP_INSTITUTION_ID_RAW__])
 
-# Source ID - canonical name
+# CORDEXP: Source ID - canonical name
 export CORDEXP_RCM_MODEL=(
-[RCM_MODEL])
+[__CORDEXP_RCM_MODEL__])
 
-# Source ID - raw name
+# CORDEXP: Source ID - raw name
 export CORDEXP_RCM_MODEL_RAW=(
-[RCM_MODEL_RAW])
+[__CORDEXP_RCM_MODEL_RAW__])
 
 # ###############################################################
 # SECTION: ES-DOC SPECIALZATIONS

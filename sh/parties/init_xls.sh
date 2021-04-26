@@ -29,13 +29,15 @@ function _do()
 	local PATH_TO_DEST_FOLDER
 	local PATH_TO_DEST
 
-	PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/parties"
-	mkdir -p "$PATH_TO_DEST_FOLDER"
+	echo $INSTITUTION
 
-	PATH_TO_DEST_FILE="$PATH_TO_DEST_FOLDER/cordex_${INSTITUTION}_parties.xlsx"
-	cp "$PATH_TO_TEMPLATE" "$PATH_TO_DEST_FILE"
+	# PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordex/parties"
+	# mkdir -p "$PATH_TO_DEST_FOLDER"
 
-	log "initialised parties XLS :: $INSTITUTION"
+	# PATH_TO_DEST_FILE="$PATH_TO_DEST_FOLDER/cordex_${INSTITUTION}_parties.xlsx"
+	# cp "$PATH_TO_TEMPLATE" "$PATH_TO_DEST_FILE"
+
+	# log "initialised parties XLS :: $INSTITUTION"
 }
 
 # Invoke entry point.

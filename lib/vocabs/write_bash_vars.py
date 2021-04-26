@@ -31,14 +31,6 @@ _ARGS.add_argument(
     )
 
 
-# Map of CORDEX collections to data factories / name pre-formatters.
-_VOCABS = {
-    'cordex': {
-        'institution_id',
-        'rcm_model'
-        },
-}
-
 # Template input file.
 _DIR = os.path.dirname(os.path.realpath(__file__))
 _TEMPLATE = os.path.join(_DIR, 'write_bash_vars.template')
@@ -49,19 +41,40 @@ def _main(args):
 
     """
     # Open template.
-    with open(args.template_fpath, 'r') as fstream:
-        content = fstream.read()
+    content = _get_template_content(args.template_fpath)
 
-    # Create CORDEX collections.
+    # Create CORDEXP collections.
     for collection in pyessv.load("copernicus:cordexp"):
         data = ''
         for term in collection:
             data += '\t\'{}\'\n'.format(term.canonical_name)
-        content = content.replace('[{}]'.format(collection.raw_name.upper()), data)
-        content = content.replace('[{}_RAW]'.format(collection.raw_name.upper()), data)
+        content = content.replace('[__CORDEXP_{}__]'.format(collection.raw_name.upper()), data)
+        content = content.replace('[__CORDEXP_{}_RAW__]'.format(collection.raw_name.upper()), data)
+
+    # Create CORDEX collections.
+    data = ''
+    for term in pyessv.load("ecmwf:c3s-cordex:institute"):
+        data += '\t\'{}\'\n'.format(term.canonical_name)
+    content = content.replace('[__CORDEX_INSTITUTION_ID__]', data)
+    content = content.replace('[__CORDEX_INSTITUTION_ID_RAW__]', data)
 
     # Write output to file system.
-    with open(args.output_fpath, 'w') as fstream:
+    _set_output(args.output_fpath, content)
+
+
+def _get_template_content(path_to_template):
+    """Returns definitions template.
+
+    """
+    with open(path_to_template, 'r') as fstream:
+        return fstream.read()
+
+
+def _set_output(path_to_output, content):
+    """Returns definitions template.
+
+    """
+    with open(path_to_output, 'w') as fstream:
         fstream.write(content)
 
 
