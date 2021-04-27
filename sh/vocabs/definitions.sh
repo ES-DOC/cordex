@@ -82,6 +82,7 @@ export CORDEX_INSTITUTION_ID_RAW=(
 export CORDEXP_INSTITUTION_ID=(
 	'cnrm'
 	'dmi'
+	'eth'
 	'gerics'
 	'ictp'
 	'ipsl'
@@ -96,6 +97,7 @@ export CORDEXP_INSTITUTION_ID=(
 export CORDEXP_INSTITUTION_ID_RAW=(
 	'cnrm'
 	'dmi'
+	'eth'
 	'gerics'
 	'ictp'
 	'ipsl'
@@ -109,6 +111,7 @@ export CORDEXP_INSTITUTION_ID_RAW=(
 # CORDEXP: Source ID - canonical name
 export CORDEXP_RCM_MODEL=(
 	'cnrm-aladin63'
+	'cosmo-crclim'
 	'dmi-hirham5'
 	'gerics-remo2015'
 	'ictp-regcm4-6'
@@ -123,6 +126,7 @@ export CORDEXP_RCM_MODEL=(
 # CORDEXP: Source ID - raw name
 export CORDEXP_RCM_MODEL_RAW=(
 	'cnrm-aladin63'
+	'cosmo-crclim'
 	'dmi-hirham5'
 	'gerics-remo2015'
 	'ictp-regcm4-6'
