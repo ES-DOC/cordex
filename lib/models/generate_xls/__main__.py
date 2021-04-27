@@ -17,6 +17,8 @@ import pyesdoc
 import pyessv
 
 from lib.models.utils import ModelTopicOutput
+from lib.utils import io_mgr
+from lib.utils import logger
 from lib.utils import vocabs
 from write_citations_and_parties import write as write_citations_and_parties
 from write_frontis import write as write_frontis
@@ -24,7 +26,6 @@ from write_property_value import write as write_property_value
 from write_property import write as write_property
 from write_propertyset import write as write_propertyset
 from write_subtopic import write as write_subtopic
-from write_topic import write as write_topic
 
 
 
@@ -36,15 +37,9 @@ _ARGS.add_argument(
     dest="institution_id",
     type=str
     )
-_ARGS.add_argument(
-    "--model-id",
-    help="A model identifier",
-    dest="model_id",
-    type=str
-    )
 
 # MIP era.
-_MIP_ERA = "cordex"
+_MIP_ERA = "cordexp"
 
 # Generator version.
 _VERSION = '1.0.0'
@@ -54,25 +49,26 @@ def _main(args):
     """Main entry point.
 
     """
-    # print(args.institution_id)
-    # print(args.model_id)
     for i in vocabs.get_institutes(args.institution_id):
-        print(i)
-        # for m in vocabs.get_models_by_institute(i):
-        #     for t in vocabs.get_topics():
-        #         xl = Spreadsheet(i, m, t)
-        #         xl.write()
+        for m in vocabs.get_models_by_institute(i):
+            for t in vocabs.get_topics():
+                for d in vocabs.get_domains():
+                    xl = Spreadsheet(i, m, t, d)
+                    logger.log("generating --> {}".format(xl.fpath), app="SH")
+                    xl.write()
 
 
 class Spreadsheet(object):
     """Wraps XLS workbook being generated.
 
     """
-    def __init__(self, i, s, t):
+    def __init__(self, i, s, t, d):
         """Instance constructor.
 
         """
-        self.doc = ModelTopicOutput.create(i, s, t)
+        self.doc = ModelTopicOutput.create(i, s, t, d)
+        self.domain_id = d.canonical_name
+        self.fpath = io_mgr.get_model_topic_xls(i, s, t, d)
         self.institution_id = i.canonical_name
         self.t = self.doc.specialization
         self.topic_label = t.label
@@ -95,7 +91,8 @@ class Spreadsheet(object):
         """
         self.set_identifiers()
 
-        write_topic(self)
+        self.wb = xlsxwriter.Workbook(self.fpath)
+
         write_frontis(self)
         write_citations_and_parties(self)
 

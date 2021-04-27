@@ -94,35 +94,43 @@ def get_citations_json(i):
 
 
 def get_institute_folder(institution):
-    """Returns path to an institute's cordex directory.
+    """Returns path to an institute's cordexp directory.
 
     """
-    return get_folder((institution, 'cordex'))
+    return get_folder((institution, 'cordexp'))
 
 
 def get_models_folder(institution):
     """Returns path to an institute's models directory.
 
     """
-    return get_folder((institution, 'cordex', 'models'))
+    return get_folder((institution, 'cordexp', 'models'))
 
 
 def get_model_folder(institution, source_id, sub_folder=None):
     """Returns path to a directory for a particular model.
 
     """
-    return get_folder((institution, 'cordex', 'models', source_id, sub_folder))
+    return get_folder((institution, 'cordexp', 'models', source_id, sub_folder))
+
+
+def get_model_folder_for_data(i, data_type):
+    """Returns path to an institute's citations directory.
+
+    """
+    return get_folder_for_data(i.canonical_name, data_type)
 
 
 def get_model_cim(institution, source_id):
     """Returns path to cim file for a particular model.
 
     """
-    folder = get_model_folder(institution, source_id, 'cim')
-    fname = 'cordex_{}_{}.json'.format(
-        institution.canonical_name,
-        source_id.canonical_name
-        )
+    folder = get_model_folder_for_data(institution, "cim")
+    fname = "{}_{}_{}.json".format(
+        domain.canonical_name,
+        source_id.canonical_name, 
+        topic.canonical_name,
+        ).replace("-", "_")
 
     return os.path.join(folder, fname)
 
@@ -136,43 +144,30 @@ def get_model_settings(institution, fname):
     return os.path.join(folder, fname)
 
 
-def get_model_topic_json(institution, source_id, topic):
+def get_model_topic_json(institution, source_id, topic, domain):
     """Returns path to json file for a particular model topic.
 
     """
-    folder = get_model_folder(institution, source_id, 'json')
-    fname = 'cordex_{}_{}_{}.json'.format(
-        institution.canonical_name,
-        source_id.canonical_name,
-        topic.canonical_name
-        )
+    folder = get_model_folder_for_data(institution, "json")
+    fname = "{}_{}_{}.json".format(
+        domain.canonical_name,
+        source_id.canonical_name, 
+        topic.canonical_name,
+        ).replace("-", "_")
 
     return os.path.join(folder, fname)
 
 
-def get_model_topic_pdf(institution, source_id, topic):
-    """Returns path to pdf file for a particular model topic.
-
-    """
-    folder = get_model_folder(institution, source_id, 'pdf')
-    fname = 'cordex_{}_{}_{}.pdf'.format(
-        institution.canonical_name,
-        source_id.canonical_name,
-        topic.canonical_name
-        )
-
-    return os.path.join(folder, fname)
-
-
-def get_model_topic_xls(institution, model_id, topic):
+def get_model_topic_xls(institution, source_id, topic, domain):
     """Returns path to xls file for a particular model topic.
 
     """
-    folder = get_model_folder(institution, model_id)
-    fname = 'cordex_{}_{}.xlsx'.format(
-        model_id.canonical_name.replace("-", "_"),
-        topic.canonical_name
-        )
+    folder = get_model_folder(institution, source_id)
+    fname = "cordexp_{}_{}_{}.xlsx".format(
+        domain.canonical_name,
+        source_id.canonical_name, 
+        topic.canonical_name,
+        ).replace("-", "_")
 
     return os.path.join(folder, fname)
 
@@ -228,11 +223,11 @@ def load_model_settings(i, fname):
     return _load_json_content(path)
 
 
-def load_model_topic_json(i, s, t):
+def load_model_topic_json(i, s, t, d):
     """Returns model topic JSON content.
 
     """
-    path = get_model_topic_json(i, s, t)
+    path = get_model_topic_json(i, s, t, d)
 
     return _load_json_content(path)
 
@@ -247,19 +242,10 @@ def write_model_cim(i, s, content):
         fstream.write(content)
 
 
-def write_model_topic_json(i, s, t, content):
+def write_model_topic_json(i, s, t, d, content):
     """Writes a model topic JSON file to file system.
 
     """
-    fpath = get_model_topic_json(i, s, t)
+    fpath = get_model_topic_json(i, s, t, d)
     with open(fpath, 'w') as fstream:
         fstream.write(json.dumps(content, indent=4))
-
-
-def write_model_topic_pdf(i, s, t, content):
-    """Writes a model topic PDF file to file system.
-
-    """
-    fpath = get_model_topic_pdf(i, s, t)
-    with open(fpath, 'w') as fstream:
-        fstream.write(str(content))

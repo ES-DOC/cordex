@@ -15,14 +15,25 @@ import pyessv
 
 
 
+# Set of regional domains run in support of project.
+_DOMAINS = pyessv.COPERNICUS.cordexp.domain
+
 # Set of participating institutes.
 _INSTITUTIONS = pyessv.COPERNICUS.cordexp.institution_id
 
 # Set of models run in support of project.
-_MODELS = pyessv.ECMWF.c3s_cordex.rcm_model
+_MODELS = pyessv.COPERNICUS.cordexp.rcm_model
 
 # Set of model topics to be documented.
 _TOPICS = pyessv.ESDOC.cordexp.model_topic
+
+
+
+def get_domains():
+    """Returns set of domains to be processed.
+
+    """
+    return _DOMAINS
 
 
 def get_institute(institution_id):
@@ -65,7 +76,7 @@ def get_models_by_institute(institution_id=None):
     """
     result = []
     for model in get_models():
-        if model.raw_name.split("-")[0] == institution_id.raw_name:
+        if model.data["institution"] == institution_id.canonical_name:
             result.append(model)
 
     return result

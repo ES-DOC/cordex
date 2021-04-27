@@ -28,14 +28,15 @@ class ModelTopicOutput(object):
     """Model topic documentation output wrapper.
 
     """
-    def __init__(self, mip_era, institute, source_id, topic):
+    def __init__(self, mip_era, institute, source_id, topic, domain):
         """Instance initialiser.
 
         """
         self.authors = []
         self.citations = []
         self.content = dict()
-        self.fpath = io_mgr.get_model_topic_json(institute, source_id, topic)
+        self.domain = domain.canonical_name
+        self.fpath = io_mgr.get_model_topic_json(institute, source_id, topic, domain)
         self.institute = institute.canonical_name
         self.mip_era = unicode(mip_era).strip().lower()
         self.parties = []
@@ -48,24 +49,25 @@ class ModelTopicOutput(object):
 
         # Auto initialise from JSON output file.
         if os.path.isfile(self.fpath):
-            obj = io_mgr.load_model_topic_json(institute, source_id, topic)
+            obj = io_mgr.load_model_topic_json(institute, source_id, topic, domain)
             self._from_dict(obj)
 
 
     @classmethod
-    def create(cls, i, s, t):
+    def create(cls, i, s, t, d):
         """Get notebook output wrapper instance.
 
         :param str m: MIP era, e.g. cordex.
         :param pyessv.Term i: Institute.
         :param pyessv.Term s: Model source.
         :param pyessv.Term t: Documentation topic.
+        :param pyessv.Term t: Regional domain.
 
         :returns: Model topic documentation output wrapper instance.
         :rtype: ModelTopicOutput
 
         """
-        return cls('CORDEX', i, s, t)
+        return cls('CORDEX', i, s, t, d)
 
 
     def save(self):
