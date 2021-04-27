@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Main entry point.
-function main()
+function _main()
 {
 	local MSG=${1}
 	local INSTITUTION
@@ -21,4 +21,4 @@ function main()
 }
 
 # Invoke entry point.
-main "$1"
+_main "$1"

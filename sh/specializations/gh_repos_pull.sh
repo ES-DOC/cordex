@@ -6,7 +6,7 @@
 #   CORDEX_HOME - path to cordex shall root folder.
 #   CORDEXP_SPECIALIZATIONS - array of specializations.
 #######################################
-function main()
+function _main()
 {
 	for SPECIALIZATION in "${CORDEXP_SPECIALIZATIONS[@]}"
 	do
@@ -33,4 +33,4 @@ function _do()
 }
 
 # Invoke entry point.
-main
+_main

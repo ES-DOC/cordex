@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Main entry point.
-function main()
+function _main()
 {
 	cordex_venv_activate
 	pipenv run python $"$CORDEX_HOME/lib/institutes/gh_repos_create.py"
@@ -9,4 +9,4 @@ function main()
 }
 
 # Invoke entry point.
-main
+_main

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Main entry point.
-function main()
+function _main()
 {
     local INSTITUTION
     local PATH_TO_REPO
@@ -10,18 +10,19 @@ function main()
 	do
         PATH_TO_REPO="$CORDEX_HOME/repos/institutions/$INSTITUTION"
         if [ -d "$PATH_TO_REPO" ]; then
-            do_clean "$INSTITUTION" "$PATH_TO_REPO"
+            _do "$INSTITUTION" "$PATH_TO_REPO"
         fi
 	done
 }
 
-function do_clean() {
+function _do() {
     local INSTITUTION=${1}
     local PATH_TO_REPO=${2}
 
-    # rm -rf "$PATH_TO_REPO/cordexp"
+    # rm -rf "$PATH_TO_REPO/cordexp/citations"
+    # rm -rf "$PATH_TO_REPO/cordexp/parties"
     # echo "TODO : clean repo :: "$PATH_TO_REPO/cordex""
 }
 
 # Invoke entry point.
-main
+_main

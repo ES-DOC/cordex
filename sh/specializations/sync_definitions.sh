@@ -8,7 +8,7 @@
 # Arguments:
 #   Specialization repo name.
 #######################################
-function main()
+function _main()
 {
 	local SPECIALIZATION
 
@@ -48,4 +48,4 @@ function _do()
 }
 
 # Invoke entry point.
-main
+_main

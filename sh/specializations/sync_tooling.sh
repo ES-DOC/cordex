@@ -45,7 +45,7 @@ function _do()
 # Globals:
 #   CORDEXP_SPECIALIZATIONS - array of specializations.
 #######################################
-function main()
+function _main()
 {
 	local SPECIALIZATION
 	local PATH_TO_PYESDOC_MP
@@ -63,4 +63,4 @@ function main()
 }
 
 # Invoke entry point.
-main
+_main

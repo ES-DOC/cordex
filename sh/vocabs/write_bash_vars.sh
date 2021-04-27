@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Main entry point.
-function main()
+function _main()
 {
 	local PATH_TO_DEFINITIONS
 	local PATH_TO_OUTPUT_FILE
@@ -26,4 +26,4 @@ function main()
 }
 
 # Invoke entry point.
-main
+_main

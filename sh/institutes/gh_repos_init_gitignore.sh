@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Main entry point.
-function main()
+function _main()
 {
 	local INSTITUTION
 
@@ -18,4 +18,4 @@ function main()
 }
 
 # Invoke entry point.
-main
+_main

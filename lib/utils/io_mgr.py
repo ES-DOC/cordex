@@ -70,27 +70,23 @@ def get_citations_folder_for_data(i):
     """Returns path to an institute's citations directory.
 
     """
-    return get_folder_for_data(i.canonical_name, data_type="json")
+    return get_folder_for_data(i.canonical_name)
 
 
 def get_citations_spreadsheet(i):
     """Returns path to an institute's citations xls file.
 
     """
-    fname = 'cordexp_{}_citations.xlsx'.format(i.canonical_name)
-    path = get_citations_folder(i)
+    fname = 'cordexp_{}_citations.xlsx'.format(i.canonical_name).replace("-", "_")
 
-    return os.path.join(path, fname)
+    return os.path.join(get_citations_folder(i), fname)
 
 
 def get_citations_json(i):
     """Returns path to an institute's citations json file.
 
     """
-    fname = "citations.json"
-    path = get_citations_folder_for_data(i)
-
-    return os.path.join(path, fname)
+    return os.path.join(get_citations_folder_for_data(i), "citations.json")
 
 
 def get_institute_folder(institution):
@@ -114,11 +110,11 @@ def get_model_folder(institution, source_id, sub_folder=None):
     return get_folder((institution, 'cordexp', 'models', source_id, sub_folder))
 
 
-def get_model_folder_for_data(i, data_type):
+def get_model_folder_for_data(source_id, data_type):
     """Returns path to an institute's citations directory.
 
     """
-    return get_folder_for_data(i.canonical_name, data_type)
+    return get_folder_for_data(source_id.canonical_name, data_type)
 
 
 def get_model_cim(institution, source_id):
@@ -131,15 +127,6 @@ def get_model_cim(institution, source_id):
         source_id.canonical_name, 
         topic.canonical_name,
         ).replace("-", "_")
-
-    return os.path.join(folder, fname)
-
-
-def get_model_settings(institution, fname):
-    """Returns path to a model settings file.
-
-    """
-    folder = get_models_folder(institution)
 
     return os.path.join(folder, fname)
 
@@ -190,7 +177,7 @@ def get_parties_spreadsheet(i):
     """Returns path to an institute's responsible parties xls file.
 
     """
-    fname = 'cordexp_{}_parties.xlsx'.format(i.canonical_name)
+    fname = 'cordexp_{}_parties.xlsx'.format(i.canonical_name).replace("-", "_")
     path = get_parties_folder(i)
 
     return os.path.join(path, fname)
@@ -200,27 +187,7 @@ def get_parties_json(i):
     """Returns path to an institute's responsible parties json file.
 
     """
-    fname = "parties.json"
-    path = get_parties_folder_for_data(i)
-
-    return os.path.join(path, fname)
-
-
-def _load_json_content(fpath):
-    """Returns JSON file content.
-
-    """
-    with open(fpath, 'r') as fstream:
-        return json.loads(fstream.read())
-
-
-def load_model_settings(i, fname):
-    """Returns model settings content.
-
-    """
-    path = get_model_settings(i, fname)
-
-    return _load_json_content(path)
+    return os.path.join(get_parties_folder_for_data(i), "parties.json")
 
 
 def load_model_topic_json(i, s, t, d):
@@ -249,3 +216,11 @@ def write_model_topic_json(i, s, t, d, content):
     fpath = get_model_topic_json(i, s, t, d)
     with open(fpath, 'w') as fstream:
         fstream.write(json.dumps(content, indent=4))
+
+
+def _load_json_content(fpath):
+    """Returns JSON file content.
+
+    """
+    with open(fpath, 'r') as fstream:
+        return json.loads(fstream.read())

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Main entry point.
-function main()
+function _main()
 {
     log "setting repos:"
     mkdir -p "$CORDEX_HOME"/repos
@@ -87,4 +87,4 @@ function _set_repo()
 }
 
 # Invoke entry point.
-main
+_main

@@ -6,7 +6,7 @@
 #   CORDEX_HOME - path to cordex shell home directory.
 #   CORDEXP_SPECIALIZATIONS - array of specializations.
 #######################################
-function main()
+function _main()
 {
 	local SPECIALIZATION
 
@@ -38,4 +38,4 @@ function _do()
 }
 
 # Invoke entry point.
-main
+_main

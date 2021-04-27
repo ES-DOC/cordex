@@ -8,7 +8,7 @@
 # Arguments:
 #   Commit message.
 #######################################
-function main()
+function _main()
 {
 	local MSG=${1}
 	local SPECIALIZATION
@@ -46,4 +46,4 @@ function _do()
 }
 
 # Invoke entry point.
-main "$1"
+_main "$1"
