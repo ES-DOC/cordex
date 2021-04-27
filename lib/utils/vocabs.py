@@ -87,3 +87,16 @@ def get_topics():
 
     """
     return _TOPICS
+
+
+def yield_topics(institution_id):
+    """Yields model topics.
+    
+    """
+    for i in get_institutes(institution_id):
+        for m in get_models_by_institute(i):
+            for t in get_topics():
+                if t.canonical_name != "toplevel":
+                    continue
+                for d in get_domains():    
+                    yield i, m, t, d

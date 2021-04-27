@@ -41,21 +41,19 @@ def _main(args):
 
     """
     for i, s, t, d in vocabs.yield_topics(args.institution_id):
-        # print("{} :: {} :: {} :: {}".format(i, s, t, d))
-        print(io_mgr.get_model_topic_xls(i, s, t, d))
-        # try:
-        #     wb = _get_spreadsheet(i, s, t, d)
-        # except IOError:
-        #     warning = '{} :: {} :: {} :: spreadsheet not found'
-        #     warning = warning.format(i.canonical_name, s.canonical_name, t.canonical_name)
-        #     logger.log_warning(warning)
-        #     continue
+        try:
+            wb = _get_spreadsheet(i, s, t, d)
+        except IOError:
+            warning = '{} :: {} :: {} :: spreadsheet not found'
+            warning = warning.format(i.canonical_name, s.canonical_name, t.canonical_name)
+            logger.log_warning(warning)
+            continue
 
-        # # Set JSON content.
-        # content = _get_content(i, s, t, wb)
+        # Set JSON content.
+        content = _get_content(i, s, t, d, wb)
 
-        # # Write JSON file.
-        # io_mgr.write_model_topic_json(i, s, t, d, content)
+        # Write JSON file.
+        io_mgr.write_model_topic_json(i, s, t, d, content)
 
 
 def _get_spreadsheet(i, s, t, d):
@@ -63,14 +61,13 @@ def _get_spreadsheet(i, s, t, d):
 
     """
     fpath = io_mgr.get_model_topic_xls(i, s, t, d)
-    print(fpath)
     if not os.path.exists(fpath):
         raise IOError()
 
     return openpyxl.load_workbook(fpath, read_only=True)
 
 
-def _get_content(i, s, t, wb):
+def _get_content(i, s, t, d, wb):
     """Returns content to be written to file system.
 
     """
@@ -78,9 +75,10 @@ def _get_content(i, s, t, wb):
     obj = collections.OrderedDict()
     obj['mipEra'] = _MIP_ERA
     obj['institute'] = i.canonical_name
-    obj['seedingSource'] = 'Spreadsheet'
+    obj['domain'] = d.canonical_name
     obj['sourceID'] = s.canonical_name
     obj['topic'] = t.canonical_name
+    obj['seedingSource'] = 'Spreadsheet'
     obj['content'] = collections.OrderedDict()
 
     # Process spreadsheet.

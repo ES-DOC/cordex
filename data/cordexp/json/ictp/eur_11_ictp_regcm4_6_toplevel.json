@@ -1,0 +1,250 @@
+{
+    "mipEra": "cordexp", 
+    "institute": "ictp", 
+    "domain": "eur-11", 
+    "sourceID": "ictp-regcm4-6", 
+    "topic": "toplevel", 
+    "seedingSource": "Spreadsheet", 
+    "content": {
+        "cordexp.toplevel.key_properties.name": {
+            "values": [
+                "REGCM4-6"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.keywords": {
+            "values": [
+                "REGCM; CORDEX; ICTP; Earth System Physics"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.overview": {
+            "values": [
+                "RegCM4-6 is the sixth version of the latest fourth generation of the ICTP regional climate model RegCM, based on the numerical weather prediction model NCEP/NCAR Mesoscale Model. The RegCM4-6 has a hydrostatic dynamical core with 23 model levels in the hybrid pressure vertical coordinate. The RegCM4-6 employs a CLM4.5 land surface scheme with physiography based on MODIS satellite data."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.details": {
+            "values": [
+                "A new version of the RegCM regional climate modeling system, RegCM4, has been recently developed and made available for public use. Compared to previous versions, RegCM4 includes new land surface, planetary boundary layer, and air\u2013sea flux schemes, a mixed convection and tropical band configuration, modifications to the pre-existing radiative transfer and boundary layer schemes, and a full upgrade of the model code towards improved flexibility, portability, and user friendliness. The model can be interactively coupled to a 1D lake model, a simplified aerosol scheme (including organic carbon, black carbon, SO4, dust, and sea spray), and a gas phase chemistry module (CBM-Z). After a general description of the model, a series of test experiments are presented over 4 domains prescribed under the CORDEX framework (Africa, South America, East Asia, and Europe) to provide illustrative examples of the model behavior and sensitivities under different climatic regimes. These experiments indicate that, overall, RegCM4 shows an improved performance in several respects compared to previous versions, although further testing by the user community is needed to fully explore its sensitivities and range of applications."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.year_released": {
+            "values": [
+                2012
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+            "values": [
+                "RegCM3"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
+            "values": [
+                "The basic model dynamics have remained the same as in RegCM3.  In RegCM4 the radiative cloud representation is modified by first calculating the total cloud cover at a given grid point and then calculating the surface fluxes separately for the cloudy and clear sky portions of the grid bo to account for the occurrence of fractional clear sky at a given grid box. In RegCM4, the contribution of the infrared spectrum was added following Solmon et al. (2008).  The existing PBL scheme (Holtslag et al. 1990), underwent various modifications, and second a new PBL scheme, the University of Washington PBL (Grenier & Bretherton 2001, Bretherton et al. 2004), was implemented. The capability of running different convection schemes over land and ocean, a configuration referred to as \u2018mixed convection', was added. The resolved scale precipitation scheme remains unchanged with the exception of some parameter settings. 2 new land use types were added to BATS to represent urban and suburban environments, and  the option to use the Community Land Model. The prognostic SST scheme described by Zeng & Beljaars (2005) was implemented in RegCM4. More information is available in Giorgi et al (2012). "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "GCM-based"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.spinup.details": {
+            "values": [
+                "The first year of the evaluation (1979) and historical (1970) simulations is a spin-up."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.repository": {
+            "values": [
+                "http://clima-dods.ictp.it/Users/ggiulian/RegCM-4.6.1.tar.gz"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_version": {
+            "values": [
+                "4-6"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran90/95"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.coupler": {
+            "values": [
+                "None: No coupler is used"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.reference.details": {
+            "values": [
+                "Giorgi F, Coppola E, Solmon F, Mariotti L and others (2012) RegCM4: model description and preliminary tests over multiple CORDEX domains. Clim Res 52:7-29.\u00a0https://doi.org/10.3354/cr01018 url:http://www.int-res.com/abstracts/cr/v52/p7-29/ "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.description": {
+            "values": [
+                "5-year bias tests for precipitation and surface temperature compared to E-OBS dataset. "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "regional means"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+            "values": [
+                "Temperature, surface pressure, specific humidity, zonal and meridional winds (ta, ps, hus, ua, va)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_top": {
+            "values": [
+                "rigid top"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.additional_information": {
+            "values": [
+                "Giorgi, F., M. R. Marinucci, G. T. Bates, and G. De Canio, 1993: Development of a second-generation climate model (RegCM2). Part II: Convective processes and assimilation of lateral boundary conditions. Mon. Wea. Rev., 121, 2814\u20132832. DOI: https://doi.org/10.1175/1520-0493(1993)121%3C2814:DOASGR%3E2.0.CO;2"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+            "values": [
+                "Temperature, surface pressure, specific humidity, zonal and meridional winds (ta, ps, hus, ua, va)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_top": {
+            "values": [
+                "rigid top"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.additional_information": {
+            "values": [
+                "Giorgi, F., M. R. Marinucci, G. T. Bates, and G. De Canio, 1993: Development of a second-generation climate model (RegCM2). Part II: Convective processes and assimilation of lateral boundary conditions. Mon. Wea. Rev., 121, 2814\u20132832. DOI: https://doi.org/10.1175/1520-0493(1993)121%3C2814:DOASGR%3E2.0.CO;2"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+            "values": [
+                "SST from the driving reanalysis ERA-Interim"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+            "values": [
+                "monthly (MOHC-HadGEM2-ES, CNRM-CERFACS-CNRM-CM5), daily (NCC-NorESM1-M), 6hr (MPI-M-MPI-ESM-LR, ICHEC-EC-EARTH)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
+            "values": [
+                "1-km MODIS-derived as described in Lawrence and Chase (2007). DOI: https://doi.org/10.1029/2006JG000168"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+            "values": [
+                "static"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
+            "values": [
+                "1-km MODIS-derived as described in Lawrence and Chase (2007). DOI: https://doi.org/10.1029/2006JG000168"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
+            "values": [
+                "static"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.name": {
+            "values": [
+                "Greenhouse Gases and Solar"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.overview": {
+            "values": [
+                "CO2, CH4, N2O, CFCs, Solar"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
+            "values": [
+                "CO2 concentrations following the RCP scenarios, and interpolated from one year to the next. "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
+            "values": [
+                "CH4 concentrations following the RCP scenarios, and interpolated from one year to the next. "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
+            "values": [
+                "N2O concentrations following the RCP scenarios, and interpolated from one year to the next. "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
+            "values": [
+                "Option 2: CFC-12 is provided as actual concentrations and any other gases are provided as an equivalence concentration of CFC-11"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
+            "values": [
+                "CFC-11 & CFC-12 concentrations following the RCP scenarios, and interpolated from one year to the next. "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.solar.provision": {
+            "values": [
+                "irradiance: Solar irradiance forcing"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.solar.additional_information": {
+            "values": [
+                "Annual Mean Total Solar Irradiance (Lean, 2000) with Wang et al. (2005) background; Lean J (2000) Evolution of the Sun's Spectral Irradiance Since the Maunder Minimum. Geophysical Research Letters 26:16, 2425-2428. DOI: https://doi.org/10.1029/2000GL000043 ; Wang Y-M, Lean JL, & Sheeley Jr NR (2005). Modeling the Sun's Magnetic Field and Irradiance since 1713. The Astrophysical Journal 625:1, 522. URL: https://iopscience.iop.org/article/10.1086/429689"
+            ]
+        }
+    }
+}
