@@ -54,14 +54,14 @@ class ModelTopicOutput(object):
 
 
     @classmethod
-    def create(cls, i, s, t, d):
+    def create(cls, i, d, s, t):
         """Get notebook output wrapper instance.
 
         :param str m: MIP era, e.g. cordex.
         :param pyessv.Term i: Institute.
+        :param pyessv.Term t: Regional domain.
         :param pyessv.Term s: Model source.
         :param pyessv.Term t: Documentation topic.
-        :param pyessv.Term t: Regional domain.
 
         :returns: Model topic documentation output wrapper instance.
         :rtype: ModelTopicOutput
@@ -156,6 +156,9 @@ class ModelTopicOutput(object):
         """Returns a set of values.
 
         """
+        # TODO: review why necessary.
+        specialization_id = specialization_id.replace("cordex", "cordexp")
+
         return self.content.get(specialization_id, dict()).get('values', [])
 
 
@@ -163,6 +166,9 @@ class ModelTopicOutput(object):
         """Returns a set of comma delimited values.
 
         """
+        # TODO: review why necessary.
+        specialization_id = specialization_id.replace("cordex", "cordexp")
+
         value = self.get_value(specialization_id)
 
         return [i.trim() for i in value.split(',')] if value else []
@@ -172,6 +178,9 @@ class ModelTopicOutput(object):
         """Returns a single value.
 
         """
+        # TODO: review why necessary.
+        specialization_id = specialization_id.replace("cordex", "cordexp")
+
         values = self.get_values(specialization_id)
 
         return values[0] if values else None

@@ -70,7 +70,7 @@ def get_models(model_id=None):
     return [get_model(model_id)]
 
 
-def get_models_by_institute(institution_id=None):
+def get_models_by_institution(institution_id=None):
     """Returns set of rcm-models to be processed filtered by institute.
 
     """
@@ -94,9 +94,19 @@ def yield_topics(institution_id):
     
     """
     for i in get_institutes(institution_id):
-        for m in get_models_by_institute(i):
+        for m in get_models_by_institution(i):
             for t in get_topics():
                 if t.canonical_name != "toplevel":
                     continue
                 for d in get_domains():    
                     yield i, m, t, d
+
+
+def yield_domains(institution_id):
+    """Yields model topics.
+    
+    """
+    for i in get_institutes(institution_id):
+        for d in get_domains():    
+            for m in get_models_by_institution(i):
+                yield (i, d, m, get_topics())

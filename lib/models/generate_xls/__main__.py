@@ -50,7 +50,7 @@ def _main(args):
 
     """
     for i in vocabs.get_institutes(args.institution_id):
-        for m in vocabs.get_models_by_institute(i):
+        for m in vocabs.get_models_by_institution(i):
             for t in vocabs.get_topics():
                 for d in vocabs.get_domains():
                     xl = Spreadsheet(i, m, t, d)
@@ -66,7 +66,7 @@ class Spreadsheet(object):
         """Instance constructor.
 
         """
-        self.doc = ModelTopicOutput.create(i, s, t, d)
+        self.doc = ModelTopicOutput.create(i, d, s, t)
         self.domain_id = d.canonical_name
         self.fpath = io_mgr.get_model_topic_xls(i, s, t, d)
         self.institution_id = i.canonical_name

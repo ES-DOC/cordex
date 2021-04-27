@@ -114,18 +114,17 @@ def get_model_folder_for_data(source_id, data_type):
     """Returns path to an institute's citations directory.
 
     """
-    return get_folder_for_data(source_id.canonical_name, data_type)
+    return get_folder_for_data(source_id.canonical_name, data_type=data_type)
 
 
-def get_model_cim(institution, source_id):
+def get_model_cim(institution, domain, source_id):
     """Returns path to cim file for a particular model.
 
     """
     folder = get_model_folder_for_data(institution, "cim")
-    fname = "{}_{}_{}.json".format(
+    fname = "{}_{}.json".format(
         domain.canonical_name,
         source_id.canonical_name, 
-        topic.canonical_name,
         ).replace("-", "_")
 
     return os.path.join(folder, fname)
@@ -170,7 +169,7 @@ def get_parties_folder_for_data(i):
     """Returns path to an institute's responsible parties directory.
 
     """
-    return get_folder_for_data(i.canonical_name, data_type="json")
+    return get_folder_for_data(i.canonical_name)
 
 
 def get_parties_spreadsheet(i):
@@ -199,23 +198,23 @@ def load_model_topic_json(i, s, t, d):
     return _load_json_content(path)
 
 
-def write_model_cim(i, s, content):
+def write_model_cim(i, d, s, obj):
     """Writes a model topic JSON file to file system.
 
     """
-    fpath = get_model_cim(i, s)
-    logger.log('writing --> {}'.format(fpath.split('/')[-1]), app='SH')
+    fpath = get_model_cim(i, d, s)
+    logger.log('writing --> {}'.format(fpath), app='SH')
     with open(fpath, 'w') as fstream:
-        fstream.write(content)
+        fstream.write(obj)
 
 
-def write_model_topic_json(i, s, t, d, content):
+def write_model_topic_json(i, s, t, d, obj):
     """Writes a model topic JSON file to file system.
 
     """
     fpath = get_model_topic_json(i, s, t, d)
     with open(fpath, 'w') as fstream:
-        fstream.write(json.dumps(content, indent=4))
+        fstream.write(json.dumps(obj, indent=4))
 
 
 def _load_json_content(fpath):

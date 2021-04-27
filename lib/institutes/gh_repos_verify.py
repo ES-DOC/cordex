@@ -91,7 +91,7 @@ def _verify_models(i, errs):
 
     """
     # Set identifiers of models to be documented.
-    identifiers = set([j.canonical_name for j in vocabs.get_models_by_institute(i)])
+    identifiers = set([j.canonical_name for j in vocabs.get_models_by_institution(i)])
 
     # Set directories.
     folder_root = io_mgr.get_folder([i, 'cordex', 'models'])
@@ -102,7 +102,7 @@ def _verify_models(i, errs):
     obsolete = documented.difference(identifiers)
 
     # Verify each model and then model topics.
-    for model in vocabs.get_models_by_institute(i):
+    for model in vocabs.get_models_by_institution(i):
         if model.canonical_name in undocumented:
             errs.append("model undocumented :: {}".format(model.canonical_name.upper()))
         elif model.canonical_name in obsolete:
