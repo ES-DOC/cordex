@@ -69,8 +69,7 @@ def _get_document(institution, domain, model, topics):
 
     # Emit validation report.
     errors = pyesdoc.validate(doc)
-    errors = [e for e in errors if
-              e.endswith('values --> is an empty list') == False]
+    errors = [e for e in errors if e.endswith('values --> is an empty list') == False]
     if errors:
         print("INVALID CIM DOCUMENT: {}".format(s))
         for err in errors:
