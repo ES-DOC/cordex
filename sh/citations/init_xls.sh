@@ -35,7 +35,7 @@ function _do()
 	local PATH_TO_TEMPLATE=${2}
 	local FNAME
 	local PATH_TO_DEST_FOLDER
-	local PATH_TO_DEST
+	local PATH_TO_DEST_FILE
 
 	PATH_TO_DEST_FOLDER="$CORDEX_HOME/repos/institutions/${INSTITUTION}/cordexp/citations"
 	mkdir -p "$PATH_TO_DEST_FOLDER"

@@ -11,4 +11,4 @@ function _main()
 }
 
 # Invoke entry point.
-_main ${1:-"all"}
+_main "${1:-"all"}"
