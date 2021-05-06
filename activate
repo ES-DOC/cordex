@@ -88,7 +88,7 @@ alias cordex-institutes-gh-repos-status='exec_cmd institutes-gh-repos-clone inst
 alias cordex-institutes-gh-repos-verify='exec_cmd institutes-gh-repos-verify institutes/gh_repos_verify.sh'
 
 # Models
-# alias cordex-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
+alias cordex-models-archive-cim-documents='exec_cmd models-archive-cim-documents models/archive_cim_documents.sh'
 alias cordex-models-generate-cim='exec_cmd models-generate-cim models/generate_cim.sh'
 alias cordex-models-generate-json='exec_cmd models-generate-json models/generate_json.sh'
 alias cordex-models-generate-xls='exec_cmd models-generate-xls models/generate_xls.sh'
