@@ -156,9 +156,6 @@ class ModelTopicOutput(object):
         """Returns a set of values.
 
         """
-        # TODO: review why necessary.
-        specialization_id = specialization_id.replace("cordex", "cordexp")
-
         return self.content.get(specialization_id, dict()).get('values', [])
 
 
@@ -166,9 +163,6 @@ class ModelTopicOutput(object):
         """Returns a set of comma delimited values.
 
         """
-        # TODO: review why necessary.
-        specialization_id = specialization_id.replace("cordex", "cordexp")
-
         value = self.get_value(specialization_id)
 
         return [i.trim() for i in value.split(',')] if value else []
@@ -178,10 +172,6 @@ class ModelTopicOutput(object):
         """Returns a single value.
 
         """
-        # TODO: review why necessary.
-        specialization_id = specialization_id.replace("cordex", "cordexp")
-
         values = self.get_values(specialization_id)
 
         return values[0] if values else None
-

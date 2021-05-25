@@ -168,6 +168,7 @@ def _map_realm(specialization, accessor):
     r.description = specialization.description or specialization.name_camel_case_spaced
     r.name = specialization.name_camel_case_spaced
     r.specialization_id = specialization.id
+
     r.key_properties = _map_topic(specialization['keyprops'], accessor)
     r.grid = _map_topic(specialization['grid'], accessor)
     r.processes = _map_topics(specialization['process'], accessor)

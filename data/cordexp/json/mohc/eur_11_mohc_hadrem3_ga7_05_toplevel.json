@@ -6,267 +6,267 @@
     "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
     "content": {
-        "cordexp.toplevel.key_properties.name": {
+        "cordex.toplevel.key_properties.name": {
             "values": [
                 "HadREM3-GA7-05"
             ]
         }, 
-        "cordexp.toplevel.key_properties.keywords": {
+        "cordex.toplevel.key_properties.keywords": {
             "values": [
                 "HadREM3-GA7-05;GA7 UM;Hadley Centre;Met Office UK"
             ]
         }, 
-        "cordexp.toplevel.key_properties.overview": {
+        "cordex.toplevel.key_properties.overview": {
             "values": [
                 "HadREM3-GA7-05 is the regional climate model based on the Met Office Unified Model Global Atmosphere 7.0 and Jules Global Land configuration7.0  (Walters et al, 2019), also used for the HadGEM3-GC3 model on which the MetOffice contribution to CMIP6 is based, and for the Climate Projections for the UK, 2018 (UKCP18), based on perturbed physic models. The model is based on the non-hydrostatic dynamical scheme  ENDGAME (Wood et al, 2014), in a configuration which uses a maximum of 63 hybrid-height terrain following levels with a top of the atmophere level at ~40km. The regional model uses prescribed aerosol optical properties and cloud condensation nuclei concentration. Anthropogenic forcings come from the MACv2-SP data for the historical period (Stevens et al, 2017) and for the RCP scenarios (Fiedler et al, 2019)."
             ]
         }, 
-        "cordexp.toplevel.key_properties.model_type.model_family": {
+        "cordex.toplevel.key_properties.model_type.model_family": {
             "values": [
                 "Regional Atmospheric Climate Model"
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.year_released": {
+        "cordex.toplevel.key_properties.genealogy.year_released": {
             "values": [
                 2019
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
+        "cordex.toplevel.key_properties.genealogy.difference_to_previous": {
             "values": [
                 "HadGEM3-RA was based on the MetOffice Unified Model Global Atmospere and Jules Global Land version 3 (Walters et al,2011), changes include a new dynamical core and major updates in parametrised schemes."
             ]
         }, 
-        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+        "cordex.toplevel.key_properties.cordex_domain.domain": {
             "values": [
                 "EUR-11"
             ]
         }, 
-        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+        "cordex.toplevel.key_properties.model_calendar.calendar": {
             "values": [
                 "GCM-based"
             ]
         }, 
-        "cordexp.toplevel.key_properties.spinup.details": {
+        "cordex.toplevel.key_properties.spinup.details": {
             "values": [
                 "One year spin up for all runs (1981 for the evaluation run, 1950 for the historical runs)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.software_properties.code_version": {
+        "cordex.toplevel.key_properties.software_properties.code_version": {
             "values": [
                 "UM10.9"
             ]
         }, 
-        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+        "cordex.toplevel.key_properties.software_properties.code_languages": {
             "values": [
                 "Fortran90,C"
             ]
         }, 
-        "cordexp.toplevel.key_properties.reference.details": {
+        "cordex.toplevel.key_properties.reference.details": {
             "values": [
                 "Walters D., Baran A., Boutle I., Brooks M., Earnshaw P., Edwards J., Furtado K., Hill P., Lock A., Manners J., Morcrette C., Mulcahy J., Sanchez C., Smith C., Stratton R., Tennant W., Tomassini L., Van Weverberg K., Vosper S., Willett M., Browse J., Bushell A., Dalvi M., Essery R., Gedney N., Hardiman S., Johnson B., Johnson C., Jones A., Mann G., Milton S., Rumbold H., Sellar A., Ujiie M., Whitall M., Williams K., and Zerroukat M. (2017) The Met Office Unified Model Global Atmosphere 7.0/7.1 and JULES Global Land 7.0 configurations, Geosci. Model Dev., 12, 1909\u20131963, 2019, https://doi.org/10.5194/gmd-12-1909-2019                                       Tucker S., Kendon, E.J. Bellouin, N. Buonomo, E. Johnson, B.T., and Murphy, J.M. Evaluation of a new 12km regional perturbed parameter ensemble over Europe, 2021, Clim. Dyn. (submitted)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
             "values": [
                 "Temperature, specific humidity, zonal and meridional winds and surface pressure (ta, hus, ua, va, ps)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
             "values": [
                 "6hr"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_top": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_top": {
             "values": [
                 "40km"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
             "values": [
                 "Temperature, specific humidity, zonal and meridional winds and surface pressure (ta, hus, ua, va, ps)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
             "values": [
                 "6hr"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_top": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_top": {
             "values": [
                 "Dependent on the atmosperic thickness of the driving boundary conditions, vertical levels removed from the top to match driving model depth of the atmosphere"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
             "values": [
                 "Reynolds SST (Reynolds, R. W., T. M. Smith, C. Liu, D. B. Chelton, K. S. Casey, and M. G. Schlax, 2007:  Daily high-resolution blended analyses for sea surface temperature. J. Climate, 20, 5473-5496. )"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
             "values": [
                 "daily"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
             "values": [
                 "Reynolds sea ice fraction "
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
             "values": [
                 "daily"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
             "values": [
                 "daily"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
             "values": [
                 "daily"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
             "values": [
                 "Prescribed aerosol optical properties (absorption, extinction and asymmetry) for the 6 shortwave and 9 longwave wavebands of the SOCRATES radiative transfer code (Edwards and Slingo, 1996, Manners et al., 2015) and cloud droplet number concentrations (CDNC) are combined from three source of data. Anthropogenic forcings come from the  MACv2-SP dataset (Stevens et al, 2017), a pre-industrial background is from an AMIP pre-industrial of a GA7 configuration of the MetUM with prognostic aerosol and the VolMIP stratospheric aerosol forcing dataset (Zanchettin et al, 2016). References: Edwards, J. M., & Slingo, A. (1996). Studies with a flexible new radiation code. I: Choosing a configuration for a large-scale model. Quarterly Journal of the Royal Meteorological Society, 122(531), 689\u2013719. https://doi.org/10.1002/qj.49712253107. Manners, J. and Edwards, J. M. and Hill, P. and Thelen, J.-C., 2015: SOCRATES (Suite Of Community RAdiative Transfer codes based on Edwards and Slingo) Technical Guide. Met Office, UK. Available at: https://code.metoffice.gov.uk/trac/socrates. Stevens, B., Fiedler, S., Kinne, S., Peters, K., Rast, S., M\u00fcsse, J., Smith, S. J., & Mauritsen, T. (2017). MACv2-SP: a parameterization of anthropogenic aerosol optical properties and an associated Twomey effect for use in CMIP6. Geoscientific Model Development, 10(1), 433\u2013452. https://doi.org/10.5194/gmd-10-433-2017. Fiedler, S., Stevens, B., Gidden, M., Smith, S. J., Riahi, K., and van Vuuren, D.: First forcing estimates from the future CMIP6 scenarios of anthropogenic aerosol optical properties and an associated Twomey effect, Geosci. Model Dev., 12, 989\u20131007, https://doi.org/10.5194/gmd-12-989-2019, 2019.  Zanchettin, D., Khodri, M., Timmreck, C., Toohey, M., Schmidt, A., Gerber, E. P., Hegerl, G., Robock, A., Pausata, F. S. R., Ball, W. T., Bauer, S. E., Bekki, S., Dhomse, S. S., LeGrande, A. N., Mann, G. W., Marshall, L., Mills, M., Marchand, M., Niemeier, U., Poulain, V., Rozanov, E., Rubino, A., Stenke, A., Tsigaridis, K., and Tummon, F.: The Model Intercomparison Project on the climatic response to Volcanic forcing (VolMIP): experimental design and forcing input data for CMIP6, Geosci. Model Dev., 9, 2701\u20132719, https://doi.org/10.5194/gmd-9-2701-2016, 2016. "
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
             "values": [
                 "monthly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.additional_information": {
             "values": [
                 "The input datasets are used via the EasyAerosol scheme. For the calculation of radiative fluxes and the representation of aerosol-radiation interactions (direct and semi-direct effects), EasyAerosol prescribes distributions of aerosol extinction, absorption and asymmetry. Those distributions are given for the shortwave and longwave spectra independently. EasyAerosol also prescribes distributions of cloud droplet number concentrations."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
             "values": [
                 "Prescribed aerosol optical properties (absorption, extinction and asymmetry) for the 6 shortwave and 9 longwave wavebands of the SOCRATES radiative transfer code (Edwards and Slingo, 1996, Manners et al., 2015) and cloud droplet number concentrations (CDNC) are combined from three source of data. Anthropogenic forcings come from the  MACv2-SP dataset (Stevens et al, 2017), a pre-industrial background is from an AMIP pre-industrial of a GA7 configuration of the MetUM with prognostic aerosol and the VolMIP stratospheric aerosol forcing dataset (Zanchettin et al, 2016) (Full citation included above)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
             "values": [
                 "Monthly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
             "values": [
                 "The input datasets are used via the EasyAerosol scheme. For the calculation of radiative fluxes and the representation of aerosol-radiation interactions (direct and semi-direct effects), EasyAerosol prescribes distributions of aerosol extinction, absorption and asymmetry. Those distributions are given for the shortwave and longwave spectra independently. EasyAerosol also prescribes distributions of cloud droplet number concentrations."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_dataset": {
             "values": [
                 "AC&C/SPARC, Cionni, I., Eyring, V., Lamarque, J. F., Randel, W. J., Stevenson, D. S., Wu, F., Bodeker, G. E., Shepherd, T. G., Shindell, D. T., & Waugh, D. W. (2011). Ozone database in support of CMIP5 simulations: results and corresponding radiative forcing. Atmospheric Chemistry and Physics Discussions, 11(4), 10875\u201310933. https://doi.org/10.5194/acpd-11-10875-2011"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
             "values": [
                 "monthly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
             "values": [
                 "AC&C/SPARC (Cionni et al, 2011)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
             "values": [
                 "monthly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
             "values": [
                 " International Geosphere\u2013Biosphere Programme dataset (IGBP; Loveland et al., 2000)  mapped to the nine land types used in JULES, plus land use changes from Hurtt, G.C., et al., 2011. References: Loveland, T. R., Reed, B. C., Ohlen, D. O., Brown, J. F., Zhu, Z., Yang, L., & Merchant, J. W. (2000). Development of a global land cover characteristics database and IGBP DISCover from 1 km AVHRR data. International Journal of Remote Sensing, 21(6\u20137), 1303\u20131330. https://doi.org/10.1080/014311600210191, Hurtt, G. C., Chini, L. P., Frolking, S., Betts, R. A., Feddema, J., Fischer, G., Fisk, J. P., Hibbard, K., Houghton, R. A., Janetos, A., Jones, C. D., Kindermann, G., Kinoshita, T., Klein Goldewijk, K., Riahi, K., Shevliakova, E., Smith, S., Stehfest, E., Thomson, A., \u2026 Wang, Y. P. (2011). Harmonization of land-use scenarios for the period 1500-2100: 600 years of global gridded annual land-use transitions, wood harvest, and resulting secondary lands. Climatic Change, 109(1), 117\u2013161. https://doi.org/10.1007/s10584-011-0153-2"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
             "values": [
                 "Annual"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.additional_information": {
             "values": [
                 "The land use changes from Hurtt et al. (2011) are used to  represent changes in anthropogenic land use by changes in grasses (c3 and c4 grasses) at the expense/addition of clearing/planting a corresponding fraction of the combination of trees (needleleaf and broadleaf) and shrubs. The fractions of bare soil, inland water, urban and ice remain unchanged. "
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
             "values": [
                 " International Geosphere\u2013Biosphere Programme dataset (IGBP; Loveland et al., 2000)  mapped to the nine land types used in JULES, plus land use changes from Hurtt, G.C., et al., 2011"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
             "values": [
                 "Annual"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_scn.additional_information": {
             "values": [
                 "The land use changes from Hurtt et al. (2011) are used to  represent changes in anthropogenic land use by changes in grasses (c3 and c4 grasses) at the expense/addition of clearing/planting a corresponding fraction of the combination of trees (needleleaf and broadleaf) and shrubs. The fractions of bare soil, inland water, urban and ice remain unchanged. "
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
             "values": [
                 "Historical and RCP scenario annual concentrations as described in  Jones, C. D., Hughes, J. K., Bellouin, N., Hardiman, S. C., Jones, G. S., Knight, J., Liddicoat, S., O'Connor, F. M., Andres, R. J., Bell, C., Boo, K.-O., Bozzo, A., Butchart, N., Cadule, P., Corbin, K. D., Doutriaux-Boucher, M., Friedlingstein, P., Gornall, J., Gray, L., Halloran, P. R., Hurtt, G., Ingram, W. J., Lamarque, J.-F., Law, R. M., Meinshausen, M., Osprey, S., Palin, E. J., Parsons Chini, L., Raddatz, T., Sanderson, M. G., Sellar, A. A., Schurer, A., Valdes, P., Wood, N., Woodward, S., Yoshioka, M., and Zerroukat, M.: The HadGEM2-ES implementation of CMIP5 centennial simulations, Geosci. Model Dev., 4, 543\u2013570, https://doi.org/10.5194/gmd-4-543-2011, 2011."
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
             "values": [
                 "Historical and RCP scenario annual concentrations as described in  Jones, C. D., Hughes, J. K., Bellouin, N., Hardiman, S. C., Jones, G. S., Knight, J., Liddicoat, S., O'Connor, F. M., Andres, R. J., Bell, C., Boo, K.-O., Bozzo, A., Butchart, N., Cadule, P., Corbin, K. D., Doutriaux-Boucher, M., Friedlingstein, P., Gornall, J., Gray, L., Halloran, P. R., Hurtt, G., Ingram, W. J., Lamarque, J.-F., Law, R. M., Meinshausen, M., Osprey, S., Palin, E. J., Parsons Chini, L., Raddatz, T., Sanderson, M. G., Sellar, A. A., Schurer, A., Valdes, P., Wood, N., Woodward, S., Yoshioka, M., and Zerroukat, M.: The HadGEM2-ES implementation of CMIP5 centennial simulations, Geosci. Model Dev., 4, 543\u2013570, https://doi.org/10.5194/gmd-4-543-2011, 2011."
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
             "values": [
                 "Historical and RCP scenario annual concentrations as described in  Jones, C. D., Hughes, J. K., Bellouin, N., Hardiman, S. C., Jones, G. S., Knight, J., Liddicoat, S., O'Connor, F. M., Andres, R. J., Bell, C., Boo, K.-O., Bozzo, A., Butchart, N., Cadule, P., Corbin, K. D., Doutriaux-Boucher, M., Friedlingstein, P., Gornall, J., Gray, L., Halloran, P. R., Hurtt, G., Ingram, W. J., Lamarque, J.-F., Law, R. M., Meinshausen, M., Osprey, S., Palin, E. J., Parsons Chini, L., Raddatz, T., Sanderson, M. G., Sellar, A. A., Schurer, A., Valdes, P., Wood, N., Woodward, S., Yoshioka, M., and Zerroukat, M.: The HadGEM2-ES implementation of CMIP5 centennial simulations, Geosci. Model Dev., 4, 543\u2013570, https://doi.org/10.5194/gmd-4-543-2011, 2011."
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
             "values": [
                 "Monthly concentration from AC&C/SPARC"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.additional_information": {
             "values": [
                 "Monthly concentration from AC&C/SPARC"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
             "values": [
                 "Option 3: Ozone depleting gases, including CFC-12, are provided as an equivalence concentration of CFC-12 and all other fluorinated gases are provided as an equivalence concentration of HFC-134a"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
             "values": [
                 "Jones, C. D., Hughes, J. K., Bellouin, N., Hardiman, S. C., Jones, G. S., Knight, J., Liddicoat, S., O'Connor, F. M., Andres, R. J., Bell, C., Boo, K.-O., Bozzo, A., Butchart, N., Cadule, P., Corbin, K. D., Doutriaux-Boucher, M., Friedlingstein, P., Gornall, J., Gray, L., Halloran, P. R., Hurtt, G., Ingram, W. J., Lamarque, J.-F., Law, R. M., Meinshausen, M., Osprey, S., Palin, E. J., Parsons Chini, L., Raddatz, T., Sanderson, M. G., Sellar, A. A., Schurer, A., Valdes, P., Wood, N., Woodward, S., Yoshioka, M., and Zerroukat, M.: The HadGEM2-ES implementation of CMIP5 centennial simulations, Geosci. Model Dev., 4, 543\u2013570, https://doi.org/10.5194/gmd-4-543-2011, 2011"
             ]
