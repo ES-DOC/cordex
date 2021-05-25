@@ -1,9 +1,9 @@
 {
-    "content": {}, 
-    "domain": "eur-11", 
+    "mipEra": "cordexp", 
     "institute": "mpi-csc", 
-    "topic": "toplevel", 
+    "domain": "eur-11", 
     "sourceID": "mpi-csc-remo2009", 
+    "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
-    "mipEra": "cordexp"
+    "content": {}
 }

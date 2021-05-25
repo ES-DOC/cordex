@@ -1,133 +1,19 @@
 {
+    "mipEra": "cordexp", 
+    "institute": "gerics", 
+    "domain": "eur-11", 
+    "sourceID": "gerics-remo2015", 
+    "topic": "toplevel", 
+    "seedingSource": "Spreadsheet", 
     "content": {
-        "cordexp.toplevel.key_properties.keywords": {
-            "values": [
-                "REMO, CORDEX, GERICS, RCM"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
-            "values": [
-                "The model uses internal ozone climatology. \n\nRoeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n\n\n\n\n\n"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
-            "values": [
-                "Roeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
-            "values": [
-                "air temperature, surface pressure, u- and v-wind components, specific humidity"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_dataset": {
-            "values": [
-                "The model uses internal ozone climatology. \n\nRoeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n\n\n\n\n\n"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
-            "values": [
-                "6 hour"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.reference.details": {
-            "values": [
-                "Jacob, D.; Elizalde, A.; Haensler, A.; Hagemann, S.; Kumar, P.; Podzun, R.; Rechid, D.; Remedio, A.R.; Saeed, F.; Sieck, K.; et al. Assessing the Transferability of the Regional Climate Model REMO to Different COordinated Regional Climate Downscaling EXperiment (CORDEX) Regions. Atmosphere 2012, 3, 181\u2013199. \n\nJacob, D.; Podzun, R. Sensitivity studies with the regional climate model REMO. Meteorol. Atmos. Phys. 1997, 63, 119\u2013129. \n\nJacob, D.; Van Den Hurk, B.J.; Andr\u00e6, U.; Elgered, G.; Fortelius, C.; Graham, L.P.; Jackson, S.D.; Karstens, U.; K\u00f6pken, C.; Lindau, R.; et al. A comprehensive model inter-comparison study investigating the water budget during the BALTEX-PIDCAP period. Meteorol. Atmos. Phys. 2001, 77, 19\u201343."
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
-            "values": [
-                "depending on availability (monthly, daily, 6 hourly)"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
-            "values": [
-                "Climatology"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
-            "values": [
-                "air temperature, surface pressure, u- and v-wind components, specific humidity"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.software_properties.code_languages": {
-            "values": [
-                "Fortran"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
-            "values": [
-                "driving reanalysis"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
-            "values": [
-                "Y: Prescribed concentrations, distributions or time series data"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.software_properties.coupler": {
-            "values": [
-                "None: No coupler is used"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
-            "values": [
-                "In the MED-CORDEX FPS scenarion run protocol 1B used coefficients to modify the anthropogenic part of the climatology. Coefficient provided by Centre National de Recherches M\u00e9t\u00e9orologiques / M\u00e9t\u00e9o-France"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.additional_information": {
-            "values": [
-                "Roeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
-            "values": [
-                "6 hourly"
-            ]
-        }, 
         "cordexp.toplevel.key_properties.name": {
             "values": [
                 "REMO2015"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+        "cordexp.toplevel.key_properties.keywords": {
             "values": [
-                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.name": {
-            "values": [
-                "Greenhause gases, aerosols and solar"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
-            "values": [
-                "Y: Prescribed concentrations, distributions or time series data"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
-            "values": [
-                "Tanre aerosol climatology used.\n\nTanre, D., Geleyn, J.-F., and Slingo, J.: First results of the introduction of an advanced aerosol-radiation interaction in the ECMWF low resolution global model, pp. 133\u2013177, H. Gerber and A. Deepak (Eds.), A. Deepak, Hampton, Virginia, 1984."
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
-            "values": [
-                "depending on availability (monthly, daily, 6 hourly)"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
-            "values": [
-                "Static land surface representation, global data set of vegetation parameters called LSPII including annual cycle of albedo. Soil texture types based on FAO data, major ecosystem types for vegetation. 1 km horizontal resolution for ecosystem types, seasonal cycle for albedo, vegetation ratio and leaf area index.\n\n\nHagemann, S., M. Botzet, L. D\u00fcmenil, B. Machenhauer, 1999:\nDerivation of global GCM boundary conditions from 1 km land use satellite data. Report No. 289, Max-Planck-Institute for Meteorology, Hamburg\nHagemann, S., 2002:\nAn improved land surface parameter dataset for global and regional climate models. Max-Planck-Institute for Meteorology, Report 336, Hamburg\nOlson, J.S., 1994a:\nGlobal ecosystem framework-definitions. USGS EROS Data Centre Internal Report, Sioux Falls, SD\nRechid, D., T.J. Raddatz and D. Jacob (2009):\nParameterization of snow-free land surface albedo as a function of vegetation phenology based on MODIS data and applied in climate modelling. Theoretical and Applied Climatology, Vol. 95, No. 3-4, pp. 245-255. DOI:10.1007/s00704-008-0003-y"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.coupling.atmosphere_fluxes_calculation_grid": {
-            "values": [
-                "Atmosphere grid"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
-            "values": [
-                "Tanre aerosol climatology used.\n\nTanre, D., Geleyn, J.-F., and Slingo, J.: First results of the introduction of an advanced aerosol-radiation interaction in the ECMWF low resolution global model, pp. 133\u2013177, H. Gerber and A. Deepak (Eds.), A. Deepak, Hampton, Virginia, 1984."
+                "REMO, CORDEX, GERICS, RCM"
             ]
         }, 
         "cordexp.toplevel.key_properties.overview": {
@@ -135,9 +21,9 @@
                 "REMO2015 is the 2015 release of the regional climate model REMO. It is based on the former numerical weather prediction model of the German Weather Service (EUROPA-MODELL). The physical parameterizations are mainly based on ECHAM4 adapted and developed for regional applications. The model has a hydrostatic dynamical core and a hybrid-sigma vertical pressure coordinate. The spatial discretization uses a rotated latitude longitude grid mapping and, in standard configuration, 27 levels in the vertical. REMO2015 supports fractional land surface cover (land, water, ice). The model is also coupled to the MPI ocean model MPI-OM."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+        "cordexp.toplevel.key_properties.model_type.model_family": {
             "values": [
-                "6 hourly"
+                "Regional Atmospheric Climate Model"
             ]
         }, 
         "cordexp.toplevel.key_properties.genealogy.year_released": {
@@ -145,39 +31,9 @@
                 2015.0
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+        "cordexp.toplevel.key_properties.genealogy.previous_name": {
             "values": [
-                "6 hourly"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
-            "values": [
-                "Monthly climatology, no year-to-year variation"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.overview": {
-            "values": [
-                "Aerosol forcing is based on Tanre climatology. It has low resolution and no yearly cycle, nor does it follow any scenario. Solar forcing comes through the radiation code, but it's amplitude is too low due to bandwidth limitations. Greenhouse gas concentrations for CO2, CH4, N2O, CFC-11 and CFC-12 read in from external source."
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.cordex_domain.domain": {
-            "values": [
-                "EUR-11"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
-            "values": [
-                "Climatology"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.model_calendar.calendar": {
-            "values": [
-                "GCM-based"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
-            "values": [
-                "Monthly climatology, no year-to-year variation"
+                "REMO2009"
             ]
         }, 
         "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
@@ -185,34 +41,59 @@
                 "REMO2015 and REMO2009 as essentially the same model. The differences are more on the technical side."
             ]
         }, 
+        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "GCM-based"
+            ]
+        }, 
         "cordexp.toplevel.key_properties.software_properties.repository": {
             "values": [
                 "https://git.gerics.de/REMO/REMO_MPI/-/tags/remo2009_mpi (restricted access)"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+        "cordexp.toplevel.key_properties.software_properties.code_languages": {
             "values": [
-                "Y: Prescribed concentrations, distributions or time series data"
+                "Fortran"
             ]
         }, 
-        "cordexp.toplevel.key_properties.model_type.model_family": {
+        "cordexp.toplevel.key_properties.software_properties.coupler": {
             "values": [
-                "Regional Atmospheric Climate Model"
+                "None: No coupler is used"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
+        "cordexp.toplevel.key_properties.reference.details": {
             "values": [
-                "Climatology"
+                "Jacob, D.; Elizalde, A.; Haensler, A.; Hagemann, S.; Kumar, P.; Podzun, R.; Rechid, D.; Remedio, A.R.; Saeed, F.; Sieck, K.; et al. Assessing the Transferability of the Regional Climate Model REMO to Different COordinated Regional Climate Downscaling EXperiment (CORDEX) Regions. Atmosphere 2012, 3, 181\u2013199. \n\nJacob, D.; Podzun, R. Sensitivity studies with the regional climate model REMO. Meteorol. Atmos. Phys. 1997, 63, 119\u2013129. \n\nJacob, D.; Van Den Hurk, B.J.; Andr\u00e6, U.; Elgered, G.; Fortelius, C.; Graham, L.P.; Jackson, S.D.; Karstens, U.; K\u00f6pken, C.; Lindau, R.; et al. A comprehensive model inter-comparison study investigating the water budget during the BALTEX-PIDCAP period. Meteorol. Atmos. Phys. 2001, 77, 19\u201343."
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+        "cordexp.toplevel.key_properties.coupling.atmosphere_fluxes_calculation_grid": {
             "values": [
-                "REMO2009"
+                "Atmosphere grid"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
             "values": [
-                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+                "air temperature, surface pressure, u- and v-wind components, specific humidity"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+            "values": [
+                "6 hour"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+            "values": [
+                "air temperature, surface pressure, u- and v-wind components, specific humidity"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+            "values": [
+                "6 hourly"
             ]
         }, 
         "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
@@ -220,9 +101,84 @@
                 "driving reanalysis"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
             "values": [
-                "Y: Prescribed concentrations, distributions or time series data"
+                "6 hourly"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+            "values": [
+                "driving reanalysis"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+            "values": [
+                "6 hourly"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+            "values": [
+                "depending on availability (monthly, daily, 6 hourly)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+            "values": [
+                "depending on availability (monthly, daily, 6 hourly)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+            "values": [
+                "Tanre aerosol climatology used.\n\nTanre, D., Geleyn, J.-F., and Slingo, J.: First results of the introduction of an advanced aerosol-radiation interaction in the ECMWF low resolution global model, pp. 133\u2013177, H. Gerber and A. Deepak (Eds.), A. Deepak, Hampton, Virginia, 1984."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
+            "values": [
+                "Climatology"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
+            "values": [
+                "Tanre aerosol climatology used.\n\nTanre, D., Geleyn, J.-F., and Slingo, J.: First results of the introduction of an advanced aerosol-radiation interaction in the ECMWF low resolution global model, pp. 133\u2013177, H. Gerber and A. Deepak (Eds.), A. Deepak, Hampton, Virginia, 1984."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
+            "values": [
+                "Climatology"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
+            "values": [
+                "In the MED-CORDEX FPS scenarion run protocol 1B used coefficients to modify the anthropogenic part of the climatology. Coefficient provided by Centre National de Recherches M\u00e9t\u00e9orologiques / M\u00e9t\u00e9o-France"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_dataset": {
+            "values": [
+                "The model uses internal ozone climatology. \n\nRoeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n\n\n\n\n\n"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
+            "values": [
+                "Climatology"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
+            "values": [
+                "The model uses internal ozone climatology. \n\nRoeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n\n\n\n\n\n"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+            "values": [
+                "Climatology"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
+            "values": [
+                "Static land surface representation, global data set of vegetation parameters called LSPII including annual cycle of albedo. Soil texture types based on FAO data, major ecosystem types for vegetation. 1 km horizontal resolution for ecosystem types, seasonal cycle for albedo, vegetation ratio and leaf area index.\n\n\nHagemann, S., M. Botzet, L. D\u00fcmenil, B. Machenhauer, 1999:\nDerivation of global GCM boundary conditions from 1 km land use satellite data. Report No. 289, Max-Planck-Institute for Meteorology, Hamburg\nHagemann, S., 2002:\nAn improved land surface parameter dataset for global and regional climate models. Max-Planck-Institute for Meteorology, Report 336, Hamburg\nOlson, J.S., 1994a:\nGlobal ecosystem framework-definitions. USGS EROS Data Centre Internal Report, Sioux Falls, SD\nRechid, D., T.J. Raddatz and D. Jacob (2009):\nParameterization of snow-free land surface albedo as a function of vegetation phenology based on MODIS data and applied in climate modelling. Theoretical and Applied Climatology, Vol. 95, No. 3-4, pp. 245-255. DOI:10.1007/s00704-008-0003-y"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+            "values": [
+                "Monthly climatology, no year-to-year variation"
             ]
         }, 
         "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
@@ -230,16 +186,60 @@
                 "Static land surface representation, global data set of vegetation parameters called LSPII including annual cycle of albedo. Soil texture types based on FAO data, major ecosystem types for vegetation. 1 km horizontal resolution for ecosystem types, seasonal cycle for albedo, vegetation ratio and leaf area index.\n\n\nHagemann, S., M. Botzet, L. D\u00fcmenil, B. Machenhauer, 1999:\nDerivation of global GCM boundary conditions from 1 km land use satellite data. Report No. 289, Max-Planck-Institute for Meteorology, Hamburg\nHagemann, S., 2002:\nAn improved land surface parameter dataset for global and regional climate models. Max-Planck-Institute for Meteorology, Report 336, Hamburg\nOlson, J.S., 1994a:\nGlobal ecosystem framework-definitions. USGS EROS Data Centre Internal Report, Sioux Falls, SD\nRechid, D., T.J. Raddatz and D. Jacob (2009):\nParameterization of snow-free land surface albedo as a function of vegetation phenology based on MODIS data and applied in climate modelling. Theoretical and Applied Climatology, Vol. 95, No. 3-4, pp. 245-255. DOI:10.1007/s00704-008-0003-y"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
             "values": [
-                "Climatology"
+                "Monthly climatology, no year-to-year variation"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.name": {
+            "values": [
+                "Greenhause gases, aerosols and solar"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.overview": {
+            "values": [
+                "Aerosol forcing is based on Tanre climatology. It has low resolution and no yearly cycle, nor does it follow any scenario. Solar forcing comes through the radiation code, but it's amplitude is too low due to bandwidth limitations. Greenhouse gas concentrations for CO2, CH4, N2O, CFC-11 and CFC-12 read in from external source."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
+            "values": [
+                "Roeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.additional_information": {
+            "values": [
+                "Roeckner, E., Arpe, K., Bengtsson, L., Christoph, M., Claussen, M., Dumenil, L., Esch, M., Schlese, U., and Schulzweida, U.: The atmospheric general circulation model ECHAM4: Model description and simulation of present-day climate., Max Planck Institute for Meteorology report series, Hamburg, Germany, Report No. 218, 1996.\n"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
             ]
         }
-    }, 
-    "domain": "eur-11", 
-    "institute": "gerics", 
-    "topic": "toplevel", 
-    "sourceID": "gerics-remo2015", 
-    "seedingSource": "Spreadsheet", 
-    "mipEra": "cordexp"
+    }
 }

@@ -1,11 +1,67 @@
 {
+    "mipEra": "cordexp", 
+    "institute": "smhi", 
+    "domain": "eur-11", 
+    "sourceID": "smhi-rca4", 
+    "topic": "toplevel", 
+    "seedingSource": "Spreadsheet", 
     "content": {
+        "cordexp.toplevel.key_properties.name": {
+            "values": [
+                "RCA4"
+            ]
+        }, 
         "cordexp.toplevel.key_properties.keywords": {
             "values": [
                 "RCA; CORDEX; SMHI; Rossby Centre;"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+        "cordexp.toplevel.key_properties.overview": {
+            "values": [
+                "RCA4 is the latest fourth generation of the Rossby Centre regional climate model RCA, based on the numerical weather prediction model HIRLAM. The RCA4 has a hydrostatic dynamical core with 40 model levels in the hybrid vertical coordinate. The RCA4 employs a tile-based land surface scheme with physiography based on ECOCLIMAP and the Flake lake model with prognostic lake ice."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.year_released": {
+            "values": [
+                2011.0
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+            "values": [
+                "RCA3"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "GCM-based"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.spinup.details": {
+            "values": [
+                "The first year of the evaluation (1979) and historical (1969) simulations is a spin-up."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran90/95"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.reference.details": {
+            "values": [
+                "Strandberg G., B\u00e4rring L., Hansson U., Jansson C., Jones C., Kjellstr\u00f6m E., Kupiainen M., Nikulin G., Samuelsson P., Ullerstig A., 2015. CORDEX scenarios for Europe from the Rossby Centre regional climate model RCA4. Report Meteorology and Climatology, 116, Swedish Meteorological and Hydrological Institute (SMHI), 84 p. https://www.smhi.se/en/publications/cordex-scenarios-for-europe-from-the-rossby-centre-regional-climate-model-rca4-1.90274 ; Samuelsson, P., Gollvik, S., Jansson, C., Kupiainen, M., Kourzeneva, E., van de Berg, W.J., 2015. The surface processes of the Rossby Centre regional atmospheric climate model (RCA4). Meteorologi, 157, Swedish Meteorological and Hydrological Institute (SMHI), p. 58. https://www.smhi.se/en/publications/the-surface-processes-of-the-rossby-centreregional-atmospheric-climate-model-rca4-1.89801"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
             "values": [
                 "Temperature, specific humidity, zonal and meridional winds (ta, hus, ua, va)"
             ]
@@ -15,104 +71,9 @@
                 "6hr"
             ]
         }, 
-        "cordexp.toplevel.key_properties.reference.details": {
-            "values": [
-                "Strandberg G., B\u00e4rring L., Hansson U., Jansson C., Jones C., Kjellstr\u00f6m E., Kupiainen M., Nikulin G., Samuelsson P., Ullerstig A., 2015. CORDEX scenarios for Europe from the Rossby Centre regional climate model RCA4. Report Meteorology and Climatology, 116, Swedish Meteorological and Hydrological Institute (SMHI), 84 p. https://www.smhi.se/en/publications/cordex-scenarios-for-europe-from-the-rossby-centre-regional-climate-model-rca4-1.90274 ; Samuelsson, P., Gollvik, S., Jansson, C., Kupiainen, M., Kourzeneva, E., van de Berg, W.J., 2015. The surface processes of the Rossby Centre regional atmospheric climate model (RCA4). Meteorologi, 157, Swedish Meteorological and Hydrological Institute (SMHI), p. 58. https://www.smhi.se/en/publications/the-surface-processes-of-the-rossby-centreregional-atmospheric-climate-model-rca4-1.89801"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
-            "values": [
-                "daily"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
             "values": [
                 "Temperature, specific humidity, zonal and meridional winds (ta, hus, ua, va)"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.other.land_use.provision": {
-            "values": [
-                "N/A: Not applicable - forcing agent is not included"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.software_properties.code_languages": {
-            "values": [
-                "Fortran90/95"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
-            "values": [
-                "sea ice from the driving reanalysis ERA-Interim"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
-            "values": [
-                "parametrized aerosol effect on radiation fluxes, single integrated class, spatially uniform "
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
-            "values": [
-                "Rummukainen et al., 1998. RCA \u2013 Rossby Centre regional Atmospheric climate model: model description and results from the first multi-year simulation. https://www.smhi.se/publikationer/rca-rossby-centre-regional-atmospheric-climate-model-model-description-and-results-from-the-first-multi-year-simulation-1.2807 (see 4.2.6 Radiation, p.18)"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
-            "values": [
-                "6hr"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.name": {
-            "values": [
-                "RCA4"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.other.solar.provision": {
-            "values": [
-                "irradiance: Solar irradiance forcing"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
-            "values": [
-                "parametrized aerosol effect on radiation fluxes, single integrated class, spatially uniform "
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
-            "values": [
-                "daily"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.spinup.details": {
-            "values": [
-                "The first year of the evaluation (1979) and historical (1969) simulations is a spin-up."
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
-            "values": [
-                "ECOCLIMAP"
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
-            "values": [
-                "Greenhouse gas concentrations are expressed as equivalent CO2 concentrations following the RCP scenarios, and interpolated from one year to the next. "
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.overview": {
-            "values": [
-                "RCA4 is the latest fourth generation of the Rossby Centre regional climate model RCA, based on the numerical weather prediction model HIRLAM. The RCA4 has a hydrostatic dynamical core with 40 model levels in the hybrid vertical coordinate. The RCA4 employs a tile-based land surface scheme with physiography based on ECOCLIMAP and the Flake lake model with prognostic lake ice."
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
-            "values": [
-                "6hr"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.genealogy.year_released": {
-            "values": [
-                2011.0
-            ]
-        }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
-            "values": [
-                "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
         "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
@@ -120,27 +81,42 @@
                 "6hr"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
             "values": [
-                "static"
+                "SST from the driving reanalysis ERA-Interim"
             ]
         }, 
-        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
             "values": [
-                "EUR-11"
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+            "values": [
+                "sea ice from the driving reanalysis ERA-Interim"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+            "values": [
+                "daily"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+            "values": [
+                "daily"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+            "values": [
+                "parametrized aerosol effect on radiation fluxes, single integrated class, spatially uniform "
             ]
         }, 
         "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
-            "values": [
-                "static"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.model_calendar.calendar": {
-            "values": [
-                "GCM-based"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
             "values": [
                 "static"
             ]
@@ -150,14 +126,9 @@
                 "Rummukainen et al., 1998. RCA \u2013 Rossby Centre regional Atmospheric climate model: model description and results from the first multi-year simulation. https://www.smhi.se/publikationer/rca-rossby-centre-regional-atmospheric-climate-model-model-description-and-results-from-the-first-multi-year-simulation-1.2807 (see 4.2.6 Radiation, p.18)"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
             "values": [
-                "Y: Prescribed concentrations, distributions or time series data"
-            ]
-        }, 
-        "cordexp.toplevel.key_properties.model_type.model_family": {
-            "values": [
-                "Regional Atmospheric Climate Model"
+                "parametrized aerosol effect on radiation fluxes, single integrated class, spatially uniform "
             ]
         }, 
         "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
@@ -165,26 +136,55 @@
                 "static"
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
             "values": [
-                "RCA3"
+                "Rummukainen et al., 1998. RCA \u2013 Rossby Centre regional Atmospheric climate model: model description and results from the first multi-year simulation. https://www.smhi.se/publikationer/rca-rossby-centre-regional-atmospheric-climate-model-model-description-and-results-from-the-first-multi-year-simulation-1.2807 (see 4.2.6 Radiation, p.18)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
             "values": [
-                "SST from the driving reanalysis ERA-Interim"
+                "ECOCLIMAP"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+            "values": [
+                "static"
             ]
         }, 
         "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
             "values": [
                 "ECOCLIMAP"
             ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
+            "values": [
+                "static"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
+            "values": [
+                "Greenhouse gas concentrations are expressed as equivalent CO2 concentrations following the RCP scenarios, and interpolated from one year to the next. "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.land_use.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.solar.provision": {
+            "values": [
+                "irradiance: Solar irradiance forcing"
+            ]
         }
-    }, 
-    "domain": "eur-11", 
-    "institute": "smhi", 
-    "topic": "toplevel", 
-    "sourceID": "smhi-rca4", 
-    "seedingSource": "Spreadsheet", 
-    "mipEra": "cordexp"
+    }
 }
