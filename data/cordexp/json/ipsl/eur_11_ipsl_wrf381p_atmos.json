@@ -1,0 +1,9 @@
+{
+    "mipEra": "cordexp", 
+    "institute": "ipsl", 
+    "domain": "eur-11", 
+    "sourceID": "ipsl-wrf381p", 
+    "topic": "atmos", 
+    "seedingSource": "Spreadsheet", 
+    "content": {}
+}

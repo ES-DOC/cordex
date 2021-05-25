@@ -1,0 +1,571 @@
+{
+    "mipEra": "cordexp", 
+    "institute": "ictp", 
+    "domain": "eur-11", 
+    "sourceID": "ictp-regcm4-6", 
+    "topic": "atmos", 
+    "seedingSource": "Spreadsheet", 
+    "content": {
+        "cordex.atmos.key_properties.name": {
+            "values": [
+                "REGCM4-6"
+            ]
+        }, 
+        "cordex.atmos.key_properties.keywords": {
+            "values": [
+                "REGCM; CORDEX; ICTP; Earth System Physics"
+            ]
+        }, 
+        "cordex.atmos.key_properties.overview": {
+            "values": [
+                "RegCM4-6 is the sixth version of the latest fourth generation of the ICTP regional climate model RegCM, based on the numerical weather prediction model NCEP/NCAR Mesoscale Model. The RegCM4-6 has a hydrostatic dynamical core with 23 model levels in the hybrid pressure vertical coordinate. The RegCM4-6 employs a CLM4.5 land surface scheme with physiography based on MODIS satellite data."
+            ]
+        }, 
+        "cordex.atmos.key_properties.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordex.atmos.key_properties.basic_approximations": {
+            "values": [
+                "Hydrostatic"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "12.0 km x 12.0 km"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                23
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.high_top": {
+            "values": [
+                true
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_dynamics": {
+            "values": [
+                24
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
+            "values": [
+                1800
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                1800
+            ]
+        }, 
+        "cordex.atmos.key_properties.orography.type": {
+            "values": [
+                "fixed: present day"
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.description": {
+            "values": [
+                "The starting set-up was identical to that of the CORDEX-CORE. 5 year simulations [1999-2005] were run to test the configuration and compare to the EOBS (using seasonal biases, and PDFs). The simulations were repeated by changing cloud, convection, and other parameters (one at a time) in order to minimize the bias. The final configuration used was the best configuration obtained in the 6-month time-frame allocated for the tuning."
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "seasonal bias[tas, pr, P99]; PDFs[tas, pr]"
+            ]
+        }, 
+        "cordex.atmos.grid.name": {
+            "values": [
+                "Arakawa B"
+            ]
+        }, 
+        "cordex.atmos.grid.overview": {
+            "values": [
+                "The grid is an Arakawa B staggered with Lambert Conformal projection, with a central latitude and longitude of 48.00 and 9.75 respectively, and Lambert true latitudes standard parallels of 30.0 and 65.0."
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system": {
+            "values": [
+                "Lambert Conformal Conic"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system_details": {
+            "values": [
+                "longitude_of_central_meridian = 9.75; standard_parallel = 30., 65.; latitude_of_projection_origin = 48.; false_easting = -6000.; false_northing = -6000.; semi_major_axis = 6371229.; inverse_flattening = 0."
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_resolution": {
+            "values": [
+                "12.0 km"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.full_domain": {
+            "values": [
+                "527 x 527"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.relaxation_zone": {
+            "values": [
+                "40 x 40 point boundary relaxation; exponential relaxation with newtonian term of the time step and diffusion (Giorgi, F., M. R. Marinucci, G. T. Bates, and G. De Canio, 1993: Development of a second-generation climate model (RegCM2). Part II: Convective processes and assimilation of lateral boundary conditions. Mon. Wea. Rev., 121, 2814\u20132832."
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.inner_domain": {
+            "values": [
+                "451 x 451"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_type": {
+            "values": [
+                "fixed grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_method": {
+            "values": [
+                "finite difference"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.grid_type": {
+            "values": [
+                "Other: Projected"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.vertical.coordinate_type": {
+            "values": [
+                "sigma: allows vertical coordinate to follow model terrain"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.name": {
+            "values": [
+                "Hydrostatic"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.overview": {
+            "values": [
+                "Giorgi F., et al. (2012). RegCM4: model description and preliminary tests over multiple CORDEX domains. Climate Research, 52, 7-29. doi: 10.3354/cr01018; Giorgi F, et al (2017). Regional Climatic Model RegCM: User\u2019s Guide Version 4.6. ICTP, Trieste. "
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.timestepping_type": {
+            "values": [
+                "leap frog"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.prognostic_variables": {
+            "values": [
+                "surface pressure", 
+                "wind components", 
+                "temperature", 
+                "water vapour", 
+                "water liquid", 
+                "Other: turbulent KE"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_boundary_condition": {
+            "values": [
+                "Other: rigid; zero pressure velocity"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_heat": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_wind": {
+            "values": [
+                "zero vertical velocity"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.lateral_boundary.condition": {
+            "values": [
+                "Other: exponential relaxation towards GCM"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_name": {
+            "values": [
+                "LeVeque 4th order 9 point laplacian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_method": {
+            "values": [
+                "iterated Laplacian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.scheme_name": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_name": {
+            "values": [
+                "Other: Linear"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_characteristics": {
+            "values": [
+                "staggered grid"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_staggering_type": {
+            "values": [
+                "Arakawa B-grid"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.conserved_quantities": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.name": {
+            "values": [
+                "CAM-CCM3-CRM"
+            ]
+        }, 
+        "cordex.atmos.radiation.overview": {
+            "values": [
+                "The CCM3 model physics is exectly identical to the Column Radiation Model (CRM). url: http://dust.ess.uci.edu/crm/index.shtml"
+            ]
+        }, 
+        "cordex.atmos.radiation.aerosols": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.name": {
+            "values": [
+                "CAM-CCM3-CRM"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_integration": {
+            "values": [
+                "wide-band model"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_intervals": {
+            "values": [
+                10
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.general_interactions": {
+            "values": [
+                "emission/absorption,"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "CFC-11 eq: Summarize the effect of non CO2, CH4, N2O and CFC-12 gases with an equivalence concentration of CFC-11", 
+                "CFC-12 eq: Summarize the radiative effect of the Ozone Depleating Substances, ODSs, with a CFC-12 equivalence concentration", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.ODS": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.other_flourinated_gases": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.physical_representation": {
+            "values": [
+                "effective crystal radius"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
+            "values": [
+                "effective cloud droplet radii"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "CAM-CCM3-CRM"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_integration": {
+            "values": [
+                "wide-band model"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_intervals": {
+            "values": [
+                9
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.general_interactions": {
+            "values": [
+                "emission/absorption,"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "CFC-11 eq: Summarize the effect of non CO2, CH4, N2O and CFC-12 gases with an equivalence concentration of CFC-11", 
+                "CFC-12 eq: Summarize the radiative effect of the Ozone Depleating Substances, ODSs, with a CFC-12 equivalence concentration", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.ODS": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.other_flourinated_gases": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
+            "values": [
+                "effective crystal radius"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.physical_representation": {
+            "values": [
+                "effective cloud droplet radii"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.name": {
+            "values": [
+                "UW PBL"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.overview": {
+            "values": [
+                "The UW planetary boundary layer parameterization provides realistic treatment of stratocumulus-capped boundary layer (SCBL) by combining a 1.5-order turbulent closure model with an entrainment closure at the boundary layer top (Grenier, H., & Bretherton, C. S. (2001). A Moist PBL Parameterization for Large-Scale Models and Its Application to Subtropical Cloud-Topped Marine Boundary Layers, Monthly Weather Review, 129(3), 357-377). "
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_name": {
+            "values": [
+                "Mellor-Yamada"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
+            "values": [
+                "TKE prognostic"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.counter_gradient": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_name": {
+            "values": [
+                "Tiedtke"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_method": {
+            "values": [
+                "bulk: A bulk mass flux scheme is used"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.processes": {
+            "values": [
+                "entrainment", 
+                "detrainment", 
+                "penetrative convection", 
+                "updrafts", 
+                "downdrafts"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.microphysics": {
+            "values": [
+                "single moment"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_name": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.name": {
+            "values": [
+                "SUBEX"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.overview": {
+            "values": [
+                "The SUBEX scheme describe large scale precipitation according to a specified autoconversion rate, when a cloud water threshold is exceeded. The specification of this threshold is based on empirical in-cloud observations of cloud liquid water amounts. Included in the scheme are simple formulations for raindrop accretion and evaporation (Pal, J. S., Small, E. E., and Eltahir, E. A. B. (2000), Simulation of regional\u2010scale water and energy budgets: Representation of subgrid cloud and precipitation processes within RegCM, J. Geophys. Res., 105( D24), 29579\u2013 29594, doi:10.1029/2000JD900415)."
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.scheme_name": {
+            "values": [
+                "SUBEX"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
+            "values": [
+                "liquid rain"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
+            "values": [
+                "SUBEX"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.processes": {
+            "values": [
+                "water vapour deposition"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.name": {
+            "values": [
+                "Sundqvist"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.overview": {
+            "values": [
+                "The cloud scheme follows Sundqvist et al. (1989) in using a critical relative humidity to compute the diagnostic cloud fraction from model relative humidity. The in-cloud water content is diagnosed from the model temperature following Lemus et al. (1997)"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.scheme_type": {
+            "values": [
+                "diagnostic"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.uses_separate_treatment": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.processes": {
+            "values": [
+                "bulk cloud"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.prognostic_variables": {
+            "values": [
+                "Other: none"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.atmos_coupling": {
+            "values": [
+                "atmosphere_radiation"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_overlap_method": {
+            "values": [
+                "maximum-random: combination of maximum and random overlap between clouds"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_inhomogeneity": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.name": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.name": {
+            "values": [
+                "sparcsolar"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.overview": {
+            "values": [
+                "No volcanic forcing. The Solar forcing follows the CMIP5 recommendations (url: https://solarisheppa.geomar.de/cmip5) with orbitals parameters described in Berger (1978). Berger, A. (1978). Long-Term Variations of Daily Insolation and Quaternary Climatic Changes, Journal of Atmospheric Sciences, 35(12), 2362-2367."
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_pathways.pathways": {
+            "values": [
+                "SW radiation: Shortwave solar spectral irradiance."
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_constant.type": {
+            "values": [
+                "transient"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_constant.transient_characteristics": {
+            "values": [
+                "As prescribed in measured up to 2005; last solar cycle repeated for the future"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.orbital_parameters.type": {
+            "values": [
+                "transient"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.orbital_parameters.fixed_reference_date": {
+            "values": [
+                1950
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.orbital_parameters.transient_method": {
+            "values": [
+                "Solar constant, semi-major axis of ecliptic, obliquity, eccentricity, longitude of parihelion, precession "
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.orbital_parameters.computation_method": {
+            "values": [
+                "Berger 1978"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.insolation_ozone.solar_ozone_impact": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.volcanoes_treatment.volcanoes_characteristics": {
+            "values": [
+                "Not taken into account"
+            ]
+        }
+    }
+}
