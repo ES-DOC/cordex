@@ -1,9 +1,9 @@
 {
     "mipEra": "cordexp", 
-    "institute": "dmi", 
+    "institute": "uhoh", 
     "domain": "eur-11", 
-    "sourceID": "dmi-hirham5", 
-    "topic": "toplevel", 
+    "sourceID": "uhoh-wrf361h", 
+    "topic": "aerosol", 
     "seedingSource": "Spreadsheet", 
     "content": {}
 }

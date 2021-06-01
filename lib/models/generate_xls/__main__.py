@@ -55,7 +55,7 @@ def _main(args):
                 for d in vocabs.get_domains():
                     xl = Spreadsheet(i, m, t, d)
                     logger.log("generating --> {}".format(xl.fpath), app="SH")
-                    # xl.write()
+                    xl.write()
 
 
 class Spreadsheet(object):

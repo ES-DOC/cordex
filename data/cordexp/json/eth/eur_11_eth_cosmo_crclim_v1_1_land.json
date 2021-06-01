@@ -1,9 +1,9 @@
 {
     "mipEra": "cordexp", 
-    "institute": "dmi", 
+    "institute": "eth", 
     "domain": "eur-11", 
-    "sourceID": "dmi-hirham5", 
-    "topic": "toplevel", 
+    "sourceID": "eth-cosmo-crclim-v1-1", 
+    "topic": "land", 
     "seedingSource": "Spreadsheet", 
     "content": {}
 }

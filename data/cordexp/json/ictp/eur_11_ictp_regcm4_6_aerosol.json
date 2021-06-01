@@ -1,9 +1,9 @@
 {
     "mipEra": "cordexp", 
-    "institute": "dmi", 
+    "institute": "ictp", 
     "domain": "eur-11", 
-    "sourceID": "dmi-hirham5", 
-    "topic": "toplevel", 
+    "sourceID": "ictp-regcm4-6", 
+    "topic": "aerosol", 
     "seedingSource": "Spreadsheet", 
     "content": {}
 }
