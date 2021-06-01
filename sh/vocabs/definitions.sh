@@ -145,7 +145,7 @@ export CORDEXP_RCM_MODEL_RAW=(
 # Array of specifications.
 export CORDEXP_SPECIALIZATIONS=(
 	'toplevel'
-	'aerosols'
+	'aerosol'
 	'atmos'
 	'land'
 )
