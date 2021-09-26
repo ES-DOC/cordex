@@ -5,5 +5,495 @@
     "sourceID": "mpi-csc-remo2009", 
     "topic": "atmos", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordex.atmos.key_properties.name": {
+            "values": [
+                "REMO2009"
+            ]
+        }, 
+        "cordex.atmos.key_properties.keywords": {
+            "values": [
+                "REMO, CORDEX, GERICS, RCM"
+            ]
+        }, 
+        "cordex.atmos.key_properties.overview": {
+            "values": [
+                "REMO2009 is the 2009 release of the regional climate model REMO. It is based on the former numerical weather prediction model of the German Weather Service (EUROPA-MODELL). The physical parameterizations are mainly based on ECHAM4 adapted and developed for regional applications. The model has a hydrostatic dynamical core and a hybrid-sigma vertical pressure coordinate. The spatial discretization uses a rotated latitude longitude grid mapping and, in standard configuration, 27 levels in the vertical. REMO2009 supports fractional land surface cover (land, water, ice). The model is also coupled to the MPI ocean model MPI-OM."
+            ]
+        }, 
+        "cordex.atmos.key_properties.model_family": {
+            "values": [
+                "ARCM: Atmospheric Regional Climate Model"
+            ]
+        }, 
+        "cordex.atmos.key_properties.basic_approximations": {
+            "values": [
+                "hydrostatic"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "0.11 x 0.11 degrees"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                27.0
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.high_top": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_dynamics": {
+            "values": [
+                60.0
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
+            "values": [
+                3600.0
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                3600.0
+            ]
+        }, 
+        "cordex.atmos.key_properties.orography.type": {
+            "values": [
+                "fixed: present day"
+            ]
+        }, 
+        "cordex.atmos.grid.name": {
+            "values": [
+                "Arakawa C-grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system": {
+            "values": [
+                "Rotated Polar"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system_details": {
+            "values": [
+                "regular lat lon grid with rotated latitude longitude mapping"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_resolution": {
+            "values": [
+                "0.44 deg, 0.22 deg, 0.11 deg"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.full_domain": {
+            "values": [
+                "depending on grid configuration, usually about 10-20 grid cells larger than the area of interest."
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.relaxation_zone": {
+            "values": [
+                "relaxation function with 8-9 grid points in the boundary zone"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.inner_domain": {
+            "values": [
+                "depending on grid configuration, see CORDEX experiment protocol."
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_type": {
+            "values": [
+                "fixed grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_method": {
+            "values": [
+                "finite elements"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_order": {
+            "values": [
+                "second"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_pole": {
+            "values": [
+                "pole rotation"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.grid_type": {
+            "values": [
+                "Latitude-Longitude"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.vertical.coordinate_type": {
+            "values": [
+                "hybrid sigma-pressure: sigma system near terrain and isobaric above"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.name": {
+            "values": [
+                "EM/DM dynamical core"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.overview": {
+            "values": [
+                "Semi-implicit hydrostatic dynamical core with a vertical terrain-following hybrid sigma pressure coordinate on a centered finite-differencing spherical regular grid."
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.timestepping_type": {
+            "values": [
+                "leap frog"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.prognostic_variables": {
+            "values": [
+                "temperature", 
+                "surface pressure", 
+                "wind components", 
+                "water vapour", 
+                "water liquid", 
+                "water ice"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_boundary_condition": {
+            "values": [
+                "radiation boundary condition"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.lateral_boundary.condition": {
+            "values": [
+                "sponge layer"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_name": {
+            "values": [
+                "4th order horizontal diffusion"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_method": {
+            "values": [
+                "iterated Laplacian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.scheme_characteristics": {
+            "values": [
+                "Eulerian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_name": {
+            "values": [
+                "Janjic"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_characteristics": {
+            "values": [
+                "4th order"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_staggering_type": {
+            "values": [
+                "Arakawa C-grid"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.conserved_quantities": {
+            "values": [
+                "Total energy"
+            ]
+        }, 
+        "cordex.atmos.radiation.name": {
+            "values": [
+                "The radiative transfer scheme was originally developed for the ECMWF model and this version has no specific name"
+            ]
+        }, 
+        "cordex.atmos.radiation.overview": {
+            "values": [
+                "The radiation code originates from the ECMWF model (older cycle) with a few modifications done in global climate model ECHAM4. These are the additional greenhouse gases, 14.6 \u03bcm band of ozone,  the single scattering properties of cloud droplets and ice crystals are derived from Mie theory, water vapor continuum has temperature weighted band averages of e-type absorption including ratios, and the effective radius of droplets and ice crystals is parameterized in terms of the liquid and ice water content, respectively."
+            ]
+        }, 
+        "cordex.atmos.radiation.aerosols": {
+            "values": [
+                "sulphate", 
+                "sea salt", 
+                "dust", 
+                "BC: black carbon / soot", 
+                "POM: particulate organic matter"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.name": {
+            "values": [
+                "The radiative transfer scheme was originally developed for the ECMWF model and this version has no specific name"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_integration": {
+            "values": [
+                "wide-band model"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_intervals": {
+            "values": [
+                2.0
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.general_interactions": {
+            "values": [
+                "scattering", 
+                "emission/absorption,"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.ODS": {
+            "values": [
+                "CFC-11: CFC", 
+                "CFC-12: CFC"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.physical_representation": {
+            "values": [
+                "effective crystal radius"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
+            "values": [
+                "effective cloud droplet radii"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_aerosols.physical_representation": {
+            "values": [
+                "asymmetry"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_aerosols.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "The radiative transfer scheme was originally developed for the ECMWF model and this version has no specific name"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_integration": {
+            "values": [
+                "wide-band model"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_intervals": {
+            "values": [
+                9.0
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.general_interactions": {
+            "values": [
+                "emission/absorption,"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.ODS": {
+            "values": [
+                "CFC-11: CFC", 
+                "CFC-12: CFC"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
+            "values": [
+                "effective crystal radius"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.physical_representation": {
+            "values": [
+                "effective cloud droplet radii"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_aerosols.physical_representation": {
+            "values": [
+                "asymmetry"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_aerosols.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.overview": {
+            "values": [
+                "For details see Tiedtke (1989), Nordeng (1994) and  Pfeifer (2006). Shallow, mid-level, deep and cold convection schemes."
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
+            "values": [
+                "TKE coupled with water"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.counter_gradient": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_method": {
+            "values": [
+                "CAPE: Mass flux determined by CAPE, convectively available potential energy."
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.processes": {
+            "values": [
+                "entrainment", 
+                "detrainment", 
+                "penetrative convection", 
+                "convective momentum transport", 
+                "downdrafts", 
+                "downdrafts"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.microphysics": {
+            "values": [
+                "single moment"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_method": {
+            "values": [
+                "separate diagnosis: Deep and Shallow convection schemes use different thermodynamic closure criteria"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.processes": {
+            "values": [
+                "convective momentum transport", 
+                "entrainment", 
+                "detrainment"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.overview": {
+            "values": [
+                "Stratiform clouds are described by a fractional cloud cover scheme and a one-moment cloud microphysics scheme."
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
+            "values": [
+                "liquid rain", 
+                "snow"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.processes": {
+            "values": [
+                "mixed phase", 
+                "cloud droplets", 
+                "cloud ice", 
+                "ice nucleation", 
+                "water vapour deposition", 
+                "effect of raindrops", 
+                "effect of snow"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.overview": {
+            "values": [
+                "A single moment bulk microphysics scheme based on Lohmann and Roeckner (1996) with  a CAPE adjustment type closure cloud cover scheme based on Sundqvist (1978)"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.scheme_type": {
+            "values": [
+                "prognostic"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.uses_separate_treatment": {
+            "values": [
+                "Convective and stratiform cloud schemes"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.processes": {
+            "values": [
+                "entrainment", 
+                "detrainment"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.prognostic_variables": {
+            "values": [
+                "liquid", 
+                "ice"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.atmos_coupling": {
+            "values": [
+                "atmosphere_radiation", 
+                "atmosphere_microphysics_precipitation", 
+                "atmosphere_turbulence_convection"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_overlap_method": {
+            "values": [
+                "maximum-random: combination of maximum and random overlap between clouds"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_pathways.pathways": {
+            "values": [
+                "SW radiation: Shortwave solar spectral irradiance."
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.insolation_ozone.solar_ozone_impact": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.volcanoes_treatment.volcanoes_characteristics": {
+            "values": [
+                "Time independent forcing though the aerosol climatology's stratospheric component"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.volcanoes_treatment.volcanoes_implementation": {
+            "values": [
+                "stratospheric aerosols optical thickness"
+            ]
+        }
+    }
 }

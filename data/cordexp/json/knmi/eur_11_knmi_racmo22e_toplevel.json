@@ -5,5 +5,411 @@
     "sourceID": "knmi-racmo22e", 
     "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordexp.toplevel.key_properties.name": {
+            "values": [
+                "RACMO22E"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.keywords": {
+            "values": [
+                "RACMO, CORDEX, KNMI"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.overview": {
+            "values": [
+                "RACMO is the Regional Atmospheric Climate MOdel developed at KNMI. It is based on the hydrostatic dynamical kernel of the HIRLAM numerical weather prediction model and the physics package of ECMWF IFS cycle 31r1. The model employs a hybrid vertical coordinate and a tile-based land surface scheme with physiography based on ECOCLIMAP. "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.year_released": {
+            "values": [
+                2012.0
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+            "values": [
+                "RACMO2.1"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
+            "values": [
+                "RACMO2.1 was based on ECMWF physics package IFS cy23r4. RACMO22E is based in IFS cy31r1."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "GCM-based"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.repository": {
+            "values": [
+                "https://svn.knmi.nl/svn/RACMO/trunk (restricted access)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_version": {
+            "values": [
+                "r441"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran, C, csh"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.coupler": {
+            "values": [
+                "None: No coupler is used"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.reference.details": {
+            "values": [
+                "van Meijgaard, E., L.H. van Ulft, G. Lenderink, S.R. de Roode, L. Wipfler, R. Boers, R.M.A. Timmermans (2012). Refinement and application of a regional atmospheric model  for climate scenario calculations of Western Europe. Final report in Climate changes Spatial planning program. KvR report number KvR 054/12. ISBN/EAN 978-90-8815-046-3. \n https://library.wur.nl/WebQuery/wurpubs/fulltext/312258 ;  http://climexp.knmi.nl/publications/FinalReport_KvR-CS06.pdf\n"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+            "values": [
+                "surface pressure (ps), temperature (ta), specific humidity (hus), zonal (ua) and meridional (va) wind components"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+            "values": [
+                "surface pressure (ps), temperature (ta), specific humidity (hus), zonal (ua) and meridional (va) wind components"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+            "values": [
+                "Sea surface temperature (tos) from the driving reanalysis ERA-Interim."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+            "values": [
+                "Sea-ice concentration (sic)  from the driving reanalysis ERA-Interim"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+            "values": [
+                "At frequency supplied by driving GCM: 6-hourly or daily"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+            "values": [
+                "At frequency supplied by driving GCM: 6-hourly, daily or monthly"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+            "values": [
+                "Parameterized aerosol effect (optical depth, absorption and scattering; wave length dependent) on radiative fluxes (only direct effect). Six aerosol classes (land, maritime, desert, urban, volcanic active, stratospheric background). Aerosol concentrations (spatial distributions, vertical profiles, monthly variations) are imported for the following species: sulfate (so4), secondary organic aerosol (soa), organic matter (hydrophobic/-phylic), black carbon (hydrophobic/-phylic), desert dust (4 size classes), and sea salt (4 size classes), and subsequently mapped on the aerosol classes. Aerosol input datasets for historical period (until 2005) are based on Lamarque et al. (2010; doi:10.5194/acp10-7017-2010); for projections (from 2006 onwards) on Van Vuuren et al. (2011; doi:10.1007/s10584-011-0148-z) and Lamarque et al. (2013 ; doi:10.1007/s10584-011-0155-0). In the evaluation experiment, historical is taken for the years until 2005, and RCP8.5 for the years after 2005."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
+            "values": [
+                "transient series, monthly variations"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.additional_information": {
+            "values": [
+                "Prescribed aerosol forcing is adopted from EC-Earth2.3 (version used for CMIP5 simulations). References: Hazeleger et al. (2012; doi:10.1007/s00382-011-1228-5) and Van Noije et al. (2014; doi:10.5194/gmd-7-2435-2014). "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
+            "values": [
+                "Parameterized aerosol effect (optical depth, absorption and scattering; wave length dependent) on radiative fluxes (only direct effect). Six aerosol classes (land, maritime, desert, urban, volcanic active, stratospheric background). Aerosol concentrations (spatial distributions, vertical profiles, monthly variations) are imported for the following species: sulfate (so4), secondary organic aerosol (soa), organic matter (hydrophobic/-phylic), black carbon (hydrophobic/-phylic), desert dust (4 size classes), and sea salt (4 size classes), and subsequently mapped on the aerosol classes. Aerosols input datasets for historical period (until 2005) are based on Lamarque et al. (2010; doi:10.5194/acp10-7017-2010); for projections (from 2006 onwards) on Van Vuuren et al. (2011; doi:10.1007/s10584-011-0148-z) and Lamarque et al. (2013 ; doi:10.1007/s10584-011-0155-0)."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
+            "values": [
+                "transient series, monthly variations"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.additional_information": {
+            "values": [
+                "Prescribed aerosol forcing is adopted from EC-Earth2.3 (version used for CMIP5 simulations). References: Hazeleger et al. (2012; doi:10.1007/s00382-011-1228-5) and Van Noije et al. (2014; doi:10.5194/gmd-7-2435-2014). "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_dataset": {
+            "values": [
+                "Spatial distributions of vertically resolved (stratospheric and tropospheric) ozone are prescribed following Cionni et al. (2011; https://doi.org/10.5194/acp-11-11267-2011)."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
+            "values": [
+                "transient series, monthly variations"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.additional_information": {
+            "values": [
+                "Prescribed ozone forcing is adopted from EC-Earth2.3 (version used for CMIP5 simulations)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
+            "values": [
+                "Spatial distributions of vertically resolved (stratospheric and tropospheric) ozone are prescribed following Cionni et al. (2011; https://doi.org/10.5194/acp-11-11267-2011)."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+            "values": [
+                "transient series, monthly variations"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.additional_information": {
+            "values": [
+                "Prescribed ozone forcing is adopted from EC-Earth2.3 (version used for CMIP5 simulations)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
+            "values": [
+                "ECOCLIMAPv2"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+            "values": [
+                "Leaf Area Index (LAI): climatology (10-day frequency; no interannual variations). Other land cover parameters: static"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
+            "values": [
+                "ECOCLIMAPv2"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
+            "values": [
+                "Leaf Area Index (LAI): climatology (10-day frequency; no interannual variations). Other land cover parameters: static"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.additional_information": {
+            "values": [
+                "ECOCLIMAP classes are mapped on HTESSEL land surface model bare ground, and low and high vegetation types and coverages. Leaf Area Index (LAI) climatology is inferred from MODIS on a 10-day frequency."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.name": {
+            "values": [
+                "Greenhouse gases, aerosol and solar"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.overview": {
+            "values": [
+                "GHGs are prescribed from annual timeseries. Aerosol concentrations are prescribed from 3D distributions of monthly timeseries with long-term annual trends."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
+            "values": [
+                "CO2 concentrations follow the RCP scenarios (Meinshausen et al., 2011; doi:10.1007/s10584-011-0156-z), and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
+            "values": [
+                "CH4 concentrations follow the RCP scenarios (Meinshausen et al., 2011; doi:10.1007/s10584-011-0156-z), and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
+            "values": [
+                "N2O concentrations follow the RCP scenarios (Meinshausen et al., 2011; doi:10.1007/s10584-011-0156-z), and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
+            "values": [
+                "Spatial distributions of vertically resolved (stratospheric and tropospheric) and monthly resolved ozone are prescribed following Cionni et al. (2011; https://doi.org/10.5194/acp-11-11267-2011)."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.additional_information": {
+            "values": [
+                "Spatial distributions of vertically resolved (stratospheric and tropospheric) and monthly resolved ozone are prescribed following Cionni et al. (2011; https://doi.org/10.5194/acp-11-11267-2011)."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
+            "values": [
+                "Option 2: CFC-12 is provided as actual concentrations and any other gases are provided as an equivalence concentration of CFC-11"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
+            "values": [
+                "CFC-11 & CFC-12 concentrations follow the RCP scenarios, and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.SO4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.SO4.additional_information": {
+            "values": [
+                "Sulfate aerosol is part of the aerosol forcing: see 1.12.6 & 1.12.7"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.additional_information": {
+            "values": [
+                "Black carbon aerosol is part of the aerosol forcing: see 1.12.6 & 1.12.7"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.additional_information": {
+            "values": [
+                "Organic carbon aerosol is part of the aerosol forcing: see 1.12.6 & 1.12.7"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.nitrate.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.aerosol_effect_on_ice_clouds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.additional_information": {
+            "values": [
+                "Relationship in the model between radiative properties of ice clouds and aerosol is implicit, i.e. independent of prescribed aerosol."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.aerosol_effect_on_ice_clouds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.RFaci_from_sulfate_only": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.additional_information": {
+            "values": [
+                "Relationship in the model between ice crystal size and aerosol is implicit, i.e. independent of prescribed aerosol."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.dust.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.dust.additional_information": {
+            "values": [
+                "Dust aerosol is part of the aerosol forcing: see 1.12.6 & 1.12.7"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.historical_explosive_volcanic_aerosol_implementation": {
+            "values": [
+                "Type B: Explosive volcanic aerosol returns rapidly to constant (average volcano)"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.future_explosive_volcanic_aerosol_implementation": {
+            "values": [
+                "Type E: Explosive volcanic aerosol set to constant (average volcano) background"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.additional_information": {
+            "values": [
+                "Stratospheric (volcanic and background) aerosol is part of the aerosol forcing: see 1.12.6 & 1.12.7"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.additional_information": {
+            "values": [
+                "Sea salt is part of the aerosol forcing: see 1.12.6 & 1.12.7"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.land_use.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.solar.provision": {
+            "values": [
+                "irradiance: Solar irradiance forcing"
+            ]
+        }
+    }
 }

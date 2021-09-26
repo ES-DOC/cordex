@@ -5,5 +5,589 @@
     "sourceID": "eth-cosmo-crclim-v1-1", 
     "topic": "atmos", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordex.atmos.key_properties.name": {
+            "values": [
+                "COSMO-crCLIM-v1-1"
+            ]
+        }, 
+        "cordex.atmos.key_properties.keywords": {
+            "values": [
+                "COSMO; CORDEX; ETH; CLMcom; RCM; atmosphere; land surface"
+            ]
+        }, 
+        "cordex.atmos.key_properties.overview": {
+            "values": [
+                "The Consortium for Small-scale Modeling (COSMO) is a non-hydrostatic limited-area atmospheric model (Rockel et al. 2008, Baldauf et al. 2011, see http://www.cosmo-model.org/, https://www.clm-community.eu/). COSMO solves the fully compressible governing equations using finite difference methods on a structured grid. It employs a split-explicit third-order Runge-Kutta discretization in time and is discretized on a rotated latitude-longitude grid using terrain-following surfaces. For the representation of unresolved processes, the following physical parameterization schemes are used (Baldauf et al. 2011): a radiative transfer scheme, a single-moment bulk cloud-microphysics scheme with 5 species (cloud water, cloud ice, rain, snow and graupel), a multilayer soil model, a turbulence scheme using a turbulent-kinetic-energy closure, and a surface transfer scheme. Sub-grid convection is parameterized using an adapted version of the Tiedtke mass-flux scheme with a moisture convergence closure. COSMO-crCLIM is the GPU version of COSMO (Fuhrer et al. 2014, 2018) and is described by Leutwyler et al. (2017). COSMO-crCLIM's land surface scheme TERRA includes a soil hydrology scheme (Schlemmer et al. 2018). All COSMO CORDEX configurations are described in S\u00f8rland et al. (2021)."
+            ]
+        }, 
+        "cordex.atmos.key_properties.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordex.atmos.key_properties.basic_approximations": {
+            "values": [
+                "non-hydrostatic"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "0.11 x 0.11 degrees lat-lon"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                40
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.high_top": {
+            "values": [
+                "FALSE"
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_dynamics": {
+            "values": [
+                90
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
+            "values": [
+                3600
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                3600
+            ]
+        }, 
+        "cordex.atmos.key_properties.orography.type": {
+            "values": [
+                "fixed: present day"
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.description": {
+            "values": [
+                "To reduce the parameter uncertainty, we use an objective calibration method on 8 semi-empirical parameters (Bellprat et al. 2016). The main idea of the approach is to approximate the model response resulting from parameter perturbations using a computationally efficient statistical regression model (metamodel) that is estimated on the basis of a minimum set of model simulations. An optimal set of parameters is found based on the best performance estimated by the metamodel in terms of 2m temperature, precipitation and cloud cover, compared to observations. Such a calibration has been performed over the EUR-44 domain and verified over the EUR-11 domain."
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "2m air temperature, precipitation, cloud cover, integrated performance score: computed as average-squared errors between model observations for each variable, each month, all simulated years and each regional average (8 for Europe). These errors are scaled by the observed interannual variability, including a measure of observational uncertainty and internal variability."
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.trend_metrics_used": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.grid.name": {
+            "values": [
+                "Rotated Arakawa C grid"
+            ]
+        }, 
+        "cordex.atmos.grid.overview": {
+            "values": [
+                "http://www2.cosmo-model.org/content/model/documentation/core/cosmo_dynamics_5.05.pdf"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system": {
+            "values": [
+                "Rotated Polar"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system_details": {
+            "values": [
+                "rotated_pole:grid_north_pole_latitude = 39.25 ; rotated_pole:grid_north_pole_longitude = -162. ;"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_resolution": {
+            "values": [
+                "0.11 deg"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.full_domain": {
+            "values": [
+                "450 x 438"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.relaxation_zone": {
+            "values": [
+                "1-way nesting by Davies (1976, 1983)-type lateral boundary formulation, width = 150 km = 12 grid points"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.inner_domain": {
+            "values": [
+                "424 x 412"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_type": {
+            "values": [
+                "fixed grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_method": {
+            "values": [
+                "finite difference"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_order": {
+            "values": [
+                "second"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_pole": {
+            "values": [
+                "pole rotation"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.grid_type": {
+            "values": [
+                "Other: Rotated latitude-longitude"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.vertical.coordinate_type": {
+            "values": [
+                "Other: height-based Gal-Chen coordinates"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.name": {
+            "values": [
+                "COSMO C++ Dycore"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.overview": {
+            "values": [
+                "COSMO is a non-hydrostatic model solving fully compressible dynamical equations to avoid restrictions on the spatial scales and domain size (http://www2.cosmo-model.org/content/model/documentation/core/cosmo_dynamics_5.05.pdf). It employs a split-explicit third-order Runge-Kutta discretization in time. The dynamical core is originally based on FORTRAN. COSMO-crCLIM is the GPU version of COSMO (Fuhrer et al. 2014, 2018) and is described by Leutwyler et al. (2017). Its C++ Dynamical core (or Dycore) has been rewritten using the Stencil Loop Language STELLA and supports all main features of the original COSMO FORTRAN dynamical core. "
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.timestepping_type": {
+            "values": [
+                "Runge Kutta third order"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.prognostic_variables": {
+            "values": [
+                "wind components", 
+                "surface pressure", 
+                "temperature", 
+                "Other: specific humidity", 
+                "Other: cloud water content", 
+                "Other: cloud ice content", 
+                "Other: turbulent kinetic energy"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_boundary_condition": {
+            "values": [
+                "sponge layer"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_heat": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_wind": {
+            "values": [
+                "implicit Rayleigh damping applied to vertical velocity only (Klemp et al. 2008)"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.lateral_boundary.condition": {
+            "values": [
+                "sponge layer"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_name": {
+            "values": [
+                "Monotonic 4th-order linear horizontal diffusion scheme with orographic limiter"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_method": {
+            "values": [
+                "iterated Laplacian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.scheme_name": {
+            "values": [
+                "Other: 1-D Bott (1989) scheme"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.scheme_characteristics": {
+            "values": [
+                "finite volume", 
+                "Other: Bott 2nd order finite-volume scheme with Strang splitting"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.conserved_quantities": {
+            "values": [
+                "tracer mass"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.conservation_method": {
+            "values": [
+                "conservation fixer"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_name": {
+            "values": [
+                "Other: 3rd order horizontal advection scheme"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_characteristics": {
+            "values": [
+                "staggered grid"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_staggering_type": {
+            "values": [
+                "Arakawa C-grid"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.conserved_quantities": {
+            "values": [
+                "Enstrophy"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.conservation_method": {
+            "values": [
+                "conservation fixer"
+            ]
+        }, 
+        "cordex.atmos.radiation.name": {
+            "values": [
+                "Ritter and Geleyn (1992)"
+            ]
+        }, 
+        "cordex.atmos.radiation.overview": {
+            "values": [
+                "To calculate the heating rate due to radiation COSMO employs the parameterization scheme of Ritter and Geleyn (1992; hereafter RG92). This scheme is based on a \u03b4-two-stream version of the general equation for radiative transfer and considers three shortwave (solar) and five longwave (ther- mal) spectral intervals. Clouds, aerosol, water vapour and other gaseous tracers are treated as optically active constituents of the atmosphere, which modify the radiative fluxes by absorption, emission and scattering.\nAs an extension to the original scheme, a new treatment of the optical properties of ice particles has been introduced which allows a direct cloud-radiative feedback with the predicted ice water content when using the cloud ice scheme for the parameterization of cloud and precipitation (http://www2.cosmo-model.org/content/model/documentation/core/cosmo_physics_5.05.pdf)."
+            ]
+        }, 
+        "cordex.atmos.radiation.aerosols": {
+            "values": [
+                "dust", 
+                "organic", 
+                "BC: black carbon / soot", 
+                "sulphate", 
+                "sea salt"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.name": {
+            "values": [
+                "Ritter and Geleyn (1992) scheme"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_integration": {
+            "values": [
+                "exponential sum fitting"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_intervals": {
+            "values": [
+                3
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.general_interactions": {
+            "values": [
+                "scattering", 
+                "Other: absorption"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.physical_representation": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.optical_methods": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Other: geometrical properties of cloud fraction (RG92)"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_aerosols.physical_representation": {
+            "values": [
+                "Other: The actual layer mean values of optically relevant substances are converted to radiative properties like optical depth, single scattering albedo and backscattered fraction through the use of empiral relations described in RG92 "
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "Ritter and Geleyn (1992) scheme"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_integration": {
+            "values": [
+                "exponential sum fitting"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_intervals": {
+            "values": [
+                5
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.general_interactions": {
+            "values": [
+                "emission/absorption,", 
+                "scattering"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.optical_methods": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.physical_representation": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_aerosols.physical_representation": {
+            "values": [
+                "Other: refer to RG92"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_aerosols.optical_methods": {
+            "values": [
+                "Other: as in RG92"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.name": {
+            "values": [
+                "1-D prognostic TKE based diagnostic closure (Raschendorfer)"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.overview": {
+            "values": [
+                "Subgrid-Scale Turbulence is parametrised using a prognostic turbulent kinetic energy closure at level 2.5. The  scheme includes the transition of turbulence which contributes mainly to the fluxes (diffusive turbulence) to very small scale (dissipative) turbulence by the action of small scale roughness elements, and the handling of non-local vertical diffusion due to the boundary layer scale turbulence. A parameterization of the pressure transport term is introduced in the TKE-equation to account for TKE-production by subgrid thermal circulations. The whole scheme is formulated in conservative thermodynamic variables together with a statistical cloud scheme according to Sommeria and Deardorff (1977) in order to consider subgrid-scale condensation effects.\nThe parametrization of surface layer fluxes extends the TKE equation to the constant flux layer using the Mellor-Yamada closure and introduces an additional laminar layer just above the surface. This makes it possible to discriminate between the values of the model variables at the rigid surface (e.g. radiative surface temperatures) and values at the roughness height z0 (lower boundary of the turbulent atmosphere). The Charnock formula to estimate the surface fluxes over sea is also reformulated using TKE.\nMoist Convection is parametrised with the Tiedtke (1989) mass-flux convection scheme with equilibrium closure based on moisture convergence. The mass flux scheme of Tiedtke (1989) discriminates three types of moist convection: shallow convection, penetrative convection and midlevel convection, which are treated by different closure conditions. Both shallow and penetrative convection have their roots in the atmospheric boundary layer but they differ in vertical extent, while midlevel convection originates at levels within the free atmosphere. As a closure condition, the Tiedtke scheme requires a formulation of the vertical mass flux at the convective cloud base in terms of the grid-scale variables. For shallow and penetrative convection, it is assumed that this mass flux is proportional to the vertically integrated moisture convergence between the surface and the cloud base. In case of midlevel convection, the mass flux is set proportional to the grid-scale vertical velocity. Given the mass flux at cloud base, the vertical redistribution of heat, moisture and momentum as well as the formation of precipitation is then calculated by integrating a stationary cloud model for both updrafts and downdrafts. This allows to compute the convective tendencies, i.e. the feedback of the subgrid vertical circulation onto the resolved flow. The downdrafts are assumed to originate at the level of free sinking. As an additional closure condition, the downdraft mass flux in this level is set proportional to the updraft mass flux at cloud base. In subsaturated regions below cloud base, the precipitation in the downdrafts may evaporate with a parameterized rate. Depending on the temperature of the lowest model layer, the precipitation is interpreted as convective snow or rain. \nDetails can be found in http://www2.cosmo-model.org/content/model/documentation/core/cosmo_physics_5.05.pdf"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_name": {
+            "values": [
+                "Other: TKE-Based Surface Transfer Scheme"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
+            "values": [
+                "TKE prognostic"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.closure_order": {
+            "values": [
+                2.5
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_name": {
+            "values": [
+                "Modified Tiedtke (1989) Mass-Flux Scheme"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_method": {
+            "values": [
+                "bulk: A bulk mass flux scheme is used"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.processes": {
+            "values": [
+                "vertical momentum transport", 
+                "updrafts", 
+                "downdrafts", 
+                "entrainment", 
+                "detrainment", 
+                "re-evaporation of convective precipitation", 
+                "Other: vertical transport of mass, heat, moisture, and effects of water-ice mixed-phase convective clouds"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.microphysics": {
+            "values": [
+                "single moment"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_name": {
+            "values": [
+                "Modified Tiedtke (1989) Mass-Flux Scheme"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_method": {
+            "values": [
+                "separate diagnosis: Deep and Shallow convection schemes use different thermodynamic closure criteria"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.processes": {
+            "values": [
+                "detrainment", 
+                "penetrative convection"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.microphysics": {
+            "values": [
+                "single moment"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.name": {
+            "values": [
+                "Single-moment bulk cloud microphysics (Doms, 2004)"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.overview": {
+            "values": [
+                "The basic parameterization scheme for the formation of grid-scale clouds and precipitation is based on a Kessler-type bulk formulation and uses a specific grouping of various cloud and precipitation particles into broad categories of water substance. The particles in these categories interact by various microphysical processes which in turn have feedbacks with the overall thermodynamics. Microphysical processes are parameterized by corresponding mass transfer rates between the categories and are formu- lated in terms of the mixing ratios as the dependent model variables. Cloud water condensation and evaporation is treated by saturation adjustment. Precipitation formation is defined by a bulk microphysics parameterization including water vapour, cloud water, cloud ice, rain and snow with 3D transport for the precipitating phases.\nhttp://www2.cosmo-model.org/content/model/documentation/core/cosmo_physics_5.05.pdf"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.scheme_name": {
+            "values": [
+                "Single-moment bulk cloud microphysics"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
+            "values": [
+                "liquid rain", 
+                "snow"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
+            "values": [
+                "Single-moment 2-category ice bulk cloud microphysics scheme"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.processes": {
+            "values": [
+                "cloud droplets", 
+                "cloud ice", 
+                "mixed phase", 
+                "ice nucleation", 
+                "water vapour deposition"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.overview": {
+            "values": [
+                "Subgrid-scale cloudiness is interpreted by an empirical function depending on relative humidity and height. A corresponding cloud water content is also interpreted.\nGrid- and sub-grid scale water clouds are considered in the turbulence scheme: cloud cover and water content are calculated according to a statistical closure.\nThe stability of the thermal stratification determines whether the dynamical evolution will be in form of a stratiform or of a convective cloud."
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.scheme_type": {
+            "values": [
+                "diagnostic"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.processes": {
+            "values": [
+                "bulk cloud"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.atmos_coupling": {
+            "values": [
+                "atmosphere_radiation", 
+                "atmosphere_microphysics_precipitation", 
+                "atmosphere_turbulence_convection"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_water_distribution.convection_coupling": {
+            "values": [
+                "coupled with deep", 
+                "coupled with shallow"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_ice_distribution.convection_coupling": {
+            "values": [
+                "coupled with deep", 
+                "coupled with shallow"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.name": {
+            "values": [
+                "Lott and Miller (1997)"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.overview": {
+            "values": [
+                "COSMO uses the sub-grid scale orography scheme of Lott and Miller (1997). The SSO scheme by Lott and Miller (1997) deals explicitly with a low-level flow which is blocked when the subgrid scale orography is sufficiently high. For this blocked flow separation occurs at the mountain flanks, resulting in a form drag. The upper part of the low-level flow is lead over the orography, while generating gravity waves.\nhttp://www2.cosmo-model.org/content/model/documentation/core/cosmo_physics_5.05.pdf"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.sponge_layer": {
+            "values": [
+                "Rayleigh friction"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.subgrid_scale_orography": {
+            "values": [
+                "effect on drag"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.name": {
+            "values": [
+                "Lott and Miller (1997)"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.source_mechanisms": {
+            "values": [
+                "low level flow blocking"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_pathways.pathways": {
+            "values": [
+                "SW radiation: Shortwave solar spectral irradiance."
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_constant.type": {
+            "values": [
+                "fixed"
+            ]
+        }
+    }
 }

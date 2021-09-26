@@ -5,5 +5,251 @@
     "sourceID": "ipsl-wrf381p", 
     "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordex.toplevel.key_properties.name": {
+            "values": [
+                "Several coupled models, regional climate model = WRF381P"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.overview": {
+            "values": [
+                "WRF381P has downscaled several GCMs"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.model_type.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.model_type.details": {
+            "values": [
+                "WRF381P is a specific configuration, with a specific set of parameterizations of the Weather Research and Forecasting Model. WRF381P is based on the WRF 3.8.1 version."
+            ]
+        }, 
+        "cordex.toplevel.key_properties.genealogy.year_released": {
+            "values": [
+                2016
+            ]
+        }, 
+        "cordex.toplevel.key_properties.genealogy.previous_name": {
+            "values": [
+                "WRF3.7.1 and old version is MM5"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "Standard"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.spinup.details": {
+            "values": [
+                "2-year simulation spin-up. The model is generally run by 20-year long time slices with overlapping 2-year periods"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.nudging.details": {
+            "values": [
+                "No spectral nudging used"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.software_properties.repository": {
+            "values": [
+                "https://www2.mmm.ucar.edu/wrf/users/"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.software_properties.code_version": {
+            "values": [
+                "WRF V3.8.1"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.tuning_applied.description": {
+            "values": [
+                "WRF was not tuned for its parameters. However a number of parameterizations were tested with low-resolution (50 km) and 5-year time periods and checked vs. E-OBS observations of temperature and precipitations. The best combination of parameterizations were selected."
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+            "values": [
+                "Wind, temperature and specific humidity"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+            "values": [
+                "6 hours"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+            "values": [
+                "Wind, temperature and specific humidity"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+            "values": [
+                "6 hours"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+            "values": [
+                "Reanalysis"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+            "values": [
+                "1 day"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+            "values": [
+                "reanalysis"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+            "values": [
+                "1 day"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+            "values": [
+                "1 day"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+            "values": [
+                "1 day"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+            "values": [
+                "standard in WRF"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
+            "values": [
+                "constant"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
+            "values": [
+                "constant"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
+            "values": [
+                "RCP8.5 CMIP5"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+            "values": [
+                "yearly"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+            "values": [
+                "climatology"
+            ]
+        }, 
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
+            "values": [
+                "climatology"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.name": {
+            "values": [
+                "CMIP5 RCP8.5"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.overview": {
+            "values": [
+                "CMIP5 RCP8.5"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "CMIP5 RCP8.5"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
+            "values": [
+                "CMIP5 yearly forcing"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
+            "values": [
+                "CMIP5 yearly forcing"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
+            "values": [
+                "CMIP5 yearly forcing"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.aerosols.SO4.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.aerosols.nitrate.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordex.toplevel.radiative_forcings.other.land_use.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }
+    }
 }

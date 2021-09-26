@@ -5,5 +5,633 @@
     "sourceID": "mohc-hadrem3-ga7-05", 
     "topic": "atmos", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordex.atmos.key_properties.name": {
+            "values": [
+                "HadREM3-GA7-05"
+            ]
+        }, 
+        "cordex.atmos.key_properties.keywords": {
+            "values": [
+                "HadREM3-GA7-05;GA7 UM;Hadley Centre;Met Office UK;CORDEX"
+            ]
+        }, 
+        "cordex.atmos.key_properties.overview": {
+            "values": [
+                "HadREM3-GA7-05 is the regional climate model based on the Met Office Unified Model Global Atmosphere 7.0 and Jules Global Land configuration7.0  (Walters et al, 2019), also used for the HadGEM3-GC3 model on which the MetOffice contribution to CMIP6 is based, and for the Climate Projections for the UK, 2018 (UKCP18), based on perturbed physic models. The model is based on the non-hydrostatic dynamical scheme  ENDGAME (Wood et al, 2014), in a configuration which uses a maximum of 63 hybrid-height terrain following levels with a top of the atmophere level at ~40km. The regional model uses prescribed aerosol optical properties and cloud condensation nuclei concentration. Anthropogenic forcings come from the MACv2-SP data for the historical period (Stevens et al, 2017) and for the RCP scenarios (Fiedler et al, 2019)."
+            ]
+        }, 
+        "cordex.atmos.key_properties.model_family": {
+            "values": [
+                "ARCM: Atmospheric Regional Climate Model"
+            ]
+        }, 
+        "cordex.atmos.key_properties.basic_approximations": {
+            "values": [
+                "non-hydrostatic"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "0.11 x 0.11 degrees rotated lat lon"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                63
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.high_top": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_dynamics": {
+            "values": [
+                240
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
+            "values": [
+                3600
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                3600
+            ]
+        }, 
+        "cordex.atmos.key_properties.orography.type": {
+            "values": [
+                "fixed: present day"
+            ]
+        }, 
+        "cordex.atmos.grid.name": {
+            "values": [
+                "Arakawa C"
+            ]
+        }, 
+        "cordex.atmos.grid.overview": {
+            "values": [
+                "Horizontal grid staggering uses an Arakawa C-grid. Vertical grid uses 63 levels with a Charney-Phillips staggering and terrain-following hybrid height coordinates"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system": {
+            "values": [
+                "Rotated Polar"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system_details": {
+            "values": [
+                "grid_north_pole_latitude = 39.25; grid_north_pole_longitude = -162.00"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_resolution": {
+            "values": [
+                "0.11 deg"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.full_domain": {
+            "values": [
+                "450 x 438"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.relaxation_zone": {
+            "values": [
+                "Semi-Lagrangian scheme (Davies, T., 2014. Lateral boundary conditions for limited area models. Quarterly Journal of the Royal Meteorological Society, 140(678), 185\u2013196) with 7 points in the rim, 3 points in the blend zone and 3 points of orographic smoothing in all direction"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.inner_domain": {
+            "values": [
+                "424 x 412"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_type": {
+            "values": [
+                "fixed grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_method": {
+            "values": [
+                "finite difference"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_pole": {
+            "values": [
+                "pole rotation"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.grid_type": {
+            "values": [
+                "Latitude-Longitude"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.vertical.coordinate_type": {
+            "values": [
+                "hybrid sigma-pressure: sigma system near terrain and isobaric above"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.name": {
+            "values": [
+                "ENDGame"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.overview": {
+            "values": [
+                "ENDGame dynamical core uses a semi-implicitsemi-Lagrangian  formulation  to  solve  the  non-hydrostatic,fully  compressible   deep-atmosphere   equations   of   mo-tion  (Wood et al,.: An inherently mass-conserving semi-implicit semi-Lagrangian  discretization  of  the  deep-atmosphere  global  non-hydrostatic  equations,  Q.  J.  Roy.  Meteorol.  Soc.,  140,  1505\u20131520).  The  primary  atmospheric  prognostics are the three-dimensional wind components, virtual dry  potential  temperature,  Exner  pressure  and  dry  density,whilst  moist  prognostics  such  as  the  mass  mixing  ratio  of water  vapour  and  prognostic  cloud  fields  as  well  as  otheratmospheric  loadings  are  advected  as  free  tracers.  These prognostic  fields  are  discretised  horizontally  onto  a  regular  longitude\u2013latitude  grid  with  Arakawa  C-grid  staggering (Arakawa and Lamb, 1977), whilst the vertical discreti-sation  utilises  a  Charney\u2013Phillips  staggering  (Charney  and Phillips,  1953)  using  terrain-following  hybrid  height  coordinates. The discretised equations are solved using a nestediterative approach centred about solving a linear Helmholtz equation."
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.timestepping_type": {
+            "values": [
+                "semi-implicit"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.prognostic_variables": {
+            "values": [
+                "Other: virtual dry potential temperature", 
+                "wind components", 
+                "clouds", 
+                "Other: mixing ratios of water vapour,liquid and ice", 
+                "Other: Exner pressure", 
+                "Other: dry density"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_boundary_condition": {
+            "values": [
+                "sponge layer"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.top_boundary.top_wind": {
+            "values": [
+                "w-damping"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.lateral_boundary.condition": {
+            "values": [
+                "Other: semi-Lagrangian scheme (Davies 2014)"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.tracers.scheme_characteristics": {
+            "values": [
+                "cubic semi-Lagrangian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_name": {
+            "values": [
+                "Other: semi-Lagrangian"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_characteristics": {
+            "values": [
+                "staggered grid", 
+                "Other: 3rd order"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.advection.momentum.scheme_staggering_type": {
+            "values": [
+                "Arakawa C-grid"
+            ]
+        }, 
+        "cordex.atmos.radiation.name": {
+            "values": [
+                "SOCRATES"
+            ]
+        }, 
+        "cordex.atmos.radiation.overview": {
+            "values": [
+                "The SOCRATES radiative transferscheme (Edwards and Slingo, 1996; Manners et al., 2015) is used with a new configuration for GA7. Solar radiationis treated in six SW bands and thermal radiation in nine LW bands. Gaseous absorption usesthe correlated-kmethod with newly derived coefficients forall gases (except where indicated below) based on the HI-TRAN 2012 spectroscopic database (Rothman et al., 2013). Scaling of absorption coefficients uses a look-up table of 59 pressures with five temperatures per pressure level based around a mid-latitude summer profile. The method of equivalent extinction (Edwards, 1996; Amundsen et al., 2017) is used for minor gases in each band."
+            ]
+        }, 
+        "cordex.atmos.radiation.aerosols": {
+            "values": [
+                "Other: Prescribed arerosol properties"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.name": {
+            "values": [
+                "SOCRATES"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_integration": {
+            "values": [
+                "correlated-k"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.spectral_intervals": {
+            "values": [
+                6
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_radiation.general_interactions": {
+            "values": [
+                "scattering", 
+                "emission/absorption,"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_ice.physical_representation": {
+            "values": [
+                "ensemble of ice crystals: complex shapes represented with an ensemble of symmetric shapes"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
+            "values": [
+                "cloud droplet number concentration: CDNC", 
+                "effective cloud droplet radii", 
+                "liquid water path: Integrated liquid water path through the cloud kg m-2"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Monte Carlo Independent Column Approximation: McICA"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_aerosols.physical_representation": {
+            "values": [
+                "Other: prescribed diagnositcs"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "SOCRATES"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_integration": {
+            "values": [
+                "correlated-k"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.transport_calculation": {
+            "values": [
+                "two-stream"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.spectral_intervals": {
+            "values": [
+                9
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.general_interactions": {
+            "values": [
+                "scattering", 
+                "emission/absorption,"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "CFC-12 eq: Summarize the radiative effect of the Ozone Depleating Substances, ODSs, with a CFC-12 equivalence concentration", 
+                "HFC-134a eq: Summarize the radiative effect of other fluorinated gases with a HFC-134a equivalence concentration", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
+            "values": [
+                "ensemble of ice crystals: complex shapes represented with an ensemble of symmetric shapes"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.physical_representation": {
+            "values": [
+                "cloud droplet number concentration: CDNC", 
+                "effective cloud droplet radii", 
+                "liquid water path: Integrated liquid water path through the cloud kg m-2"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_liquid.optical_methods": {
+            "values": [
+                "Mie theory: For spherical particles"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_cloud_inhomogeneity.cloud_inhomogeneity": {
+            "values": [
+                "Monte Carlo Independent Column Approximation: McICA"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_aerosols.physical_representation": {
+            "values": [
+                "Other: prescribed diagnostics "
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.overview": {
+            "values": [
+                "Deep and shallow convection are based on the Gregory Rowntree (1990) scheme with modifications. The turbulence convection scheme is that of Lock et al. (2000) with the modifications described in Lock (2001) and Brown et al. (2008). It is a first-order turbulence closure mixing adiabatically conserved heat and moisture variables, momentum and tracers."
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_type": {
+            "values": [
+                "vertical profile of Kz", 
+                "non-local diffusion", 
+                "Monin-Obukhov similarity", 
+                "Coastal Buddy Scheme: separate components for coastal near surface winds over ocean and land", 
+                "Coupled with convection", 
+                "Depth capped at cloud base: boundary layer capped at cloud base when convection is diagnosed"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.closure_order": {
+            "values": [
+                1
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.counter_gradient": {
+            "values": [
+                true
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_method": {
+            "values": [
+                "bulk: A bulk mass flux scheme is used"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.microphysics": {
+            "values": [
+                "tuning parameter based"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_name": {
+            "values": [
+                "Gregory Rowntree (1990) scheme with modifications"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_method": {
+            "values": [
+                "separate diagnosis: Deep and Shallow convection schemes use different thermodynamic closure criteria"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.processes": {
+            "values": [
+                "entrainment", 
+                "detrainment", 
+                "re-evaporation of convective precipitation"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.microphysics": {
+            "values": [
+                "tuning parameter based"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.name": {
+            "values": [
+                "Wilson and Ballard (1999) - with significant additions"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.overview": {
+            "values": [
+                "Based on Wilson and Ballard (1999) with significant additions. Calculates transfers between liquid, ice and vapour allowing for mixed-phase and with assumed particle-size distributions for the liquid and ice, and size-dependent fall speeds. Cloud inhomogeneity is taken into account when calculating autoconversion and accretion. Size distribution for rain is based on Abel and Boutle (2012) and for snow on Field et al., 2007."
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.scheme_name": {
+            "values": [
+                "Based on Wilson and Ballard (1999)"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
+            "values": [
+                "liquid rain", 
+                "snow"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
+            "values": [
+                "Based on Wilson and Ballard (1999)"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.processes": {
+            "values": [
+                "mixed phase", 
+                "cloud droplets", 
+                "cloud ice", 
+                "ice nucleation", 
+                "water vapour deposition", 
+                "effect of raindrops", 
+                "effect of snow"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.name": {
+            "values": [
+                "PC2"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.overview": {
+            "values": [
+                "The parametrisation used is the prognostic cloud fraction and prognostic condensate (PC2) scheme (Wilson et al., 2008a, b) along with the cloud erosion parametrisation described by Morcrette (2012) and critical relative humidity parametrisation described in Van Weverberg et al. (2016). PC2 uses three prognostic variables for water mixing ratio - vapour, liquid and ice - and a further three prognostic variables for cloud fraction: liquid, ice and mixed-phase. Cloud inhomogeneity is represented in the radiation and in warm rain microphysics using regime-dependent inhomogeneity."
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.scheme_type": {
+            "values": [
+                "prognostic", 
+                "diagnostic"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.processes": {
+            "values": [
+                "entrainment", 
+                "detrainment", 
+                "bulk cloud"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.prognostic_variables": {
+            "values": [
+                "cloud amount", 
+                "liquid", 
+                "ice", 
+                "rain"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.atmos_coupling": {
+            "values": [
+                "atmosphere_radiation", 
+                "atmosphere_microphysics_precipitation", 
+                "atmosphere_turbulence_convection", 
+                "atmosphere_natural_forcing"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_overlap_method": {
+            "values": [
+                "random"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_inhomogeneity": {
+            "values": [
+                "McICA (Monte-Carlo Independent Column Approximation) with parameterisation of fractional standard deviation and linked to warm rain."
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_water_distribution.type": {
+            "values": [
+                "diagnostic"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_water_distribution.function_name": {
+            "values": [
+                "Uses the function of Liu et al. (2008)."
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_water_distribution.convection_coupling": {
+            "values": [
+                "coupled with deep", 
+                "coupled with shallow"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_ice_distribution.type": {
+            "values": [
+                "diagnostic"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_ice_distribution.function_name": {
+            "values": [
+                "exponential+gamma function"
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.sub_grid_scale_ice_distribution.convection_coupling": {
+            "values": [
+                "coupled with deep", 
+                "coupled with shallow"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.overview": {
+            "values": [
+                "Separate schemes are used for orographic and non-orographic gravity waves, namely Warner and McIntyre (2001) for non-orographic and Palmer, Shutts and Swinbank (1986) for orographic.\""
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.background": {
+            "values": [
+                "continuous spectrum"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.subgrid_scale_orography": {
+            "values": [
+                "effect on drag"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.name": {
+            "values": [
+                "Palmer, Shutts and Swinbank (1986)"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.source_mechanisms": {
+            "values": [
+                "linear mountain waves", 
+                "low level flow blocking", 
+                "statistical sub-grid scale variance"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.calculation_method": {
+            "values": [
+                "Other: linear theory of hydrostatic gravity waves "
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.propagation_scheme": {
+            "values": [
+                "linear theory"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.orographic_gravity_waves.dissipation_scheme": {
+            "values": [
+                "single wave", 
+                "Other: Richardson number"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.non_orographic_gravity_waves.name": {
+            "values": [
+                "Warner and McIntyre (2001)"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.non_orographic_gravity_waves.source_mechanisms": {
+            "values": [
+                "background spectrum"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.non_orographic_gravity_waves.calculation_method": {
+            "values": [
+                "spatially dependent", 
+                "temporally dependent"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.non_orographic_gravity_waves.propagation_scheme": {
+            "values": [
+                "linear theory"
+            ]
+        }, 
+        "cordex.atmos.gravity_waves.non_orographic_gravity_waves.dissipation_scheme": {
+            "values": [
+                "spectral", 
+                "wave saturation vs Richardson number"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.overview": {
+            "values": [
+                "See topic description and individual forcings"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_pathways.pathways": {
+            "values": [
+                "SW radiation: Shortwave solar spectral irradiance."
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_constant.type": {
+            "values": [
+                "transient"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.solar_constant.transient_characteristics": {
+            "values": [
+                "As per CMIP6 forcing (Matthes et al., 2017)"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.orbital_parameters.type": {
+            "values": [
+                "fixed"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.orbital_parameters.fixed_reference_date": {
+            "values": [
+                2000
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.insolation_ozone.solar_ozone_impact": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.volcanoes_treatment.volcanoes_characteristics": {
+            "values": [
+                "Prescribed aerosol optical properties (absorption, extinction and asymmetry) for the 6 shortwave and 9 longwave wavebands of the SOCRATES radiative transfer code (Edwards and Slingo, 1996, Manners et al., 2015) and cloud droplet number concentrations (CDNC) are combined from three source of data. Anthropogenic forcings come from the  MACv2-SP dataset (Stevens et al, 2017), a pre-industrial background is from an AMIP pre-industrial of a GA7 configuration of the MetUM with prognostic aerosol and the VolMIP stratospheric aerosol forcing dataset (Zanchettin et al, 2016)"
+            ]
+        }, 
+        "cordex.atmos.natural_forcing.volcanoes_treatment.volcanoes_implementation": {
+            "values": [
+                "stratospheric aerosols optical thickness"
+            ]
+        }
+    }
 }

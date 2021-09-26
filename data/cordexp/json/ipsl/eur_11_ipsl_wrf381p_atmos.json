@@ -5,5 +5,226 @@
     "sourceID": "ipsl-wrf381p", 
     "topic": "atmos", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordex.atmos.key_properties.name": {
+            "values": [
+                "Weather Research and Forecasting (WRF) model"
+            ]
+        }, 
+        "cordex.atmos.key_properties.overview": {
+            "values": [
+                "Frome the WRF website https://www.mmm.ucar.edu/weather-research-and-forecasting-model : \"The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale numerical weather prediction system designed for both atmospheric research and operational forecasting applications. It features two dynamical cores, a data assimilation system, and a software architecture supporting parallel computation and system extensibility. The model serves a wide range of meteorological applications across scales from tens of meters to thousands of kilometers. The effort to develop WRF began in the latter 1990's and was a collaborative partnership of the National Center for Atmospheric Research (NCAR), the National Oceanic and Atmospheric Administration (represented by the National Centers for Environmental Prediction (NCEP) and the Earth System Research Laboratory), the U.S. Air Force, the Naval Research Laboratory, the University of Oklahoma, and the Federal Aviation Administration (FAA).\n\nFor researchers, WRF can produce simulations based on actual atmospheric conditions (i.e., from observations and analyses) or idealized conditions. WRF offers operational forecasting a flexible and computationally-efficient platform, while reflecting recent advances in physics, numerics, and data assimilation contributed by developers from the expansive research community. WRF is currently in operational use at NCEP and other national meteorological centers as well as in real-time forecasting configurations at laboratories, universities, and companies.\n\nWRF has a large worldwide community of registered users (a cumulative total of over 48,000 in over 160 countries), and NCAR provides regular workshops and tutorials on it. The WRF system contains two dynamical solvers, referred to as the ARW (Advanced Research WRF) core and the NMM (Nonhydrostatic Mesoscale Model) core. The ARW has been developed in large part and is maintained by NCAR's Mesoscale and Microscale Meteorology Laboratory, and its users' page is: WRF-ARW Users' Page. The NMM core was developed by the National Centers for Environmental Prediction (NCEP), and is currently used in their HWRF (Hurricane WRF) system.\""
+            ]
+        }, 
+        "cordex.atmos.key_properties.model_family": {
+            "values": [
+                "ARCM: Atmospheric Regional Climate Model"
+            ]
+        }, 
+        "cordex.atmos.key_properties.basic_approximations": {
+            "values": [
+                "non-hydrostatic"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.canonical_horizontal_resolution": {
+            "values": [
+                "0.11x0.11 degrees rotated lat-lon"
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.number_of_vertical_levels": {
+            "values": [
+                32
+            ]
+        }, 
+        "cordex.atmos.key_properties.resolution.high_top": {
+            "values": [
+                "TRUE"
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_dynamics": {
+            "values": [
+                60
+            ]
+        }, 
+        "cordex.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
+            "values": [
+                900
+            ]
+        }, 
+        "cordex.atmos.key_properties.orography.type": {
+            "values": [
+                "fixed: present day"
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.description": {
+            "values": [
+                "The model has been tuned by testing a number of combinations of microphysics and convection schemes and checking seasonal average temperature and precipitation at 50 km resolution over 5 years against EOBS. No other tuning performed."
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "Bias of seasonal temperature and precipitation"
+            ]
+        }, 
+        "cordex.atmos.key_properties.tuning_applied.trend_metrics_used": {
+            "values": [
+                "No trend tuning"
+            ]
+        }, 
+        "cordex.atmos.grid.overview": {
+            "values": [
+                "Rotated lat-lon 0.11x0.11 grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system": {
+            "values": [
+                "Others"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.coordinate_system_details": {
+            "values": [
+                "Rotated pole: longitude : -162 ; latitude: 39.25"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.horizontal_resolution": {
+            "values": [
+                "0.11\u00b0"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.full_domain": {
+            "values": [
+                "504 x 492"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.relaxation_zone": {
+            "values": [
+                "5 relaxation rows"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.inner_domain": {
+            "values": [
+                "494 x 482"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_type": {
+            "values": [
+                "fixed grid"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.scheme_method": {
+            "values": [
+                "finite difference"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.horizontal.grid_type": {
+            "values": [
+                "Latitude-Longitude"
+            ]
+        }, 
+        "cordex.atmos.grid.discretisation.vertical.coordinate_type": {
+            "values": [
+                "hybrid sigma-pressure: sigma system near terrain and isobaric above"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.name": {
+            "values": [
+                "WRF-ARW"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.timestepping_type": {
+            "values": [
+                "Runge Kutta third order"
+            ]
+        }, 
+        "cordex.atmos.dynamical_core.lateral_boundary.condition": {
+            "values": [
+                "sponge layer"
+            ]
+        }, 
+        "cordex.atmos.radiation.name": {
+            "values": [
+                "RRTMG"
+            ]
+        }, 
+        "cordex.atmos.radiation.aerosols": {
+            "values": [
+                "organic", 
+                "sea salt", 
+                "BC: black carbon / soot", 
+                "sulphate", 
+                "dust"
+            ]
+        }, 
+        "cordex.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_radiation.name": {
+            "values": [
+                "RRTMG"
+            ]
+        }, 
+        "cordex.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
+            "values": [
+                "CO2: Carbon Dioxide", 
+                "CH4: Methane", 
+                "N2O: Nitrous Oxide", 
+                "O3", 
+                "H2O"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.boundary_layer_turbulence.scheme_name": {
+            "values": [
+                "Mellor-Yamada"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_name": {
+            "values": [
+                "New simplified Arakawa-Schubert"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.deep_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_name": {
+            "values": [
+                "Included in Arakawa-Schubert"
+            ]
+        }, 
+        "cordex.atmos.turbulence_convection.shallow_convection.scheme_type": {
+            "values": [
+                "mass-flux"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.name": {
+            "values": [
+                "New Thompson "
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
+            "values": [
+                "liquid rain", 
+                "snow", 
+                "hail", 
+                "graupel"
+            ]
+        }, 
+        "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
+            "values": [
+                "New Thompson "
+            ]
+        }, 
+        "cordex.atmos.cloud_scheme.overview": {
+            "values": [
+                "As microphysics scheme"
+            ]
+        }
+    }
 }

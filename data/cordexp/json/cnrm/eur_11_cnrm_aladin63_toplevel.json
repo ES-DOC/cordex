@@ -5,5 +5,420 @@
     "sourceID": "cnrm-aladin63", 
     "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordexp.toplevel.key_properties.name": {
+            "values": [
+                "CNRM-ALADIN63"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.keywords": {
+            "values": [
+                "ALADIN; CORDEX; CNRM; Meteo-France; Euro-CORDEX; atmosphere; Europe; land surface"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.overview": {
+            "values": [
+                "CNRM-ALADIN63 is the version 6.3 of the CNRM Regional Climate Model ALADIN (Aire Limit\u00e9e Adaptation dynamique\nD\u00e9veloppement InterNational). It is based on the dynamical core of the ALADIN numerical weather prediction version in its cycle 37t1 and on the physical package of the ARPEGE climate model version 6.3. It can be considered as the limited area version of CNRM-ARPEGE used in particular in CMIP6 as the atmospheric model of the GCMs CNRM-CM6 and CNRM-ESM2. CNRM-ALADIN63 is an hydrostatic model, based on a bispectral,\nsemi-implicit, semi-Lagrangian advection scheme\nand is used with an horizontal resolution\nof 12 km and 91 hybrid vertical levels over the Euro-CORDEX domain. CNRM-ALADIN63 includes the version\n8 of the SURFEX surface scheme that uses\nnotably a tile approach which separates natural land surface,\ntown, lake and sea areas in the calculation of surface fluxes with physiography based on ECOCLIMAP. The\nlakes are represented using the bulk FLake model\n which\ncomputes the temporal evolution of the vertical lake temperature\nprofile from the surface mixing layer to the bottom. The natural land surface are simulated using\nthe Interaction Soil Biosphere Atmosphere (ISBA) model. Towns are represented by a rock cover in this version and ocean surface are forced by sea surface temperature and sea ice external datasets. CNRM-ALADIN63 uses\nthe XIOS input/output parallel server software, which facilitates the model workflow, especially online\npostprocessing and the production of output files in full\nNetCDF format with appropriate attributes, in line with the\nClimate Model Output Rewriter (CMOR) format."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.details": {
+            "values": [
+                "CNRM-ALADIN63 is a Atmosphere Regional Climate Model including the high-resolution representation of the atmosphere and land surface. In this version, it is not coupled to an ocean, sea ice or aerosol model. The model is externally forced by time evolving forcings: atmosphere lateral boundary conditions coming from a reanalyis or a GCM every 6-hour, sea surface temperature, sea ice cover, aerosols, tropospheric ozone, greenhouse gas concentration, solar irradiance "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.year_released": {
+            "values": [
+                2018.0
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+            "values": [
+                "CNRM-ALADIN53 or CNRM-ALADIN52 or CNRM-RM4"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
+            "values": [
+                "Nearly all the components of the model (dynamics, physics of the atmosphere, land surface) has been changed between CNRM-ALADIN53 (or 52) and the new CNRM-ALADIN63.  "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "Other: gregorian calendar"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.spinup.details": {
+            "values": [
+                "ERA-Interim: Five years of spin-up is done before the restart of the run in 1979\nCNRM-CM5: The two first years of the historical simulation (1949-1950) are considered as spin-up years.\nHadGEM2-ES: The first year of the historical simulation (1950) is considered as the spin-up year.\nMPI-M-MPI-ESM-LR: The first year of the historical simulation (1950) is considered as the spin-up year.\nNorESM1-M: The first year of the historical simulation (1950) is considered as the spin-up year.\n"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.nudging.details": {
+            "values": [
+                "No nudging used"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.repository": {
+            "values": [
+                "internal at CNRM"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_version": {
+            "values": [
+                "version 6.3.1"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran 90"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.components_structure": {
+            "values": [
+                "ALADIN63 is the atmosphere component and SURFEX is the surface model. They are coupled internally at the model time step. No external coupler."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.coupler": {
+            "values": [
+                "None: No coupler is used"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.flux_correction.details": {
+            "values": [
+                "no flux correction"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.reference.details": {
+            "values": [
+                "Nabat P., Somot S., Cassou C., Mallet M., Michou M., Bouniol D., Decharme B., Druge T., Roehrig R., and Saint-Martin D. (2020) Modulation of radiative aerosols effects by atmospheric circulation over the Euro-Mediterranean region,Atmospheric Chemistry and Physics, 20(14), 8315--8349, doi:10.5194/acp-20-8315-2020"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.coupling.atmosphere_double_flux": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.coupling.atmosphere_fluxes_calculation_grid": {
+            "values": [
+                "Atmosphere grid"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.coupling.atmosphere_relative_winds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.description": {
+            "values": [
+                "No specific tuning strategy. Outside some tuning related to the grid resolution, we have used the same parameterization and the same tuning as the CNRM-CM6 and CNRM-ESM2 GCM models used in CMIP6 by CNRM in order to keep consistency between the CNRM GCMs and the CNRM RCM."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.regional_metrics_used": {
+            "values": [
+                "none "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.trend_metrics_used": {
+            "values": [
+                "none "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.energy_balance": {
+            "values": [
+                "not relevant in ARCM"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.tuning_applied.fresh_water_balance": {
+            "values": [
+                "not relevant in ARCM"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+            "values": [
+                "ua: Eastward Wind\nva: Northward Wind\nta: Air Temperature\nhus: Specific Humidity\nps: Surface Air Pressure"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+            "values": [
+                "6hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_top": {
+            "values": [
+                "no "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+            "values": [
+                "ua: Eastward Wind\nva: Northward Wind\nta: Air Temperature\nhus: Specific Humidity\nPs: Surface Air Pressure"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+            "values": [
+                "6 hr"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_top": {
+            "values": [
+                "none"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+            "values": [
+                "Monthly-mean sea surface temperature is used. SST dataset comes from the driving reanalysis ERA-Interim"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+            "values": [
+                "1 month "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+            "values": [
+                "no explicit sea ice model nor sea ice information is taken into account. The sea ice spatial coverage is set depending on a SST threshold "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+            "values": [
+                "1 month"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+            "values": [
+                "1 month"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+            "values": [
+                "1 month"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.additional_information": {
+            "values": [
+                "no explicit sea ice model nor sea ice information is taken into account. The sea ice spatial coverage is set depending on a SST threshold. The SST datasets are taken from the driving GCMs on the sea grid and the SOSIE software is used to interpolate properly from the GCM ocean grid to the RCM grid. "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+            "values": [
+                "Tropospheric aerosols : TACTIC dataset for the evaluation run (AOD at 550 nm), 5 aerosol classes (sulfate, organic aerosol, black carbon, desert dust, sea salt), one 2D spatial pattern per class, one vertical profile per class, seasonal cycle (12 maps for each class) and annual temporal evolution.\nDirect effect (absorption, scattering) and first aerosol indirect effect (Twomey) are included.\nVolcanic aerosols included : temporal evolution folliowing CMIP6 dataset  (Thomason et al.., 2018) including notably major eruptions such as Mt Pinatubo (1991)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
+            "values": [
+                "interannual evolution (transient) of the 12-month climatology for sulfate, organic, black carbon, dust and sea-salt, as well as for volcanic aerosols"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.additional_information": {
+            "values": [
+                "Reference of the TACTIC dataset : Michou, M., Nabat, P., Saint-Martin, D., Bock, J., Decharme, B., Mallet, M., Roehrig, R., S\u00e9f\u00e9rian, R., S\u00e9n\u00e9si, S., and Voldoire, A. (2020): Present-day and historical aerosol and ozone characteristics in CNRM CMIP6 simulations, Journal of Advances in Modeling Earth Systems, https://doi.org/10.1029/2019MS001816.\nReference for volcanic aerosols : Thomason, L. W., Ernest, N., Mill\u00e1n, L., Rieger, L., Bourassa, A., Vernier, J.-P., Manney, G., Luo, B., Arfeuille, F., and Peter, T. (2018) : A global space-based stratospheric aerosol climatology: 1979\u20132016, Earth System Science Data, 10, 469\u2013492, https://doi.org/10.5194/essd-10-469-2018."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
+            "values": [
+                "The 5-class tropospheric aerosols are inherited from each forcing GCM\nCNRM-CM5: Szopa et al. (2013)\nMPI-ESM: MACv2 data set (Kinne, 2019)\nHadGEM2-ES: Bellouin et al. (2011)\nNorESM1-M: only the total AOD was available for this GCM. Split between aerosol species is based on Szopa et al. (2013)\n\nVolcanic aerosols :  temporal evolution (1949-1999) following the CMIP5 dataset:   \nC. M. Ammann, F. Joos, D. S. Schimel, B. L. Otto-Bliesner, R. A. Tomas (2007), Solar influence on climate during the past millennium: Results from transient simulations with the NCAR Climate System Model, Proceedings of the National Academy of Sciences Mar 2007, 104 (10) 3713-3718; DOI: 10.1073/pnas.0605064103"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_frequency": {
+            "values": [
+                "CNRM-CM5: transient (1 month) : black carbon, organic, sulfate \u2013 12-month constant climatology : dust, sea salt\nHadGEM2-ES: all transient (1 month)\nMPI-ESM-LR: transient (1 month) : black carbon, organic, sulfate \u2013 12-month constant climatology : dust, sea salt\nNorESM1-M: all transient (1 month)\n\nVolcanic aerosols : time-evolving until 1999, constant between 2000 and 2100"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_dataset": {
+            "values": [
+                "Ozone concentrations from global dataset built with a CMIP6 ARPEGE simulation using interactive chemistry (Michou et al. 2020), 12-month means, time-evolving (1979-2018)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
+            "values": [
+                "Monthly-mean values with interannual evolution"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.additional_information": {
+            "values": [
+                "Reference of the dataset : Michou, M., Nabat, P., Saint-Martin, D., Bock, J., Decharme, B., Mallet, M., Roehrig, R., S\u00e9f\u00e9rian, R., S\u00e9n\u00e9si, S., and Voldoire, A. (2020): Present-day and historical aerosol and ozone characteristics in CNRM CMIP6 simulations, Journal of Advances in Modeling Earth Systems, https://doi.org/10.1029/2019MS001816."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_dataset": {
+            "values": [
+                "Constant climatological vertical profile is used. "
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+            "values": [
+                "no temporal evolution"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
+            "values": [
+                "The surface information are defined from the Ecoclimap\nII database (Faroux et al. 2013) which provides for\nEurope a 1-km resolution land cover classification including\n273 covers, and associated ecosystems and surface\nparameters. Based on the Corine Land Cover map over\nEurope (EEA 2005), it is a static classification representative\nof year 2000 and there is no land covers modification\nover the simulation period."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+            "values": [
+                "12-month constant climatology"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
+            "values": [
+                "same as for evaluation"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_frequency": {
+            "values": [
+                "same as for the evaluation run"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.name": {
+            "values": [
+                "Greenhouse gases, tropospheric and stratospheric aerosols, ozone and solar "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.overview": {
+            "values": [
+                "For evaluation, historical and scenario simulations, the evolution of greenhouse gases (GHGs) is included following the yearly global averages of Meinshausen et al. (2017) for CO2, N2O, CH4, CFC12 and a CFC11-equivalent species that includes the effects of all the other GHGs of the original data set (39 species). The total solar irradiance forcing is taken into account with yearly averages following Matthes et al. (2017). Aerosol forcing is described in \"Key Properties\".", 
+                " "
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data", 
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.additional_information": {
+            "values": [
+                "see information in Key Properties: evolving ozone in the evaluation run but constant in historical and scenario runs"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data", 
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.additional_information": {
+            "values": [
+                "see information in Key Properties: evolving ozone in the evaluation run but constant in historical and scenario runs"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
+            "values": [
+                "Option 2: CFC-12 is provided as actual concentrations and any other gases are provided as an equivalence concentration of CFC-11"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.SO4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.SO4.additional_information": {
+            "values": [
+                "see information in Key Properties"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.additional_information": {
+            "values": [
+                "see information in Key Properties"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.additional_information": {
+            "values": [
+                "see information in Key Properties"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.nitrate.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.provision": {
+            "values": [
+                "Other: Cloud albedo effect is included as described in Michou et al. (2020): sulfate, organic matter and sea-salt aerosol mass is used to calculate cloud droplet number concentration and liquid cloud effective radius"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.aerosol_effect_on_ice_clouds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.additional_information": {
+            "values": [
+                "Cloud albedo effect is included as described in Michou et al. (2020): sulfate, organic matter and sea-salt aerosol mass is used to calculate cloud droplet number concentration and liquid cloud effective radius"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.aerosol_effect_on_ice_clouds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.RFaci_from_sulfate_only": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.dust.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability", 
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.dust.additional_information": {
+            "values": [
+                "the temporal evolution of dust depends on the driving GCMs (see Key Properties)"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }
+    }
 }

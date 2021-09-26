@@ -23,7 +23,7 @@
         }, 
         "cordex.atmos.key_properties.model_family": {
             "values": [
-                "Regional Atmospheric Climate Model"
+                "ARCM: Atmospheric Regional Climate Model"
             ]
         }, 
         "cordex.atmos.key_properties.basic_approximations": {
@@ -33,12 +33,12 @@
         }, 
         "cordex.atmos.key_properties.resolution.canonical_horizontal_resolution": {
             "values": [
-                "12.0 km x 12.0 km"
+                "0.11 x 0.11 deg"
             ]
         }, 
         "cordex.atmos.key_properties.resolution.number_of_vertical_levels": {
             "values": [
-                23
+                23.0
             ]
         }, 
         "cordex.atmos.key_properties.resolution.high_top": {
@@ -48,22 +48,22 @@
         }, 
         "cordex.atmos.key_properties.timestepping.timestep_dynamics": {
             "values": [
-                24
+                24.0
             ]
         }, 
         "cordex.atmos.key_properties.timestepping.timestep_shortwave_radiative_transfer": {
             "values": [
-                1800
+                1800.0
             ]
         }, 
         "cordex.atmos.key_properties.timestepping.timestep_longwave_radiative_transfer": {
             "values": [
-                1800
+                1800.0
             ]
         }, 
         "cordex.atmos.key_properties.orography.type": {
             "values": [
-                "Fixed: present day"
+                "fixed: present day"
             ]
         }, 
         "cordex.atmos.key_properties.tuning_applied.description": {
@@ -118,12 +118,12 @@
         }, 
         "cordex.atmos.grid.discretisation.horizontal.scheme_type": {
             "values": [
-                "Fixed grid"
+                "fixed grid"
             ]
         }, 
         "cordex.atmos.grid.discretisation.horizontal.scheme_method": {
             "values": [
-                "Finite difference"
+                "finite difference"
             ]
         }, 
         "cordex.atmos.grid.discretisation.horizontal.grid_type": {
@@ -133,7 +133,7 @@
         }, 
         "cordex.atmos.grid.discretisation.vertical.coordinate_type": {
             "values": [
-                "Sigma: allows vertical coordinate to follow model terrain"
+                "sigma: allows vertical coordinate to follow model terrain"
             ]
         }, 
         "cordex.atmos.dynamical_core.name": {
@@ -148,16 +148,16 @@
         }, 
         "cordex.atmos.dynamical_core.timestepping_type": {
             "values": [
-                "Leap frog"
+                "leap frog"
             ]
         }, 
         "cordex.atmos.dynamical_core.prognostic_variables": {
             "values": [
-                "Surface pressure", 
-                "Wind components", 
-                "Temperature", 
-                "Water vapour", 
-                "Water liquid", 
+                "surface pressure", 
+                "wind components", 
+                "temperature", 
+                "water vapour", 
+                "water liquid", 
                 "Other: turbulent KE"
             ]
         }, 
@@ -188,7 +188,7 @@
         }, 
         "cordex.atmos.dynamical_core.diffusion_horizontal.scheme_method": {
             "values": [
-                "Iterated Laplacian"
+                "iterated Laplacian"
             ]
         }, 
         "cordex.atmos.dynamical_core.advection.tracers.scheme_name": {
@@ -203,7 +203,7 @@
         }, 
         "cordex.atmos.dynamical_core.advection.momentum.scheme_characteristics": {
             "values": [
-                "Staggered grid"
+                "staggered grid"
             ]
         }, 
         "cordex.atmos.dynamical_core.advection.momentum.scheme_staggering_type": {
@@ -238,22 +238,22 @@
         }, 
         "cordex.atmos.radiation.shortwave_radiation.spectral_integration": {
             "values": [
-                "Wide-band model"
+                "wide-band model"
             ]
         }, 
         "cordex.atmos.radiation.shortwave_radiation.transport_calculation": {
             "values": [
-                "Two-stream"
+                "two-stream"
             ]
         }, 
         "cordex.atmos.radiation.shortwave_radiation.spectral_intervals": {
             "values": [
-                10
+                10.0
             ]
         }, 
         "cordex.atmos.radiation.shortwave_radiation.general_interactions": {
             "values": [
-                "Emission/absorption,"
+                "emission/absorption,"
             ]
         }, 
         "cordex.atmos.radiation.shortwave_GHG.greenhouse_gas_complexity": {
@@ -279,7 +279,7 @@
         }, 
         "cordex.atmos.radiation.shortwave_cloud_ice.physical_representation": {
             "values": [
-                "Effective crystal radius"
+                "effective crystal radius"
             ]
         }, 
         "cordex.atmos.radiation.shortwave_cloud_ice.optical_methods": {
@@ -289,7 +289,7 @@
         }, 
         "cordex.atmos.radiation.shortwave_cloud_liquid.physical_representation": {
             "values": [
-                "Effective cloud droplet radii"
+                "effective cloud droplet radii"
             ]
         }, 
         "cordex.atmos.radiation.shortwave_cloud_liquid.optical_methods": {
@@ -309,22 +309,22 @@
         }, 
         "cordex.atmos.radiation.longwave_radiation.spectral_integration": {
             "values": [
-                "Wide-band model"
+                "wide-band model"
             ]
         }, 
         "cordex.atmos.radiation.longwave_radiation.transport_calculation": {
             "values": [
-                "Two-stream"
+                "two-stream"
             ]
         }, 
         "cordex.atmos.radiation.longwave_radiation.spectral_intervals": {
             "values": [
-                9
+                9.0
             ]
         }, 
         "cordex.atmos.radiation.longwave_radiation.general_interactions": {
             "values": [
-                "Emission/absorption,"
+                "emission/absorption,"
             ]
         }, 
         "cordex.atmos.radiation.longwave_GHG.greenhouse_gas_complexity": {
@@ -350,7 +350,7 @@
         }, 
         "cordex.atmos.radiation.longwave_cloud_ice.physical_reprenstation": {
             "values": [
-                "Effective crystal radius"
+                "effective crystal radius"
             ]
         }, 
         "cordex.atmos.radiation.longwave_cloud_ice.optical_methods": {
@@ -360,7 +360,7 @@
         }, 
         "cordex.atmos.radiation.longwave_cloud_liquid.physical_representation": {
             "values": [
-                "Effective cloud droplet radii"
+                "effective cloud droplet radii"
             ]
         }, 
         "cordex.atmos.radiation.longwave_cloud_liquid.optical_methods": {
@@ -405,26 +405,26 @@
         }, 
         "cordex.atmos.turbulence_convection.deep_convection.scheme_type": {
             "values": [
-                "Mass-flux"
+                "mass-flux"
             ]
         }, 
         "cordex.atmos.turbulence_convection.deep_convection.scheme_method": {
             "values": [
-                "Bulk: A bulk mass flux scheme is used"
+                "bulk: A bulk mass flux scheme is used"
             ]
         }, 
         "cordex.atmos.turbulence_convection.deep_convection.processes": {
             "values": [
-                "Entrainment", 
-                "Detrainment", 
-                "Penetrative convection", 
-                "Updrafts", 
-                "Downdrafts"
+                "entrainment", 
+                "detrainment", 
+                "penetrative convection", 
+                "updrafts", 
+                "downdrafts"
             ]
         }, 
         "cordex.atmos.turbulence_convection.deep_convection.microphysics": {
             "values": [
-                "Single moment"
+                "single moment"
             ]
         }, 
         "cordex.atmos.turbulence_convection.shallow_convection.scheme_name": {
@@ -449,7 +449,7 @@
         }, 
         "cordex.atmos.microphysics_precipitation.large_scale_precipitation.hydrometeors": {
             "values": [
-                "Liquid rain"
+                "liquid rain"
             ]
         }, 
         "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.scheme_name": {
@@ -459,7 +459,7 @@
         }, 
         "cordex.atmos.microphysics_precipitation.large_scale_cloud_microphysics.processes": {
             "values": [
-                "Water vapour deposition"
+                "water vapour deposition"
             ]
         }, 
         "cordex.atmos.cloud_scheme.name": {
@@ -474,7 +474,7 @@
         }, 
         "cordex.atmos.cloud_scheme.scheme_type": {
             "values": [
-                "Diagnostic"
+                "diagnostic"
             ]
         }, 
         "cordex.atmos.cloud_scheme.uses_separate_treatment": {
@@ -484,7 +484,7 @@
         }, 
         "cordex.atmos.cloud_scheme.processes": {
             "values": [
-                "Bulk cloud"
+                "bulk cloud"
             ]
         }, 
         "cordex.atmos.cloud_scheme.prognostic_variables": {
@@ -494,12 +494,12 @@
         }, 
         "cordex.atmos.cloud_scheme.atmos_coupling": {
             "values": [
-                "Atmosphere_radiation"
+                "atmosphere_radiation"
             ]
         }, 
         "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_overlap_method": {
             "values": [
-                "Maximum-random: combination of maximum and random overlap between clouds"
+                "maximum-random: combination of maximum and random overlap between clouds"
             ]
         }, 
         "cordex.atmos.cloud_scheme.optical_cloud_properties.cloud_inhomogeneity": {
@@ -529,7 +529,7 @@
         }, 
         "cordex.atmos.natural_forcing.solar_constant.type": {
             "values": [
-                "Transient"
+                "transient"
             ]
         }, 
         "cordex.atmos.natural_forcing.solar_constant.transient_characteristics": {
@@ -539,12 +539,12 @@
         }, 
         "cordex.atmos.natural_forcing.orbital_parameters.type": {
             "values": [
-                "Transient"
+                "transient"
             ]
         }, 
         "cordex.atmos.natural_forcing.orbital_parameters.fixed_reference_date": {
             "values": [
-                1950
+                1950.0
             ]
         }, 
         "cordex.atmos.natural_forcing.orbital_parameters.transient_method": {

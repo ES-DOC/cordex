@@ -5,5 +5,263 @@
     "sourceID": "dmi-hirham5", 
     "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
-    "content": {}
+    "content": {
+        "cordexp.toplevel.key_properties.name": {
+            "values": [
+                "HIRHAM5"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.keywords": {
+            "values": [
+                "HIRHAM, CORDEX, HIRHAM5, DMI"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.overview": {
+            "values": [
+                "HIRHAM5 has been developed at the DMI. It is a merge of the hydrostatic dynamical core of the HIRLAM 7.0 NWP model and the physical parameterization of the ECHAM5 GCM version 5.2.02. Most model development has dealt with parameterizations relevant to the Arctic or technical issues."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_type.model_family": {
+            "values": [
+                "Regional Atmospheric Climate Model"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.year_released": {
+            "values": [
+                2012
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+            "values": [
+                "HIRHAM4"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
+            "values": [
+                "Changes from version 4 to version 5 included upgrades to both the dynamical core with an upgrade from an older HIRLAM version to version 7.0 and to the physical parameterization going from ECHAM4 to ECHAM5."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+            "values": [
+                "EUR-11"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+            "values": [
+                "GCM-based"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.spinup.details": {
+            "values": [
+                "Normally one year of spinup is included in an experiment. All soil water reservoirs are initialized as full."
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.nudging.details": {
+            "values": [
+                "No nudging"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.repository": {
+            "values": [
+                "Internally at DMI (restricted access)"
+            ]
+        }, 
+        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+            "values": [
+                "Fortran, csh"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.name": {
+            "values": [
+                "Greenhouse gases"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.overview": {
+            "values": [
+                "GHGs are prescribed from annual concentration timeseries."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
+            "values": [
+                "CO2 concentrations follow the RCP scenarios (Meinshausen et al., 2011; doi:10.1007/s10584-011-0156-z), and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
+            "values": [
+                "CH4 concentrations follow the RCP scenarios (Meinshausen et al., 2011; doi:10.1007/s10584-011-0156-z), and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
+            "values": [
+                "N2O concentrations follow the RCP scenarios (Meinshausen et al., 2011; doi:10.1007/s10584-011-0156-z), and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
+            "values": [
+                "Option 1: CFCs, including CFC-12, are provided as actual concentrations"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
+            "values": [
+                "CFC-11 & CFC-12 concentrations follow the RCP scenarios, and are interpolated from one year to the next."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.SO4.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.SO4.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.nitrate.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.nitrate.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.aerosol_effect_on_ice_clouds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.aerosol_effect_on_ice_clouds": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.RFaci_from_sulfate_only": {
+            "values": [
+                false
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.dust.provision": {
+            "values": [
+                "Y: Prescribed concentrations, distributions or time series data"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.dust.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.historical_explosive_volcanic_aerosol_implementation": {
+            "values": [
+                "Type E: Explosive volcanic aerosol set to constant (average volcano) background"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.future_explosive_volcanic_aerosol_implementation": {
+            "values": [
+                "Type E: Explosive volcanic aerosol set to constant (average volcano) background"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
+            "values": [
+                "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.additional_information": {
+            "values": [
+                "Climatological concentrations. Taken from ECHAM5, following Tanre, D., Geleyn, J.-F. and Slingo, J. M. (1984): First results of the introduction of an advanced aerosol-radiation interaction in the ecmwf low resolution global model. In: Aerosols and Their Climatic  effects, edited by Gerber, H. and Deepak, A., pp. 133\u2013177. A. Deepak,", 
+                "Hampton, Va."
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.land_use.provision": {
+            "values": [
+                "N/A: Not applicable - forcing agent is not included"
+            ]
+        }, 
+        "cordexp.toplevel.radiative_forcings.other.solar.provision": {
+            "values": [
+                "N/A: Not applicable - solar forcing is not included"
+            ]
+        }
+    }
 }
