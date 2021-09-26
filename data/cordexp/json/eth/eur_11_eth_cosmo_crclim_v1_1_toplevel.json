@@ -6,412 +6,412 @@
     "topic": "toplevel", 
     "seedingSource": "Spreadsheet", 
     "content": {
-        "cordexp.toplevel.key_properties.name": {
+        "cordex.toplevel.key_properties.name": {
             "values": [
                 "COSMO-crCLIM-v1-1"
             ]
         }, 
-        "cordexp.toplevel.key_properties.keywords": {
+        "cordex.toplevel.key_properties.keywords": {
             "values": [
                 "COSMO; CORDEX; ETH; CLMcom; RCM; atmosphere; land surface"
             ]
         }, 
-        "cordexp.toplevel.key_properties.overview": {
+        "cordex.toplevel.key_properties.overview": {
             "values": [
                 "The Consortium for Small-scale Modeling (COSMO) is a non-hydrostatic limited-area atmospheric model (Rockel et al. 2008, Baldauf et al. 2011, see http://www.cosmo-model.org/, https://www.clm-community.eu/). COSMO solves the fully compressible governing equations using finite difference methods on a structured grid. It employs a split-explicit third-order Runge-Kutta discretization in time and is discretized on a rotated latitude-longitude grid using terrain-following surfaces. For the representation of unresolved processes, the following physical parameterization schemes are used (Baldauf et al. 2011): a radiative transfer scheme, a single-moment bulk cloud-microphysics scheme with 5 species (cloud water, cloud ice, rain, snow and graupel), a multilayer soil model, a turbulence scheme using a turbulent-kinetic-energy closure, and a surface transfer scheme. Sub-grid convection is parameterized using an adapted version of the Tiedtke mass-flux scheme with a moisture convergence closure. COSMO-crCLIM is the GPU version of COSMO (Fuhrer et al. 2014, 2018) and is described by Leutwyler et al. (2017). COSMO-crCLIM's land surface scheme TERRA includes a soil hydrology scheme (Schlemmer et al. 2018)."
             ]
         }, 
-        "cordexp.toplevel.key_properties.model_type.model_family": {
+        "cordex.toplevel.key_properties.model_type.model_family": {
             "values": [
                 "Regional Atmospheric Climate Model"
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.year_released": {
+        "cordex.toplevel.key_properties.genealogy.year_released": {
             "values": [
                 2019
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.previous_name": {
+        "cordex.toplevel.key_properties.genealogy.previous_name": {
             "values": [
                 "CCLM-4-8-17"
             ]
         }, 
-        "cordexp.toplevel.key_properties.genealogy.difference_to_previous": {
+        "cordex.toplevel.key_properties.genealogy.difference_to_previous": {
             "values": [
                 "COSMO-crCLIM is the GPU version of COSMO (Fuhrer et al. 2014, 2018) and is described by Leutwyler et al. (2017). COSMO-crCLIM's land surface scheme TERRA includes a soil hydrology scheme (Schlemmer et al. 2018)."
             ]
         }, 
-        "cordexp.toplevel.key_properties.cordex_domain.domain": {
+        "cordex.toplevel.key_properties.cordex_domain.domain": {
             "values": [
                 "EUR-11"
             ]
         }, 
-        "cordexp.toplevel.key_properties.model_calendar.calendar": {
+        "cordex.toplevel.key_properties.model_calendar.calendar": {
             "values": [
                 "GCM-based"
             ]
         }, 
-        "cordexp.toplevel.key_properties.spinup.details": {
+        "cordex.toplevel.key_properties.spinup.details": {
             "values": [
                 "A spinup for soil moisture is used in all COSMO-crCLIM simulations. The soil moisture initial conditions are based on a EUR-11 32-year (1979-2010) evaluation simulation of COSMO-CLM driven by ERA-Interim. They are calculated as the 10-year mean (1999-2009) of the 5 days before and 5 days after the initialisation date: from 27/12 to 5/01 for an initialisation date of 1/01. \nThe years 1949-1950 are considered as spin-up years."
             ]
         }, 
-        "cordexp.toplevel.key_properties.nudging.details": {
+        "cordex.toplevel.key_properties.nudging.details": {
             "values": [
                 "no nudging used"
             ]
         }, 
-        "cordexp.toplevel.key_properties.software_properties.repository": {
+        "cordex.toplevel.key_properties.software_properties.repository": {
             "values": [
                 "https://github.com/C2SM-RCM/cosmo-pompa/tree/COSMO-crCLIM_v1.1c (and https://github.com/C2SM-RCM/stella/tree/crclim for DyCore)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.software_properties.code_languages": {
+        "cordex.toplevel.key_properties.software_properties.code_languages": {
             "values": [
                 "C++ using the Stencil Loop Language STELLA for the dynamical core, Fortran with OpenACC directives otherwise"
             ]
         }, 
-        "cordexp.toplevel.key_properties.software_properties.components_structure": {
+        "cordex.toplevel.key_properties.software_properties.components_structure": {
             "values": [
                 "The atmosphere component includes the land-surface scheme. "
             ]
         }, 
-        "cordexp.toplevel.key_properties.software_properties.coupler": {
+        "cordex.toplevel.key_properties.software_properties.coupler": {
             "values": [
                 "None: No coupler is used"
             ]
         }, 
-        "cordexp.toplevel.key_properties.flux_correction.details": {
+        "cordex.toplevel.key_properties.flux_correction.details": {
             "values": [
                 "No flux correction applied"
             ]
         }, 
-        "cordexp.toplevel.key_properties.reference.details": {
+        "cordex.toplevel.key_properties.reference.details": {
             "values": [
                 "Leutwyler, D., D. Lu\u0308thi, N. Ban, O. Fuhrer, C. Scha\u0308r (2017): Evaluation of the Convection-Resolving Climate Modeling Approach on Continental Scales. J. Geophys. Res. Atmos., 122, 5237-5258, http://dx.doi.org/10.1002/2016JD026013; \nBaldauf, M., Seifert, A., F\u00f6rstner, J., Majewski, D., Raschendorfer, M., and Reinhardt, T. (2011): Operational Convective-Scale Numerical Weather Prediction with the COSMO Model: Description and Sensitivities. Monthly Weather Review 139, 12, 3887-3905, https://doi.org/10.1175/MWR-D-10-05013.1; \nhttp://www.cosmo-model.org/content/model/documentation/core/default.htm"
             ]
         }, 
-        "cordexp.toplevel.key_properties.coupling.atmosphere_double_flux": {
+        "cordex.toplevel.key_properties.coupling.atmosphere_double_flux": {
             "values": [
                 "FALSE"
             ]
         }, 
-        "cordexp.toplevel.key_properties.coupling.atmosphere_fluxes_calculation_grid": {
+        "cordex.toplevel.key_properties.coupling.atmosphere_fluxes_calculation_grid": {
             "values": [
                 "Atmosphere grid"
             ]
         }, 
-        "cordexp.toplevel.key_properties.coupling.atmosphere_relative_winds": {
+        "cordex.toplevel.key_properties.coupling.atmosphere_relative_winds": {
             "values": [
                 "FALSE"
             ]
         }, 
-        "cordexp.toplevel.key_properties.tuning_applied.description": {
+        "cordex.toplevel.key_properties.tuning_applied.description": {
             "values": [
                 "To reduce the parameter uncertainty, we use an objective calibration method on 8 semi-empirical parameters (Bellprat et al. 2016). The main idea of the approach is to approximate the model response resulting from parameter perturbations using a computationally efficient statistical regression model (metamodel) that is estimated on the basis of a minimum set of model simulations. An optimal set of parameters is found based on the best performance estimated by the metamodel in terms of 2m temperature, precipitation and cloud cover, compared to observations. Such a calibration has been performed over the EUR-44 domain and verified over the EUR-11 domain."
             ]
         }, 
-        "cordexp.toplevel.key_properties.tuning_applied.regional_metrics_used": {
+        "cordex.toplevel.key_properties.tuning_applied.regional_metrics_used": {
             "values": [
                 "2m air temperature, precipitation, cloud cover, integrated performance score: computed as average-squared errors between model observations for each variable, each month, all simulated years and each regional average (8 for Europe). These errors are scaled by the observed interannual variability, including a measure of observational uncertainty and internal variability."
             ]
         }, 
-        "cordexp.toplevel.key_properties.tuning_applied.trend_metrics_used": {
+        "cordex.toplevel.key_properties.tuning_applied.trend_metrics_used": {
             "values": [
                 "none"
             ]
         }, 
-        "cordexp.toplevel.key_properties.tuning_applied.energy_balance": {
+        "cordex.toplevel.key_properties.tuning_applied.energy_balance": {
             "values": [
                 "not relevant"
             ]
         }, 
-        "cordexp.toplevel.key_properties.tuning_applied.fresh_water_balance": {
+        "cordex.toplevel.key_properties.tuning_applied.fresh_water_balance": {
             "values": [
                 "not relevant"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_variables": {
             "values": [
                 "surface pressure (ps), skin temperature (ts), specific humidity (hus), air temperature (ta), eastward wind (ua), northward wind (va)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_frequency": {
             "values": [
                 "6-hourly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_top": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.atmos_lbc_eval_top": {
             "values": [
                 "none"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_eval.additional_information": {
             "values": [
                 "Change in upper level damping to only relax vertical velocity instead of all dynamical fields (Klemp et al. 2008).\nKlemp, J. B., Dudhia, J., and Hassiotis, A. D. (2008). An Upper Gravity-Wave Absorbing Layer for NWP Applications. Monthly Weather Review 136, 10, 3987-4004, https://doi.org/10.1175/2008MWR2596.1"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_variables": {
             "values": [
                 "surface pressure (ps), skin temperature (ts), specific humidity (hus), air temperature (ta), eastward wind (ua), northward wind (va)"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_frequency": {
             "values": [
                 "6-hourly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_top": {
+        "cordex.toplevel.key_properties.gcm_forcing.atmos_lbc_scn.atmos_lbc_scn_top": {
             "values": [
                 "none"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_variable": {
             "values": [
                 "driving reanalysis"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sst_lbc_eval_frequency": {
             "values": [
                 "6-hourly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_variable": {
             "values": [
                 "driving reanalysis"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.sic_lbc_eval_frequency": {
             "values": [
                 "6-hourly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_eval.additional_information": {
             "values": [
                 "SST and sea-ice cover fields are used to calculate the skin temperature "
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sst_lbc_scn_frequency": {
             "values": [
                 "6-hourly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.sic_lbc_scn_frequency": {
             "values": [
                 "6-hourly"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.ocean_lbc_scn.additional_information": {
             "values": [
                 "SST and sea-ice cover fields from the GCMs are used to calculate the skin temperature "
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_dataset": {
             "values": [
                 "AeroCom1 aerosol monthly climatology dataset (Kinne et al., 2006). Parameters are: aerosol optical thickness of black carbon, mineral dust, organic matter, sulfate, sea salt."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.aerosol_eval_frequency": {
             "values": [
                 "monthly climatology"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_eval.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_eval.additional_information": {
             "values": [
                 "Values are read as monthly means and interpolated into daily values. \nKinne, S., Schulz, M., Textor, C., Guibert, S., Balkanski, Y., Bauer, S. E., Berntsen, T., Berglen, T. F., Boucher, O., Chin, M., Collins, W., Dentener, F., Diehl, T., Easter, R., Feichter, J., Fillmore, D., Ghan, S., Ginoux, P., Gong, S., Grini, A., Hendricks, J., Herzog, M., Horowitz, L., Isaksen, I., Iversen, T., Kirkev\u00e5g, A., Kloster, S., Koch, D., Kristjansson, J. E., Krol, M., Lauer, A., Lamarque, J. F., Lesins, G., Liu, X., Lohmann, U., Montanaro, V., Myhre, G., Penner, J., Pitari, G., Reddy, S., Seland, O., Stier, P., Takemura, T., and Tie, X.: An AeroCom initial assessment \u2013 optical properties in aerosol component modules of global models, Atmos. Chem. Phys., 6, 1815\u20131834, https://doi.org/10.5194/acp-6-1815-2006, 2006."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.aerosol_scn.aerosol_scn_dataset": {
             "values": [
                 "as for evaluation experiment"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_eval.ozone_eval_frequency": {
             "values": [
                 "climatology"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.ozone_scn.ozone_scn_frequency": {
             "values": [
                 "climatology"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_dataset": {
             "values": [
                 "Land cover type is derived from the FAO digital soil map of the World. 9 types are considered: sand, sandy loam, loam, loamy clay, clay, ice, rock, peat and sea water. Vegetation parameters (Leaf Area Index and Plant Cover) are based on monthly climatological fields, derived from the ECOCLIMAP dataset (Masson et al., 2003). Land surface albedo is based on monthly satellite-derived fields for dry and saturated soil (Lawrence and Chase, 2007)."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.land_cover_eval_frequency": {
             "values": [
                 "monthly climatology"
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_eval.additional_information": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_eval.additional_information": {
             "values": [
                 "Masson, V., Champeaux, J., Chauvin, F., Meriguet, C., and Lacaze, R.: A global database of land surface parameters at 1-km resolution in\nmeteorological and climate models., J. Climate., 16, 1261\u2013 1282, https://doi.org/10.1175/1520-0442-16.9.1261, 2003. \nLawrence, P. and Chase, T.: Representing a new MODIS consistent land surface in the community land model (CLM 3.0), J. Geophys. Res., 930 112, G01 023, https://doi.org/10.1029/2006JG000168, 2007."
             ]
         }, 
-        "cordexp.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
+        "cordex.toplevel.key_properties.gcm_forcing.land_cover_scn.land_cover_scn_dataset": {
             "values": [
                 "as for evaluation experiment"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CO2.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CO2.additional_information": {
             "values": [
                 "CO2 concentrations for historical simulations are prescribed following an A1B scenario from 1950 to 2005. \nCO2 concentrations for RCP8.5 simulations are prescribed following an RCP8.5 scenario from 2006 to 2100."
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CH4.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CH4.additional_information": {
             "values": [
                 "Converted to CO2-equivalents using 100-yr Global Warming Potentials (GWP) from the IPCC Assessment Reports"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.N2O.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.N2O.additional_information": {
             "values": [
                 "Converted to CO2-equivalents using 100-yr GWP from IPCC ARs"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.tropospheric_O3.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.stratospheric_O3.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.provision": {
             "values": [
                 "Y: Prescribed concentrations, distributions or time series data"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.equivalence_concentration": {
             "values": [
                 "Option 3: Ozone depleting gases, including CFC-12, are provided as an equivalence concentration of CFC-12 and all other fluorinated gases are provided as an equivalence concentration of HFC-134a"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
+        "cordex.toplevel.radiative_forcings.greenhouse_gases.CFC.additional_information": {
             "values": [
                 "Converted to CO2-equivalents using 100-yr GWP from IPCC ARs"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.SO4.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.SO4.provision": {
             "values": [
                 "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.SO4.additional_information": {
+        "cordex.toplevel.radiative_forcings.aerosols.SO4.additional_information": {
             "values": [
                 "AeroCom1 aerosol optical thickness monthly climatology (Kinne et al., 2006), interpolated as daily values. \nKinne, S., Schulz, M., Textor, C., Guibert, S., Balkanski, Y., Bauer, S. E., Berntsen, T., Berglen, T. F., Boucher, O., Chin, M., Collins, W., Dentener, F., Diehl, T., Easter, R., Feichter, J., Fillmore, D., Ghan, S., Ginoux, P., Gong, S., Grini, A., Hendricks, J., Herzog, M., Horowitz, L., Isaksen, I., Iversen, T., Kirkev\u00e5g, A., Kloster, S., Koch, D., Kristjansson, J. E., Krol, M., Lauer, A., Lamarque, J. F., Lesins, G., Liu, X., Lohmann, U., Montanaro, V., Myhre, G., Penner, J., Pitari, G., Reddy, S., Seland, O., Stier, P., Takemura, T., and Tie, X.: An AeroCom initial assessment \u2013 optical properties in aerosol component modules of global models, Atmos. Chem. Phys., 6, 1815\u20131834, https://doi.org/10.5194/acp-6-1815-2006, 2006."
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.black_carbon.provision": {
             "values": [
                 "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.black_carbon.additional_information": {
+        "cordex.toplevel.radiative_forcings.aerosols.black_carbon.additional_information": {
             "values": [
                 "As for SO4"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.organic_carbon.provision": {
             "values": [
                 "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.organic_carbon.additional_information": {
+        "cordex.toplevel.radiative_forcings.aerosols.organic_carbon.additional_information": {
             "values": [
                 "As for SO4"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.nitrate.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.nitrate.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.aerosol_effect_on_ice_clouds": {
+        "cordex.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.aerosol_effect_on_ice_clouds": {
             "values": [
                 "FALSE"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.additional_information": {
+        "cordex.toplevel.radiative_forcings.aerosols.cloud_albedo_effect.additional_information": {
             "values": [
                 "Aerosols influence clouds through direct and semi-direct effects. Indirect effects are not included in COSMO-crCLIM."
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.aerosol_effect_on_ice_clouds": {
+        "cordex.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.aerosol_effect_on_ice_clouds": {
             "values": [
                 "FALSE"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.RFaci_from_sulfate_only": {
+        "cordex.toplevel.radiative_forcings.aerosols.cloud_lifetime_effect.RFaci_from_sulfate_only": {
             "values": [
                 "FALSE"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.dust.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.dust.provision": {
             "values": [
                 "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.dust.additional_information": {
+        "cordex.toplevel.radiative_forcings.aerosols.dust.additional_information": {
             "values": [
                 "As for SO4"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.tropospheric_volcanic.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.stratospheric_volcanic.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
+        "cordex.toplevel.radiative_forcings.aerosols.sea_salt.provision": {
             "values": [
                 "C: Fixed prescribed climatology of concentrations with no year-to-year variability"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.aerosols.sea_salt.additional_information": {
+        "cordex.toplevel.radiative_forcings.aerosols.sea_salt.additional_information": {
             "values": [
                 "As for SO4"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.other.land_use.provision": {
+        "cordex.toplevel.radiative_forcings.other.land_use.provision": {
             "values": [
                 "N/A: Not applicable - forcing agent is not included"
             ]
         }, 
-        "cordexp.toplevel.radiative_forcings.other.solar.provision": {
+        "cordex.toplevel.radiative_forcings.other.solar.provision": {
             "values": [
                 "irradiance: Solar irradiance forcing"
             ]
